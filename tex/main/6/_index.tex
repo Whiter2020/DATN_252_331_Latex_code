@@ -50,6 +50,24 @@ Việc lựa chọn kiến trúc phân lớp cho hệ thống xuất phát từ 
     \item \textbf{Dễ bảo trì}: logic nghiệp vụ tập trung tại các lớp dịch vụ/nghiệp vụ, giảm lặp và dễ kiểm soát.
     \item \textbf{Phù hợp với hệ thống web hướng dịch vụ}: các chức năng có thể được tổ chức thành các dịch vụ rõ ràng tương ứng với các ca sử dụng đã phân tích.
 \end{itemize}
+
+% ====================== BỔ SUNG PHẦN GỢI Ý QUÁN ĂN ======================
+\subsection{Thiết kế module Gợi ý quán ăn}
+Module Gợi ý quán ăn là một trong những module quan trọng của hệ thống, nhằm cung cấp trải nghiệm cá nhân hóa cho người dùng. Module này được thiết kế theo cách hybrid, kết hợp nhiều tiêu chí để đưa ra danh sách gợi ý phù hợp nhất.
+
+Các thành phần chính của module bao gồm:
+\begin{itemize}[label=\textbullet]
+    \item Phân tích khẩu vị cá nhân (taste profile) và khu vực ưu tiên của người dùng.
+    \item Tính toán độ tương đồng giữa khẩu vị người dùng với đặc điểm của các quán ăn (category matching).
+    \item Xem xét lịch sử food tour của người dùng để ưu tiên các quán đã từng xuất hiện.
+    \item Kết hợp vị trí hiện tại để ưu tiên quán ăn gần nhất.
+    \item Hiển thị lý do gợi ý rõ ràng cho từng quán (ví dụ: “Bạn thích món cay • Đã xuất hiện trong 2 food tour trước”).
+\end{itemize}
+
+Module này được tích hợp trực tiếp vào giao diện tạo và quản lý food tour, giúp người dùng nhận gợi ý ngay khi đang xây dựng hành trình.
+
+% ====================== KẾT THÚC BỔ SUNG ======================
+
 \subsection{Thiết kế cơ sở dữ liệu}
 \subsubsection{ERD}
 ERD tổng quan của toàn bộ hệ thống được biểu diễn ở hình 5.2
@@ -374,4 +392,3 @@ Danh sách các điểm dừng trong food tour được hiển thị theo thứ 
 hành trình và các địa điểm sẽ ghé thăm.
 
 Nhìn chung, giao diện chi tiết food tour được thiết kế trực quan, đầy đủ thông tin và nhất quán với tổng thể hệ thống, đóng vai trò quan trọng trong việc hỗ trợ người dùng khám phá, lựa chọn và sử dụng các hành trình ăn uống một cách hiệu quả.
-
