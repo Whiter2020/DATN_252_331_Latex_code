@@ -1,0 +1,83 @@
+\section{Giới thiệu đề tài}
+\subsection{Bối cảnh và động cơ}
+Trong bối cảnh đô thị hóa và phát triển kinh tế – xã hội diễn ra mạnh mẽ, đời sống vật chất và
+tinh thần của người dân tại các thành phố lớn ngày càng được nâng cao. Cùng với đó, nhu cầu
+ăn uống không chỉ dừng lại ở việc đáp ứng sinh hoạt hằng ngày mà còn gắn liền với trải nghiệm,
+khám phá và tận hưởng văn hóa ẩm thực. Việc tổ chức các hành trình ăn uống (food tour) theo
+cá nhân hoặc theo nhóm đã trở thành một xu hướng phổ biến, đặc biệt trong giới trẻ và cộng
+đồng dân văn phòng.
+
+Mặc dù hiện nay đã tồn tại nhiều nền tảng hỗ trợ tìm kiếm và đánh giá quán ăn, song các nền
+tảng này chủ yếu tập trung vào việc cung cấp thông tin cho từng địa điểm riêng lẻ. Để lên kế
+hoạch cho một food tour gồm nhiều quán ăn, người dùng thường phải kết hợp sử dụng nhiều
+công cụ khác nhau như ứng dụng bản đồ để xác định vị trí, ứng dụng đánh giá để tham khảo
+chất lượng và mạng xã hội để tìm kiếm gợi ý từ cộng đồng. Quá trình này không chỉ gây mất
+thời gian mà còn thiếu tính đồng bộ, đặc biệt là chưa hỗ trợ hiệu quả việc tối ưu hóa lộ trình di
+chuyển giữa nhiều địa điểm trong cùng một hành trình.
+
+Bên cạnh đó, nhiều người dùng đã từng xây dựng các food tour cá nhân hoặc trải nghiệm những
+hành trình ăn uống tương tự nhau, tuy nhiên các food tour này chưa được lưu trữ và chia sẻ
+một cách có hệ thống để cộng đồng có thể dễ dàng tiếp cận và tái sử dụng. Từ những hạn chế
+trên, việc xây dựng một hệ thống tích hợp hỗ trợ tìm kiếm quán ăn, tạo food tour, tối ưu lộ trình
+và chia sẻ food tour công khai trở nên cần thiết. Đây chính là bối cảnh và động cơ chính thúc
+đẩy việc thực hiện đề tài này.
+
+\subsection{Mục tiêu của đề tài}
+Mục tiêu tổng quát của đề tài là nghiên cứu và xây dựng một ứng dụng web (tạm gọi là CityFoodTour) hỗ trợ người dùng trong việc lập kế hoạch cho các hành trình ăn uống một cách hiệu quả và thuận tiện, thông qua việc tích hợp các chức năng tìm kiếm quán ăn, tạo food tour và xác định lộ trình di chuyển hợp lý trong một nền tảng thống nhất.
+
+Trên cơ sở mục tiêu tổng quát đó, đề tài hướng đến các mục tiêu cụ thể sau:
+
+\begin{itemize}[label=\textbullet]
+    \item Xây dựng hệ thống cho phép người dùng tìm kiếm và tra cứu thông tin chi tiết về các quán ăn,
+bao gồm vị trí và các thông tin liên quan phục vụ nhu cầu tham khảo.
+    \item Hỗ trợ người dùng tạo và quản lý các food tour cá nhân bằng cách thêm một hoặc nhiều quán
+ăn vào cùng một hành trình.
+    \item Nghiên cứu và áp dụng phương pháp sắp xếp lộ trình di chuyển hợp lý giữa các quán ăn trong
+food tour nhằm giảm thời gian và quãng đường di chuyển.
+    \item Phát triển chức năng chia sẻ food tour ở chế độ công khai, cho phép người dùng khác tìm
+kiếm, tham khảo và sử dụng lại các food tour đã được chia sẻ.
+    \item Phát triển cơ chế gợi ý quán ăn cá nhân hóa dựa trên khẩu vị, lịch sử sử dụng và vị trí hiện tại của người dùng.
+\end{itemize}
+
+\subsection{Phạm vi thực hiện của đề tài}
+Đề tài được triển khai trong phạm vi nghiên cứu và xây dựng một ứng dụng web hướng đến
+người dùng cuối. Hệ thống tập trung vào các chức năng cốt lõi bao gồm quản lý người dùng,
+quản lý thông tin quán ăn, tạo và quản lý food tour, sắp xếp lộ trình di chuyển và chia sẻ food
+tour công khai.
+
+Việc gợi ý food tour trong hệ thống được thực hiện dựa trên mức độ tương đồng giữa các quán
+ăn trong lịch sử tạo food tour của người dùng và các food tour đã tồn tại, nhằm đưa ra các gợi ý
+phù hợp dựa trên các đặc điểm chung. Đề tài không sử dụng các kỹ thuật học máy hay trí tuệ
+nhân tạo nâng cao, mà tập trung vào các phương pháp gợi ý dựa trên quy tắc và độ tương đồng,
+phù hợp với phạm vi nghiên cứu của luận văn.
+
+\subsection{Giới hạn và định hướng triển khai của đề tài}
+Để đảm bảo tính khả thi và tập trung vào các mục tiêu nghiên cứu chính, đề tài được triển khai
+trong phạm vi và giới hạn như sau:
+
+\begin{itemize}[label=\textbullet]
+    \item Hệ thống được xây dựng dưới dạng ứng dụng web, hướng đến người dùng cuối.
+    \item Hệ thống hỗ trợ các chức năng cốt lõi bao gồm:
+    \begin{itemize}[label=\textbullet]
+    \item Quản lý người dùng.
+    \item Quản lý và tra cứu thông tin quán ăn.
+    \item Tạo và quản lý các food tour cá nhân.
+    \item Sắp xếp lộ trình di chuyển giữa nhiều quán ăn trong cùng một food tour.
+    \item Chia sẻ food tour ở chế độ công khai để người dùng khác có thể tìm kiếm và tham khảo.
+    \item Gợi ý quán ăn cá nhân hóa theo khẩu vị và lịch sử sử dụng.
+\end{itemize}
+    
+    \item Cơ chế gợi ý food tour được xây dựng dựa trên mức độ tương đồng giữa các quán ăn xuất hiện
+trong lịch sử tạo food tour của người dùng và các food tour đã tồn tại.
+\end{itemize}
+
+\subsection{Kết quả mong đợi}
+Kết quả mong đợi của đề tài là xây dựng được một ứng dụng web hoạt động ổn định, đáp ứng
+được các yêu cầu chức năng đã đề ra. Hệ thống cho phép người dùng tìm kiếm quán ăn, tạo và
+quản lý food tour cá nhân, xác định lộ trình di chuyển hợp lý giữa các quán ăn và chia sẻ food
+tour công khai để người dùng khác có thể tìm kiếm và tham khảo.
+
+Bên cạnh sản phẩm phần mềm, luận văn trình bày đầy đủ quá trình nghiên cứu, phân tích, thiết
+kế và triển khai hệ thống, từ đó đánh giá tính khả thi và hiệu quả của giải pháp đề xuất. Các kết
+quả đạt được có thể làm nền tảng cho việc mở rộng, cải tiến hệ thống hoặc phát triển các hướng
+nghiên cứu tiếp theo trong tương lai.

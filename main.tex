@@ -1,0 +1,123 @@
+\documentclass[15pt]{extarticle}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+% [draft]
+% {article}
+% \usepackage[final]{hyperref}
+
+% \documentclass{article}
+% ---- Vietnamese support ----
+
+% \usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+
+% Lmodern does NOT support T5 fully → bỏ hoặc thay bằng cm-super
+% \usepackage{lmodern}  
+\usepackage{courier}
+% Dùng font Latin Modern hỗ trợ T5 (khuyên dùng):
+\usepackage{amsmath,amssymb}
+
+\usepackage{sty/env}
+\usepackage{sty/Fancyhdr}
+\usepackage{sty/Titlesec}
+% \usepackage{sty/glossary}
+
+
+\newcommand{\FooterTitle}{CO4029 - Học kỳ 251 năm học 2025-2026}
+\newcommand{\FooterPage}{Trang {\thepage}/\pageref{LastPage}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\include{tex/cover}
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\include{tex/commitment}   % Lời cam đoan
+\cleardoublepage
+\include{tex/thanks}       % Lời cảm ơn
+\cleardoublepage
+\include{tex/abstract}     % Tóm tắt
+\cleardoublepage
+
+\arrayrulecolor{cyan!80!blue}   % xanh tươi, hơi đậm
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\addcontentsline{toc}{section}{Mục lục}
+\tableofcontents
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ---------- DANH SÁCH HÌNH VẼ ----------
+\cleardoublepage
+\addcontentsline{toc}{section}{Danh sách hình vẽ}
+\listoffigures
+
+% ---------- DANH SÁCH BẢNG ----------
+\cleardoublepage
+\addcontentsline{toc}{section}{Danh sách bảng}
+\listoftables
+\newpage
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+
+\pagestyle{fancy}  
+
+% --- Phần main ---
+\include{tex/main/1/_index} 
+\include{tex/main/2/_index} 
+\include{tex/main/3/_index}
+\include{tex/main/4/_index} 
+\include{tex/main/5/_index} 
+\include{tex/main/6/_index}
+\include{tex/main/7/_index} 
+\include{tex/main/8/_index}
+\include{tex/main/9/_index} 
+\include{tex/main/10/_index} 
+\include{tex/main/11/_index} 
+\include{tex/main/12/_index} 
+% Lưu lại số trang cuối main
+\newcounter{mainendpage}
+\setcounter{mainendpage}{\value{page}}
+
+% --- Phần không thuộc nội dung chính (bibliography + appendix) ---
+\cleardoublepage
+\makeatletter
+\let\orig@c@page\c@page          % lưu counter page
+
+
+% --- Footer riêng chỉ đánh số trang ---
+\pagestyle{fancy}
+\fancyhf{}                        % xóa header/footer cũ
+\fancyfoot[C]{\thepage}           % chỉ in số trang ở giữa footer
+\renewcommand{\footrulewidth}{0pt} % tắt gạch ngang ở footer
+\renewcommand{\headrulewidth}{0pt} % tắt gạch ngang ở header (nếu có)
+
+\include{tex/ref}
+\include{tex/appendix/_index}
+
+% --- Quay lại footer main ---
+\setcounter{page}{\value{mainendpage}} % phục hồi counter page
+\renewcommand{\thepage}{\arabic{page}} % số trang Ả Rập
+\pagestyle{fancy}              % footer main bình thường
+\makeatother
+
+
+
+
+
+
+
+
+\end{document}

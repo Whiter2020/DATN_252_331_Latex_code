@@ -1,0 +1,32 @@
+\usepackage{fancyhdr}   
+\usepackage{color}     
+\usepackage{lastpage}  
+\usepackage{epsfig}    
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{40pt}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{
+ \begin{tabular}{rl}
+    \begin{picture}(25,15)(0,0)
+    \put(0,-8){\includegraphics[width=8mm, height=8mm]{bachkhoa_logo.png}}
+    %\put(0,-8){\epsfig{width=10mm,figure=hcmut.eps}}
+   \end{picture}&
+	%\includegraphics[width=8mm, height=8mm]{hcmut.png} & %
+	\begin{tabular}{l}
+		\textbf{\textcolor{blue}{\bf \ttfamily Trường Đại Học Bách khoa}}\\
+		\textbf{\textcolor{blue}{\bf \ttfamily Khoa Khoa học và Kỹ thuật máy tính}}
+	\end{tabular} 	
+ \end{tabular}
+}
+\renewcommand{\headrulewidth}{0.3pt}
+\fancyhead[R]{
+	\begin{tabular}{l}
+		\tiny \bf \\
+		\tiny \bf 
+	\end{tabular}  }
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L]{\ttfamily \FooterTitle}
+\fancyfoot[R]{\ttfamily \FooterPage}
+\renewcommand{\footrulewidth}{0.3pt}

@@ -1,0 +1,53 @@
+\usepackage{amsmath, amsfonts, amssymb} % toán học
+\usepackage[
+  sort=standard,
+  abbreviations,
+  stylemods,
+  style=list,
+  nogroupskip,
+  nomain
+]{glossaries-extra}
+
+
+
+\newglossarystyle{compactlist}{%
+  \setglossarystyle{list}% dựa trên list
+  \renewenvironment{theglossary}%
+    {\begin{description}\setlength{\itemsep}{0pt}}% itemsep=0pt
+    {\end{description}}%
+  \renewcommand*{\glossaryentryfield}[5]{%
+    \item[\textbf{##1}] ##3 % ##1=name, ##3=description
+  }%
+  \renewcommand*{\glsgroupskip}{} % bỏ khoảng trống giữa nhóm
+}
+
+\setabbreviationstyle{long-short}
+
+% ------------------------
+% Custom glossary types
+% ------------------------
+\newglossary[slg]{symbols}{syi}{syg}{Danh sách các ký hiệu}
+
+% ------------------------
+% Abbreviations
+% ------------------------
+\newabbreviation{PC}{PC}{Product Collection}
+\newabbreviation{LD}{LD}{Launch Date}
+
+% ------------------------
+% Symbols
+% ------------------------
+\newglossaryentry{natural}{name={\ensuremath{\mathbb{N}}},
+  description={Set of natural numbers},
+  type=symbols}
+\newglossaryentry{real}{name={\ensuremath{\mathbb{R}}},
+  description={Set of real numbers},
+  type=symbols}
+\newglossaryentry{realpos}{name={\ensuremath{\mathbb{R}^+}},
+  description={Set of positive real numbers},
+  type=symbols}
+
+% ------------------------
+% Make glossaries
+% ------------------------
+\makeglossaries

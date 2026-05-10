@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage[
+  unicode=true,
+  pdfencoding=auto,
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=red,
+  citecolor=green,
+  filecolor=magenta,
+  breaklinks=true
+]{hyperref}
+\usepackage{bookmark} % quản lý bookmark tốt hơn
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TOC và số cấp section
+\setcounter{secnumdepth}{4}  % đánh số tới subsubsubsection
+\setcounter{tocdepth}{3}     % TOC chỉ show tới subsubsection
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section / Subsection / Subsubsection / Subsubsubsection
+\renewcommand{\thesection}{\arabic{section}.}
+\titleformat{\section}[block]{\large\bfseries}{\thesection}{0.5em}{\large} 
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
+\titleformat{\subsection}[block]{\normalsize\bfseries}{\thesubsection}{0.5em}{\normalsize}
+\titlespacing*{\subsection}{0em}{1em}{0em}
+
+\renewcommand{\thesubsubsection}{\thesubsection\arabic{subsubsection}.}
+\titleformat{\subsubsection}[block]{\normalsize\bfseries}{\thesubsubsection}{0.5em}{\normalsize}
+\titlespacing*{\subsubsection}{0em}{1em}{0pt}
+
+\makeatletter
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\alph{subsubsubsection}.}
+
+
+\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{1em}%
+    {-0.1ex\@plus -1ex \@minus -.2ex}%
+    {0.1ex \@plus .2ex}%
+    {\normalfont\normalsize\bfseries\itshape\raggedright}}
+
+% TOC line cho subsubsubsection (chỉ để tránh warning, không dùng cft)
+\newcommand*\l@subsubsubsection{\@dottedtocline{4}{6em}{2.5em}}
+\newcommand*{\subsubsubsectionmark}[1]{}
+
+% --- hyperref bookmark ---
+\pdfstringdefDisableCommands{%
+  \def\subsubsubsection#1{#1}%
+  \def\\{ }%
+  \def\newline{ }%
+  \def\hline{}%
+  \def\h{}%
+}
+\bookmarksetup{level=4,numbered,open}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TOC spacing (chỉ tới cấp 3)
+\setlength{\cftbeforesecskip}{0.3em}
+\setlength{\cftbeforesubsecskip}{0.2em}
+\setlength{\cftbeforesubsubsecskip}{0.15em}
+
+\renewcommand{\cftsecaftersnum}{\hspace{0.5em}}
+\renewcommand{\cftsubsecaftersnum}{\hspace{0.5em}}
+\renewcommand{\cftsubsubsecaftersnum}{\hspace{0.5em}}
