@@ -1,0 +1,2221 @@
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.6.10)  13 SEP 2026 14:33
+ restricted system commands enabled.
+ file:line:error style messages enabled.
+**"d:/DATN_CODE/Bao Cao/main"
+("d:/DATN_CODE/Bao Cao/main.tex"
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
+Lua module: lualibs 2023-07-13 v2.76 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2023-07-13 v2.76 ConTeXt Lua libraries -- extended 
+collection.
+luaotfload | conf : Root cache directory is "C:/Users/ADMIN/AppData/Local/MiKTeX
+/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2023-12-28.lua" from kpse-res
+olved path "D:/Tools/MikTex/tex/luatex/luaotfload/fontloader-2023-12-28.lua".
+Lua-only attribute luaotfload@noligature = 1
+luaotfload | init : Context OpenType loader version 3.134
+Inserting `luaotfload.node_processor' in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 2
+luaotfload | conf : Root cache directory is "C:/Users/ADMIN/AppData/Local/MiKTeX
+/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' in `find_truetype_file'.
+Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
+Inserting `luaotfload.harf.glyphstream' in `glyph_stream_provider'.
+Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
+Inserting `luaotfload.harf.finalize_hlist' in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' in `glyph_info'.
+Lua-only attribute luaotfload.letterspace_done = 3
+Inserting `luaotfload.aux.set_sscale_dimens' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_font_index' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.patch_cambria_domh' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.fixup_fontdata' in `luaotfload.patch_font_unsafe'.
+Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'.
+Inserting `tracingstacklevels' in `input_level_string'. (D:/Tools/MikTex/tex/la
+tex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(D:/Tools/MikTex/tex/latex/base/size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from C:/Users/ADMIN/AppData/Local/M
+iKTeX/luatex-cache/generic/names/luaotfload-names.luc.gz)
+(D:/Tools/MikTex/tex/latex/base/exscale.sty
+Package: exscale 2025/06/05 v2.1i Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+\big@size=\dimen147
+)
+\c@part=\count273
+\c@section=\count274
+\c@subsection=\count275
+\c@subsubsection=\count276
+\c@paragraph=\count277
+\c@subparagraph=\count278
+\c@figure=\count279
+\c@table=\count280
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(D:/Tools/MikTex/tex/latex/fontspec/fontspec.sty
+(D:/Tools/MikTex/tex/latex/l3packages/xparse/xparse.sty
+(D:/Tools/MikTex/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-12-24 L3 programming layer (loader) 
+
+(D:/Tools/MikTex/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2025-10-09 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count281
+Inserting `l3color' in `luaotfload.parse_color'.))
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+Lua module: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+(D:/Tools/MikTex/tex/latex/fontspec/fontspec-luatex.sty
+Package: fontspec-luatex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaT
+eX
+\l__fontspec_script_int=\count282
+\l__fontspec_language_int=\count283
+\l__fontspec_strnum_int=\count284
+\l__fontspec_tmp_int=\count285
+\l__fontspec_tmpa_int=\count286
+\l__fontspec_tmpb_int=\count287
+\l__fontspec_tmpc_int=\count288
+\l__fontspec_em_int=\count289
+\l__fontspec_emdef_int=\count290
+\l__fontspec_strong_int=\count291
+\l__fontspec_strongdef_int=\count292
+\l__fontspec_tmpa_dim=\dimen149
+\l__fontspec_tmpb_dim=\dimen150
+\l__fontspec_tmpc_dim=\dimen151
+
+(D:/Tools/MikTex/tex/latex/base/fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(D:/Tools/MikTex/tex/latex/fontspec/fontspec.cfg)))
+luaotfload | cache : Lookup cache loaded from C:/Users/ADMIN/AppData/Local/MiKTe
+X/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
+
+Package fontspec Info: 
+(fontspec)             Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"name:Times New
+(fontspec)             Roman:mode=node;script=latn;language=dflt;+tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"name:Times
+(fontspec)             New
+(fontspec)             Roman:mode=node;script=latn;language=dflt;+tlig;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"name:Times New
+(fontspec)             Roman/B:mode=node;script=latn;language=dflt;+tlig;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"name:Times New
+(fontspec)             Roman/B:mode=node;script=latn;language=dflt;+tlig;+smcp;
+"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"name:Times New
+(fontspec)             Roman/I:mode=node;script=latn;language=dflt;+tlig;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"name:Times New
+(fontspec)             Roman/I:mode=node;script=latn;language=dflt;+tlig;+smcp;
+"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"name:Times
+(fontspec)             New
+(fontspec)             Roman/BI:mode=node;script=latn;language=dflt;+tlig;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"name:Times New
+(fontspec)             Roman/BI:mode=node;script=latn;language=dflt;+tlig;+smcp
+;"
+
+
+(D:/Tools/MikTex/tex/generic/babel/babel.sty
+Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
+TeX and XeLaTeX
+
+(D:/Tools/MikTex/tex/generic/babel/luababel.def
+\bbl@readstream=\read2
+\l@afrikaans=\language2
+Package babel Info: Non-standard hyphenation setup on input line 118.
+\l@ancientgreek=\language3
+\l@armenian=\language4
+\l@assamese=\language5
+\l@basque=\language6
+\l@belarusian=\language7
+\l@bengali=\language8
+\l@bokmal=\language9
+\l@bulgarian=\language10
+\l@catalan=\language11
+\l@churchslavonic=\language12
+\l@classiclatin=\language13
+\l@coptic=\language14
+\l@croatian=\language15
+\l@czech=\language16
+\l@danish=\language17
+\l@dutch=\language18
+\l@esperanto=\language19
+\l@estonian=\language20
+\l@ethiopic=\language21
+\l@finnish=\language22
+\l@french=\language23
+\l@friulan=\language24
+\l@galician=\language25
+\l@georgian=\language26
+\l@german=\language27
+\l@greek=\language28
+\l@gujarati=\language29
+\l@hindi=\language30
+\l@hungarian=\language31
+\l@icelandic=\language32
+\l@indonesian=\language33
+\l@interlingua=\language34
+\l@irish=\language35
+\l@italian=\language36
+\l@kannada=\language37
+\l@kurmanji=\language38
+\l@latin=\language39
+\l@latvian=\language40
+\l@lithuanian=\language41
+\l@liturgicallatin=\language42
+\l@macedonian=\language43
+\l@malayalam=\language44
+\l@marathi=\language45
+\l@mongolian=\language46
+\l@mongolianlmc=\language47
+\l@monogreek=\language48
+\l@ngerman=\language49
+\l@nynorsk=\language50
+\l@occitan=\language51
+\l@oriya=\language52
+\l@pali=\language53
+\l@panjabi=\language54
+\l@piedmontese=\language55
+\l@polish=\language56
+\l@portuguese=\language57
+\l@romanian=\language58
+\l@romansh=\language59
+\l@russian=\language60
+\l@sanskrit=\language61
+\l@serbian=\language62
+\l@serbianc=\language63
+\l@slovak=\language64
+\l@slovenian=\language65
+\l@spanish=\language66
+\l@swedish=\language67
+\l@swissgerman=\language68
+\l@tamil=\language69
+\l@telugu=\language70
+\l@thai=\language71
+\l@turkish=\language72
+\l@turkmen=\language73
+\l@ukenglish=\language74
+\l@ukrainian=\language75
+\l@uppersorbian=\language76
+\l@usenglishmax=\language77
+\l@welsh=\language78
+\babelcatcodetablenum=\catcodetable14
+\bbl@pattcodes=\catcodetable15
+)
+\babel@savecnt=\count293
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2068.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2070.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2072.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2073.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2074.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2076.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2101.
+\U@D=\dimen152
+\l@unhyphenated=\language79
+
+(D:/Tools/MikTex/tex/generic/babel/luababel.def
+\bbl@attr@locale=\attribute4
+)
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4196.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(D:/Tools/MikTex/tex/latex/arabi/bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(D:/Tools/MikTex/tex/generic/babel/locale/vi/babel-vietnamese.tex)
+Package babel Info: Importing font and identification data for vietnamese
+(babel)             from babel-vi.ini. Reported on input line 4320.
+
+(D:/Tools/MikTex/tex/latex/babel-vietnamese/vietnamese.ldf
+Language: vietnamese 
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Vietnamese' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 36.
+
+Package babel Info: Hyphen rules for 'vietnamese' set to \l@english
+(babel)             (\language0). Reported on input line 37.
+Package babel Info: Hyphen rules for 'vietnam' set to \l@english
+(babel)             (\language0). Reported on input line 38.
+Package babel Info: Making " an active character on input line 147.
+)) (D:/Tools/MikTex/tex/latex/psnfss/courier.sty
+Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
+)
+(D:/Tools/MikTex/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(D:/Tools/MikTex/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(D:/Tools/MikTex/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen153
+))
+(D:/Tools/MikTex/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen154
+)
+(D:/Tools/MikTex/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count294
+LaTeX Info: Redefining \frac on input line 235.
+\uproot@=\count295
+\leftroot@=\count296
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count297
+\DOTSCASE@=\count298
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen155
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count299
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count300
+\dotsspace@=\muskip17
+\c@parentequation=\count301
+\dspbrk@lvl=\count302
+\tag@help=\toks18
+\row@=\count303
+\column@=\count304
+\maxfields@=\count305
+\andhelp@=\toks19
+\eqnshift@=\dimen156
+\alignsep@=\dimen157
+\tagshift@=\dimen158
+\tagwidth@=\dimen159
+\totwidth@=\dimen160
+\lineht@=\dimen161
+\@envbody=\toks20
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+)
+(D:/Tools/MikTex/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(D:/Tools/MikTex/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (./sty/env.sty
+(D:/Tools/MikTex/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+
+(D:/Tools/MikTex/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(D:/Tools/MikTex/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(D:/Tools/MikTex/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count306
+\Gm@cntv=\count307
+\c@Gm@tempcnt=\count308
+\Gm@bindingoffset=\dimen162
+\Gm@wd@mp=\dimen163
+\Gm@odd@mp=\dimen164
+\Gm@even@mp=\dimen165
+\Gm@layoutwidth=\dimen166
+\Gm@layoutheight=\dimen167
+\Gm@layouthoffset=\dimen168
+\Gm@layoutvoffset=\dimen169
+\Gm@dimlist=\toks23
+
+(D:/Tools/MikTex/tex/latex/geometry/geometry.cfg))
+(D:/Tools/MikTex/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(D:/Tools/MikTex/tex/latex/koma-script/scrextend.sty
+Package: scrextend 2026/02/02 v3.49.2 KOMA-Script package (extend other classes
+ with features of KOMA-Script classes)
+
+(D:/Tools/MikTex/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-dependent
+ basics and keyval usage)
+
+(D:/Tools/MikTex/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-independen
+t basics and keyval usage)
+
+(D:/Tools/MikTex/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2026/02/02 v3.49.2 KOMA-Script package (file load hooks)
+
+(D:/Tools/MikTex/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2026/02/02 v3.49.2 KOMA-Script package (using LaTeX hook
+s)
+
+(D:/Tools/MikTex/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2026/02/02 v3.49.2 KOMA-Script package (logo)
+)))
+Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 370.
+)))
+(D:/Tools/MikTex/tex/latex/tools/indentfirst.sty
+Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
+)
+(D:/Tools/MikTex/tex/latex/chngcntr/chngcntr.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
+)
+(D:/Tools/MikTex/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(D:/Tools/MikTex/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(D:/Tools/MikTex/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(D:/Tools/MikTex/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 106.
+
+(D:/Tools/MikTex/tex/latex/graphics-def/luatex.def
+File: luatex.def 2025/09/29 v1.2f Graphics/color driver for luatex
+))
+\Gin@req@height=\dimen170
+\Gin@req@width=\dimen171
+)
+(D:/Tools/MikTex/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+
+(D:/Tools/MikTex/tex/latex/tools/array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen172
+\ar@mcellbox=\box55
+\extrarowheight=\dimen173
+\NC@list=\toks24
+\extratabsurround=\skip54
+\backup@length=\skip55
+\ar@cellbox=\box56
+)
+\TX@col@width=\dimen174
+\TX@old@table=\dimen175
+\TX@old@col=\dimen176
+\TX@target=\dimen177
+\TX@delta=\dimen178
+\TX@cols=\count309
+\TX@ftn=\toks25
+)
+(D:/Tools/MikTex/tex/latex/tools/longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip56
+\LTright=\skip57
+\LTpre=\skip58
+\LTpost=\skip59
+\LTchunksize=\count310
+\LTcapwidth=\dimen179
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@gbox=\box61
+\LT@cols=\count311
+\LT@rows=\count312
+\c@LT@tables=\count313
+\c@LT@chunks=\count314
+\LT@p@ftn=\toks26
+)
+(D:/Tools/MikTex/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen180
+\c@nlinenum=\count315
+\TeXr@lab=\toks27
+)
+(D:/Tools/MikTex/tex/latex/multirow/multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip60
+\multirow@cntb=\count316
+\multirow@dima=\skip61
+\bigstrutjot=\dimen181
+)
+(D:/Tools/MikTex/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count317
+\float@exts=\toks28
+\float@box=\box62
+\@float@everytoks=\toks29
+\@floatcapt=\box63
+)
+(D:/Tools/MikTex/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+
+(D:/Tools/MikTex/tex/latex/graphics/color.sty
+Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
+
+(D:/Tools/MikTex/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: luatex.def on input line 149.
+
+(D:/Tools/MikTex/tex/latex/graphics/mathcolor.ltx))
+\everycr=\toks30
+\minrowclearance=\skip62
+\rownum=\count318
+)
+(D:/Tools/MikTex/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(D:/Tools/MikTex/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 274.
+LaTeX Info: Redefining \color on input line 762.
+
+(D:/Tools/MikTex/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(D:/Tools/MikTex/tex/latex/pgf/frontendlayer/tikz.sty
+(D:/Tools/MikTex/tex/latex/pgf/basiclayer/pgf.sty
+(D:/Tools/MikTex/tex/latex/pgf/utilities/pgfrcs.sty
+(D:/Tools/MikTex/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks31
+\pgfutil@tempdima=\dimen182
+\pgfutil@tempdimb=\dimen183
+)
+(D:/Tools/MikTex/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box64
+)
+(D:/Tools/MikTex/tex/generic/pgf/utilities/pgfrcs.code.tex
+(D:/Tools/MikTex/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+
+(D:/Tools/MikTex/tex/latex/pgf/basiclayer/pgfcore.sty
+(D:/Tools/MikTex/tex/latex/pgf/systemlayer/pgfsys.sty
+(D:/Tools/MikTex/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+
+(D:/Tools/MikTex/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks32
+\pgfkeys@temptoks=\toks33
+
+(D:/Tools/MikTex/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks34
+))
+\pgf@x=\dimen184
+\pgf@y=\dimen185
+\pgf@xa=\dimen186
+\pgf@ya=\dimen187
+\pgf@xb=\dimen188
+\pgf@yb=\dimen189
+\pgf@xc=\dimen190
+\pgf@yc=\dimen191
+\pgf@xd=\dimen192
+\pgf@yd=\dimen193
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count319
+\c@pgf@countb=\count320
+\c@pgf@countc=\count321
+\c@pgf@countd=\count322
+\t@pgf@toka=\toks35
+\t@pgf@tokb=\toks36
+\t@pgf@tokc=\toks37
+\pgf@sys@id@count=\count323
+
+(D:/Tools/MikTex/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-luatex.def
+
+(D:/Tools/MikTex/tex/generic/pgf/systemlayer/pgfsys-luatex.def
+File: pgfsys-luatex.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(D:/Tools/MikTex/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(D:/Tools/MikTex/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count324
+\pgfsyssoftpath@bigbuffer@items=\count325
+)
+(D:/Tools/MikTex/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfmath.code.tex
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfmathutil.code.tex)
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen194
+\pgfmath@count=\count326
+\pgfmath@box=\box65
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
+)
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex)
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.
+tex) (D:/Tools/MikTex/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count327
+))
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfint.code.tex)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen195
+\pgf@picmaxx=\dimen196
+\pgf@picminy=\dimen197
+\pgf@picmaxy=\dimen198
+\pgf@pathminx=\dimen199
+\pgf@pathmaxx=\dimen256
+\pgf@pathminy=\dimen257
+\pgf@pathmaxy=\dimen258
+\pgf@xx=\dimen259
+\pgf@xy=\dimen260
+\pgf@yx=\dimen261
+\pgf@yy=\dimen262
+\pgf@zx=\dimen263
+\pgf@zy=\dimen264
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen265
+\pgf@path@lasty=\dimen266
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen267
+\pgf@shorten@start@additional=\dimen268
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box66
+\pgf@hbox=\box67
+\pgf@layerbox@main=\box68
+\pgf@picture@serial@count=\count328
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen269
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen270
+\pgf@pt@y=\dimen271
+\pgf@pt@temp=\dimen272
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen273
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen274
+\pgf@sys@shading@range@num=\count329
+\pgf@shadingcount=\count330
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box69
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(D:/Tools/MikTex/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(D:/Tools/MikTex/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box70
+)
+(D:/Tools/MikTex/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(D:/Tools/MikTex/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen275
+\pgf@nodesepend=\dimen276
+)
+(D:/Tools/MikTex/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+))
+(D:/Tools/MikTex/tex/latex/pgf/utilities/pgffor.sty
+(D:/Tools/MikTex/tex/latex/pgf/utilities/pgfkeys.sty
+(D:/Tools/MikTex/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(D:/Tools/MikTex/tex/latex/pgf/math/pgfmath.sty
+(D:/Tools/MikTex/tex/generic/pgf/math/pgfmath.code.tex))
+(D:/Tools/MikTex/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen277
+\pgffor@skip=\dimen278
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
+))
+(D:/Tools/MikTex/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+
+(D:/Tools/MikTex/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count331
+\pgfplotmarksize=\dimen279
+)
+\tikz@lastx=\dimen280
+\tikz@lasty=\dimen281
+\tikz@lastxsaved=\dimen282
+\tikz@lastysaved=\dimen283
+\tikz@lastmovetox=\dimen284
+\tikz@lastmovetoy=\dimen285
+\tikzleveldistance=\dimen286
+\tikzsiblingdistance=\dimen287
+\tikz@figbox=\box71
+\tikz@figbox@bg=\box72
+\tikz@tempbox=\box73
+\tikz@tempbox@bg=\box74
+\tikztreelevel=\count332
+\tikznumberofchildren=\count333
+\tikznumberofcurrentchild=\count334
+\tikz@fig@count=\count335
+
+(D:/Tools/MikTex/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count336
+\pgfmatrixcurrentcolumn=\count337
+\pgf@matrix@numberofcolumns=\count338
+)
+\tikz@expandcount=\count339
+
+(D:/Tools/MikTex/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopath
+s.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (D:/Tools/MikTex/tex/latex/tikz-3dplot/tikz-3dplot.sty
+(D:/Tools/MikTex/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(D:/Tools/MikTex/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.c
+ode.tex
+File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(D:/Tools/MikTex/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary3d.cod
+e.tex
+File: tikzlibrary3d.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(D:/Tools/MikTex/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows
+.code.tex
+File: tikzlibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (D:/Tools/MikTex/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\arrowsize=\dimen288
+))) (D:/Tools/MikTex/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(D:/Tools/MikTex/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(D:/Tools/MikTex/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(D:/Tools/MikTex/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))
+(D:/Tools/MikTex/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2026/03/30 v0.6h Insert pages of external PDF documents (AM)
+
+(D:/Tools/MikTex/tex/latex/tools/calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count340
+\calc@Bcount=\count341
+\calc@Adimen=\dimen289
+\calc@Bdimen=\dimen290
+\calc@Askip=\skip63
+\calc@Bskip=\skip64
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count342
+\calc@Cskip=\skip65
+)
+(D:/Tools/MikTex/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
+\ESO@tempdima=\dimen291
+\ESO@tempdimb=\dimen292
+)
+(D:/Tools/MikTex/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count343
+)
+\AM@pagewidth=\dimen293
+\AM@pageheight=\dimen294
+\AM@fboxrule=\dimen295
+
+(D:/Tools/MikTex/tex/latex/pdfpages/ppluatex.def
+File: ppluatex.def 2026/03/30 v0.6h Pdfpages driver for LuaTeX (AM)
+)
+\pdfpages@includegraphics@status=\count344
+\AM@pagebox=\box75
+\AM@global@opts=\toks43
+\AM@pagecnt=\count345
+\AM@toc@title=\toks44
+\AM@lof@heading=\toks45
+\c@AM@survey=\count346
+\AM@templatesizebox=\box76
+)
+(D:/Tools/MikTex/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(D:/Tools/MikTex/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip66
+\RaggedLeftLeftskip=\skip67
+\RaggedRightLeftskip=\skip68
+\CenteringRightskip=\skip69
+\RaggedLeftRightskip=\skip70
+\RaggedRightRightskip=\skip71
+\CenteringParfillskip=\skip72
+\RaggedLeftParfillskip=\skip73
+\RaggedRightParfillskip=\skip74
+\JustifyingParfillskip=\skip75
+\CenteringParindent=\skip76
+\RaggedLeftParindent=\skip77
+\RaggedRightParindent=\skip78
+\JustifyingParindent=\skip79
+)
+(D:/Tools/MikTex/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(D:/Tools/MikTex/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen296
+\captionmargin=\dimen297
+\caption@leftmargin=\dimen298
+\caption@rightmargin=\dimen299
+\caption@width=\dimen300
+\caption@indent=\dimen301
+\caption@parindent=\dimen302
+\caption@hangindent=\dimen303
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count347
+\c@continuedfloat=\count348
+Package caption Info: float package is loaded.
+Package caption Info: longtable package is loaded.
+
+(D:/Tools/MikTex/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: scrextend package is loaded.
+\caption@addmargin@hsize=\dimen304
+\caption@addmargin@linewidth=\dimen305
+)
+(D:/Tools/MikTex/tex/latex/hyphenat/hyphenat.sty
+Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
+\langwohyphens=\language80
+LaTeX Info: Redefining \_ on input line 43.
+)
+(D:/Tools/MikTex/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(D:/Tools/MikTex/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+
+(D:/Tools/MikTex/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+(D:/Tools/MikTex/tex/latex/ncctools/extdash.sty
+Package: extdash 2018/06/24 v1.3 Extended Dash Package (NCC)
+)
+(D:/Tools/MikTex/tex/latex/graphics/rotating.sty
+Package: rotating 2025/01/14 v2.16e rotated objects in LaTeX
+\c@r@tfl@t=\count349
+\rotFPtop=\skip80
+\rotFPbot=\skip81
+\rot@float@box=\box77
+\rot@mess@toks=\toks46
+)
+(D:/Tools/MikTex/tex/latex/xurl/xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+)
+(D:/Tools/MikTex/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip82
+\enit@outerparindent=\dimen306
+\enit@toks=\toks47
+\enit@inbox=\box78
+\enit@count@id=\count350
+\enitdp@description=\count351
+)) (./sty/Fancyhdr.sty
+(D:/Tools/MikTex/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip83
+\f@nch@offset@elh=\skip84
+\f@nch@offset@erh=\skip85
+\f@nch@offset@olh=\skip86
+\f@nch@offset@orh=\skip87
+\f@nch@offset@elf=\skip88
+\f@nch@offset@erf=\skip89
+\f@nch@offset@olf=\skip90
+\f@nch@offset@orf=\skip91
+\f@nch@height=\skip92
+\f@nch@footalignment=\skip93
+\f@nch@widthL=\skip94
+\f@nch@widthC=\skip95
+\f@nch@widthR=\skip96
+\@temptokenb=\toks48
+)
+(D:/Tools/MikTex/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2025/08/14 v2.1h lastpage: 2.09 or 2e? (HMM)
+
+(D:/Tools/MikTex/tex/latex/lastpage/lastpage2e.sty
+Package: lastpage2e 2025/08/14 v2.1h Decide which 2e lastpage version to use (H
+MM)
+
+(D:/Tools/MikTex/tex/latex/lastpage/lastpagemodern.sty
+Package: lastpagemodern 2025-08-14 v2.1h Refers to last page's name (HMM; JPG)
+\c@lastpagecount=\count352
+) 
+)) (D:/Tools/MikTex/tex/latex/graphics/epsfig.sty
+Package: epsfig 2024/01/14 v1.7b (e)psfig emulation (SPQR)
+\epsfxsize=\dimen307
+\epsfysize=\dimen308
+)) (./sty/Titlesec.sty
+(D:/Tools/MikTex/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box79
+\beforetitleunit=\skip97
+\aftertitleunit=\skip98
+\ttl@plus=\dimen309
+\ttl@minus=\dimen310
+\ttl@toksa=\toks49
+\titlewidth=\dimen311
+\titlewidthlast=\dimen312
+\titlewidthfirst=\dimen313
+)
+(D:/Tools/MikTex/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 51.
+\cftparskip=\skip99
+\cftbeforetoctitleskip=\skip100
+\cftaftertoctitleskip=\skip101
+\cftbeforepartskip=\skip102
+\cftpartnumwidth=\skip103
+\cftpartindent=\skip104
+\cftbeforesecskip=\skip105
+\cftsecindent=\skip106
+\cftsecnumwidth=\skip107
+\cftbeforesubsecskip=\skip108
+\cftsubsecindent=\skip109
+\cftsubsecnumwidth=\skip110
+\cftbeforesubsubsecskip=\skip111
+\cftsubsubsecindent=\skip112
+\cftsubsubsecnumwidth=\skip113
+\cftbeforeparaskip=\skip114
+\cftparaindent=\skip115
+\cftparanumwidth=\skip116
+\cftbeforesubparaskip=\skip117
+\cftsubparaindent=\skip118
+\cftsubparanumwidth=\skip119
+\cftbeforeloftitleskip=\skip120
+\cftafterloftitleskip=\skip121
+\cftbeforefigskip=\skip122
+\cftfigindent=\skip123
+\cftfignumwidth=\skip124
+\c@lofdepth=\count353
+\c@lotdepth=\count354
+\cftbeforelottitleskip=\skip125
+\cftafterlottitleskip=\skip126
+\cftbeforetabskip=\skip127
+\cfttabindent=\skip128
+\cfttabnumwidth=\skip129
+)
+(D:/Tools/MikTex/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+
+(D:/Tools/MikTex/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(D:/Tools/MikTex/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(D:/Tools/MikTex/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(D:/Tools/MikTex/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks50
+))
+(D:/Tools/MikTex/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(D:/Tools/MikTex/tex/latex/hyperref/nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+
+(D:/Tools/MikTex/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(D:/Tools/MikTex/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(D:/Tools/MikTex/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count355
+)
+(D:/Tools/MikTex/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen314
+\Hy@linkcounter=\count356
+\Hy@pagecounter=\count357
+
+(D:/Tools/MikTex/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+)
+(D:/Tools/MikTex/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count358
+
+(D:/Tools/MikTex/tex/latex/hyperref/puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4066.
+Package hyperref Info: Option `unicode' set `true' on input line 4066.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4066.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4066.
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4462.
+\c@Hy@tempcnt=\count359
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen315
+
+(D:/Tools/MikTex/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(D:/Tools/MikTex/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count360
+\Field@Width=\dimen316
+\Fld@charsize=\dimen317
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring ON on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count361
+\c@Item=\count362
+\c@Hfootnote=\count363
+)
+Package hyperref Info: Driver (autodetected): hluatex.
+
+(D:/Tools/MikTex/tex/latex/hyperref/hluatex.def
+File: hluatex.def 2025-07-12 v7.01o Hyperref driver for luaTeX
+\Fld@listcount=\count364
+\c@bookmark@seq@number=\count365
+
+(D:/Tools/MikTex/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(D:/Tools/MikTex/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip130
+)
+(D:/Tools/MikTex/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+
+(D:/Tools/MikTex/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
+)
+\BKM@id=\count366
+))
+\c@subsubsubsection=\count367
+)
+
+LaTeX Warning: Unused global option(s):
+    [15pt].
+
+(./main.aux (./tex/cover.aux)
+Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
+(babel)             Reported on input line 11.
+ (./tex/commitment.aux) (./tex/thanks.aux)
+(./tex/abstract.aux) (./tex/main/1/_index.aux) (./tex/main/2/_index.aux)
+(./tex/main/3/_index.aux) (./tex/main/4/_index.aux) (./tex/main/5/_index.aux)
+(./tex/main/6/_index.aux) (./tex/main/7/_index.aux) (./tex/main/8/_index.aux)
+(./tex/main/9/_index.aux) (./tex/main/10/_index.aux) (./tex/main/11/_index.aux) (./tex/main/12/_index.aux) (./tex/ref.aux) (./tex/appendix/_index.aux))
+\openout1 = main.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 34.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 34.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 34.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 34.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 34.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 34.
+LaTeX Font Info:    Redeclaring math accent \check on input line 34.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 34.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 34.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 34.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 34.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 34.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 3
+4.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 34.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 
+34.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on 
+input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line
+ 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 
+34.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 34.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on 
+input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input lin
+e 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/pcr/b/n on input line 34.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+*geometry* verbose mode - [ preamble ] result:
+* driver: luatex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 455.24411pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 702.78308pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-52.36449pt
+* \headheight=40.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=11.69997pt plus 5.19942pt minus 2.60054pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(D:/Tools/MikTex/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count368
+\scratchdimen=\dimen318
+\scratchbox=\box80
+\nofMPsegments=\count369
+\nofMParguments=\count370
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count371
+\MPscratchDim=\dimen319
+\MPnumerator=\count372
+\makeMPintoPDFobject=\count373
+\everyMPtoPDFconversion=\toks52
+) (D:/Tools/MikTex/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(D:/Tools/MikTex/tex/latex/00miktex/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: rotating package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 34.
+
+\openout2 = tex/cover.aux
+ (./tex/cover.tex
+<bachkhoa_logo.png, id=6, 431.4519pt x 431.4519pt>
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 26.
+(luatex.def)             Requested size: 86.28885pt x 86.28885pt.
+LaTeX Font Info:    Calculating math sizes for size <15> on input line 31.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <15> not available
+(Font)              size <14.4> substituted on input line 31.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 31.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.5> not available
+(Font)              size <7> substituted on input line 31.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <15> not available
+(Font)              size <14.4> substituted on input line 31.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 31.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 31.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
+
+(D:/Tools/MikTex/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
+
+
+(D:/Tools/MikTex/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <15> not available
+(Font)              size <14.4> substituted on input line 31.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.49995> not available
+(Font)              size <10.95> substituted on input line 31.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 31.
+
+LaTeX Font Info:    Calculating math sizes for size <19> on input line 45.
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <19> not available
+(Font)              size <17.28> substituted on input line 45.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13.29994> not available
+(Font)              size <14.4> substituted on input line 45.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <9.5> not available
+(Font)              size <9> substituted on input line 45.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <19> not available
+(Font)              size <17.28> substituted on input line 45.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13.29994> not available
+(Font)              size <14.4> substituted on input line 45.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <9.5> not available
+(Font)              size <9> substituted on input line 45.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <19> not available
+(Font)              size <17.28> substituted on input line 45.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13.29994> not available
+(Font)              size <14.4> substituted on input line 45.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <9.5> not available
+(Font)              size <9> substituted on input line 45.
+
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 66.
+
+Overfull \hbox (52.33328pt too wide) in paragraph at lines 65--73
+[]  [] 
+ []
+
+[1
+
+
+{C:/Users/ADMIN/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}<./bachkhoa_log
+o.png>])
+\openout2 = tex/commitment.aux
+ (./tex/commitment.tex)
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 39.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13> not available
+(Font)              size <12> substituted on input line 39.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.5> not available
+(Font)              size <6> substituted on input line 39.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 39.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.5> not available
+(Font)              size <6> substituted on input line 39.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13> not available
+(Font)              size <12> substituted on input line 39.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.5> not available
+(Font)              size <6> substituted on input line 39.
+
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 39.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+LaTeX Font Info:    Trying to load font information for TU+pcr on input line 39
+.
+LaTeX Font Info:    No file TUpcr.fd. on input line 39.
+
+LaTeX Font Warning: Font shape `TU/pcr/b/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 39.
+
+
+LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 39.
+
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
+[1
+
+
+
+
+
+
+
+]
+\openout2 = tex/thanks.aux
+ (./tex/thanks.tex)
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 41.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [2
+
+
+
+
+
+
+
+]
+\openout2 = tex/abstract.aux
+ (./tex/abstract.tex
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 19.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [3
+
+
+
+
+
+
+
+])
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 43.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [4
+
+
+] (./main.toc [5
+
+
+
+
+]
+Overfull \hbox (0.65004pt too wide) detected at line 49
+\TU/TimesNewRoman(0)/m/n/13 4.2.10.  
+ []
+
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 69.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+[6])
+\tf@toc=\write4
+
+\openout4 = main.toc
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 54.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [7] (./main.lof)
+\tf@lof=\write5
+
+\openout5 = main.lof
+ [8
+
+
+] (./main.lot)
+\tf@lot=\write6
+
+\openout6 = main.lot
+ [9
+
+
+]
+\openout2 = tex/main/1/_index.aux
+ (./tex/main/1/_index.tex)
+\openout2 = tex/main/2/_index.aux
+
+(./tex/main/2/_index.tex
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 37.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [10
+
+
+
+
+
+
+]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 79.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [11])
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 79.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [12]
+\openout2 = tex/main/3/_index.aux
+ (./tex/main/3/_index.tex
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 36.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [13
+
+
+
+]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 70.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [14]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 99.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+
+[15])
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 80.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [16]
+\openout2 = tex/main/4/_index.aux
+ (./tex/main/4/_index.tex
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 47.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [17
+
+
+
+]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 90.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [18]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 148.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [19]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 206.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [20]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 251.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [21])
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 81.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [22]
+\openout2 = tex/main/5/_index.aux
+
+(./tex/main/5/_index.tex
+<img/1.png, id=380, 914.41624pt x 1195.46625pt>
+File: img/1.png Graphic file (type png)
+<use img/1.png>
+Package luatex.def Info: img/1.png  used on input line 16.
+(luatex.def)             Requested size: 455.24411pt x 595.15964pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 19.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [23
+
+
+
+]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 20.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [24<./img/1.png>]
+./tex/main/5/_index.tex:99: Infinite glue shrinkage found in box being split
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 99.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+
+[25]
+./tex/main/5/_index.tex:155: Infinite glue shrinkage found in box being split
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 155.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+
+[26]
+./tex/main/5/_index.tex:211: Infinite glue shrinkage found in box being split
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 211.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+
+[27]
+./tex/main/5/_index.tex:267: Infinite glue shrinkage found in box being split
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 267.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+
+[28]
+./tex/main/5/_index.tex:324: Infinite glue shrinkage found in box being split
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 324.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+
+[29]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 325.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [30]
+./tex/main/5/_index.tex:379: Infinite glue shrinkage found in box being split
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 379.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+
+[31]
+./tex/main/5/_index.tex:436: Infinite glue shrinkage found in box being split
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 436.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+
+[32]
+./tex/main/5/_index.tex:491: Infinite glue shrinkage found in box being split
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 491.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+
+[33]
+./tex/main/5/_index.tex:544: Infinite glue shrinkage found in box being split
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 544.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+
+[34]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 547.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [35]
+<img/activity/Activity_Danh_Gia.drawio.png, id=461, 685.56125pt x 785.93625pt>
+File: img/activity/Activity_Danh_Gia.drawio.png Graphic file (type png)
+<use img/activity/Activity_Danh_Gia.drawio.png>
+Package luatex.def Info: img/activity/Activity_Danh_Gia.drawio.png  used on inp
+ut line 553.
+(luatex.def)             Requested size: 409.71692pt x 469.71855pt.
+<img/activity/Activity_Diagram_Login_Logout.drawio.png, id=462, 684.5575pt x 80
+5.0075pt>
+File: img/activity/Activity_Diagram_Login_Logout.drawio.png Graphic file (type 
+png)
+<use img/activity/Activity_Diagram_Login_Logout.drawio.png>
+Package luatex.def Info: img/activity/Activity_Diagram_Login_Logout.drawio.png 
+ used on input line 561.
+(luatex.def)             Requested size: 409.71692pt x 481.81674pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 564.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [36<./img/activity/Activity_Danh_Gia.drawio.png>]
+<img/activity/Activity_Find_Restaurant.drawio.png, id=470, 483.8075pt x 1005.75
+75pt>
+File: img/activity/Activity_Find_Restaurant.drawio.png Graphic file (type png)
+<use img/activity/Activity_Find_Restaurant.drawio.png>
+Package luatex.def Info: img/activity/Activity_Find_Restaurant.drawio.png  used
+ on input line 569.
+(luatex.def)             Requested size: 309.56265pt x 643.55984pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 572.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [37<./img/activity/Activity_Diagram_Login_Logout.drawio.png>]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 574.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [38<./img/activity/Activity_Find_Restaurant.drawio.png>]
+<img/activity/Activity_Find_Route.png, id=485, 484.81125pt x 1046.91125pt>
+File: img/activity/Activity_Find_Route.png Graphic file (type png)
+<use img/activity/Activity_Find_Route.png>
+Package luatex.def Info: img/activity/Activity_Find_Route.png  used on input li
+ne 577.
+(luatex.def)             Requested size: 259.49246pt x 560.37155pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 582.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [39<./img/activity/Activity_Find_Route.png>]
+<img/activity/Activity_User_Profile_Edit.drawio.png, id=493, 523.9575pt x 1005.
+7575pt>
+File: img/activity/Activity_User_Profile_Edit.drawio.png Graphic file (type png
+)
+<use img/activity/Activity_User_Profile_Edit.drawio.png>
+Package luatex.def Info: img/activity/Activity_User_Profile_Edit.drawio.png  us
+ed on input line 585.
+(luatex.def)             Requested size: 259.49246pt x 498.12007pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 588.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [40<./img/activity/Activity_User_Profile_Edit.drawio.png>]
+<img/activity/Activity_Quan_Ly_Du_Lieu_Quan_An.drawio.png, id=502, 523.9575pt x
+ 1168.365pt>
+File: img/activity/Activity_Quan_Ly_Du_Lieu_Quan_An.drawio.png Graphic file (ty
+pe png)
+<use img/activity/Activity_Quan_Ly_Du_Lieu_Quan_An.drawio.png>
+Package luatex.def Info: img/activity/Activity_Quan_Ly_Du_Lieu_Quan_An.drawio.p
+ng  used on input line 593.
+(luatex.def)             Requested size: 259.49246pt x 578.65445pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 598.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [41<./img/activity/Activity_Quan_Ly_Du_Lieu_Quan_An.drawio.png>]
+File: img/activity/Activity_Find_Restaurant.drawio.png Graphic file (type png)
+<use img/activity/Activity_Find_Restaurant.drawio.png>
+Package luatex.def Info: img/activity/Activity_Find_Restaurant.drawio.png  used
+ on input line 601.
+(luatex.def)             Requested size: 259.49246pt x 539.46382pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 608.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [42]
+<img/sequence/Sequence_Account_Management.drawio.png, id=516, 874.26625pt x 545
+.03625pt>
+File: img/sequence/Sequence_Account_Management.drawio.png Graphic file (type pn
+g)
+<use img/sequence/Sequence_Account_Management.drawio.png>
+Package luatex.def Info: img/sequence/Sequence_Account_Management.drawio.png  u
+sed on input line 616.
+(luatex.def)             Requested size: 455.24411pt x 283.81136pt.
+<img/sequence/Sequence_Create_Foot_Route.drawio.png, id=517, 753.81625pt x 434.
+62375pt>
+File: img/sequence/Sequence_Create_Foot_Route.drawio.png Graphic file (type png
+)
+<use img/sequence/Sequence_Create_Foot_Route.drawio.png>
+Package luatex.def Info: img/sequence/Sequence_Create_Foot_Route.drawio.png  us
+ed on input line 624.
+(luatex.def)             Requested size: 455.24411pt x 262.474pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 627.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [43<./img/sequence/Sequence_Account_Management.drawio.png>]
+<img/sequence/Sequence_Danh_Gia.drawio.png, id=525, 798.985pt x 515.9275pt>
+File: img/sequence/Sequence_Danh_Gia.drawio.png Graphic file (type png)
+<use img/sequence/Sequence_Danh_Gia.drawio.png>
+Package luatex.def Info: img/sequence/Sequence_Danh_Gia.drawio.png  used on inp
+ut line 632.
+(luatex.def)             Requested size: 418.82375pt x 270.44876pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 637.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [44<./img/sequence/Sequence_Create_Foot_Route.drawio.png><./img/sequence/Sequen
+ce_Danh_Gia.drawio.png>]
+<img/sequence/Sequence_Login.drawio.png, id=534, 753.81625pt x 414.54875pt>
+File: img/sequence/Sequence_Login.drawio.png Graphic file (type png)
+<use img/sequence/Sequence_Login.drawio.png>
+Package luatex.def Info: img/sequence/Sequence_Login.drawio.png  used on input 
+line 640.
+(luatex.def)             Requested size: 455.24411pt x 250.3505pt.
+<img/sequence/Sequence_Restaurant_Data_Management.drawio.png, id=535, 914.41624
+pt x 384.43625pt>
+File: img/sequence/Sequence_Restaurant_Data_Management.drawio.png Graphic file 
+(type png)
+<use img/sequence/Sequence_Restaurant_Data_Management.drawio.png>
+Package luatex.def Info: img/sequence/Sequence_Restaurant_Data_Management.drawi
+o.png  used on input line 648.
+(luatex.def)             Requested size: 455.24411pt x 191.39053pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 653.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [45<./img/sequence/Sequence_Login.drawio.png><./img/sequence/Sequence_Restauran
+t_Data_Management.drawio.png>]
+<img/sequence/Sequence_Search_Restaurant.drawio.png, id=544, 793.96625pt x 394.
+47375pt>
+File: img/sequence/Sequence_Search_Restaurant.drawio.png Graphic file (type png
+)
+<use img/sequence/Sequence_Search_Restaurant.drawio.png>
+Package luatex.def Info: img/sequence/Sequence_Search_Restaurant.drawio.png  us
+ed on input line 656.
+(luatex.def)             Requested size: 455.24411pt x 226.18863pt.
+<img/sequence/Sequence_User_Profile_Edit.drawio.png, id=545, 748.7975pt x 795.9
+7375pt>
+File: img/sequence/Sequence_User_Profile_Edit.drawio.png Graphic file (type png
+)
+<use img/sequence/Sequence_User_Profile_Edit.drawio.png>
+Package luatex.def Info: img/sequence/Sequence_User_Profile_Edit.drawio.png  us
+ed on input line 665.
+(luatex.def)             Requested size: 455.24411pt x 483.92793pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 668.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+
+[46<./img/sequence/Sequence_Search_Restaurant.drawio.png>]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 676.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [47<./img/sequence/Sequence_User_Profile_Edit.drawio.png>]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 684.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [48]
+<img/4.png, id=566, 5618.9925pt x 6553.23282pt>
+File: img/4.png Graphic file (type png)
+<use img/4.png>
+Package luatex.def Info: img/4.png  used on input line 688.
+(luatex.def)             Requested size: 455.24411pt x 530.86896pt.
+)
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 82.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [49<./img/4.png>]
+\openout2 = tex/main/6/_index.aux
+
+(./tex/main/6/_index.tex
+<img/3.png, id=574, 906.38625pt x 855.195pt>
+File: img/3.png Graphic file (type png)
+<use img/3.png>
+Package luatex.def Info: img/3.png  used on input line 20.
+(luatex.def)             Requested size: 386.96027pt x 365.1038pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 23.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [50
+
+
+
+]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 29.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [51<./img/3.png>]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 57.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [52]
+<img/2.png, id=595, 1631.09375pt x 788.9475pt>
+File: img/2.png Graphic file (type png)
+<use img/2.png>
+Package luatex.def Info: img/2.png  used on input line 76.
+(luatex.def)             Requested size: 1631.0898pt x 788.94556pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 79.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [53]
+
+Package hyperref Warning: bookmark level for unknown subsubsubsection defaults 
+to 0.
+
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 86.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+[54<./img/2.png>]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 134.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [55]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 191.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [56]
+<img/5.png, id=628, 4282.7503pt x 1992.69469pt>
+File: img/5.png Graphic file (type png)
+<use img/5.png>
+Package luatex.def Info: img/5.png  used on input line 200.
+(luatex.def)             Requested size: 4282.73991pt x 1992.68983pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 203.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [57]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 205.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [58<./img/5.png>]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 221.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [59]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 231.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [60]
+<img/workflow.png, id=659, 702.625pt x 263.98625pt>
+File: img/workflow.png Graphic file (type png)
+<use img/workflow.png>
+Package luatex.def Info: img/workflow.png  used on input line 243.
+(luatex.def)             Requested size: 455.24411pt x 171.04523pt.
+<img/signup.png, id=660, 377.91188pt x 445.665pt>
+File: img/signup.png Graphic file (type png)
+<use img/signup.png>
+Package luatex.def Info: img/signup.png  used on input line 255.
+(luatex.def)             Requested size: 364.19667pt x 429.49281pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 258.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [61<./img/workflow.png>]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 265.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [62<./img/signup.png>]
+<img/admin.png, id=676, 981.6675pt x 948.54375pt>
+File: img/admin.png Graphic file (type png)
+<use img/admin.png>
+Package luatex.def Info: img/admin.png  used on input line 270.
+(luatex.def)             Requested size: 455.24411pt x 439.88145pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 278.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [63<./img/admin.png>]
+<img/home.png, id=684, 948.54375pt x 925.20656pt>
+File: img/home.png Graphic file (type png)
+<use img/home.png>
+Package luatex.def Info: img/home.png  used on input line 291.
+(luatex.def)             Requested size: 455.24411pt x 444.03763pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 294.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [64]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 301.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [65<./img/home.png>]
+<img/search.png, id=698, 1158.57843pt x 858.95906pt>
+File: img/search.png Graphic file (type png)
+<use img/search.png>
+Package luatex.def Info: img/search.png  used on input line 308.
+(luatex.def)             Requested size: 455.24411pt x 337.50916pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 315.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+
+[66<./img/search.png>]
+<img/restaurant.png, id=706, 1041.1397pt x 913.91437pt>
+File: img/restaurant.png Graphic file (type png)
+<use img/restaurant.png>
+Package luatex.def Info: img/restaurant.png  used on input line 325.
+(luatex.def)             Requested size: 455.24411pt x 399.61342pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 328.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [67]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 338.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [68<./img/restaurant.png>]
+<img/profile.png, id=720, 1039.63406pt x 517.18219pt>
+File: img/profile.png Graphic file (type png)
+<use img/profile.png>
+Package luatex.def Info: img/profile.png  used on input line 347.
+(luatex.def)             Requested size: 455.24411pt x 226.46393pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 361.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [69<./img/profile.png>]
+<img/foodtour.png, id=728, 722.7pt x 680.5425pt>
+File: img/foodtour.png Graphic file (type png)
+<use img/foodtour.png>
+Package luatex.def Info: img/foodtour.png  used on input line 369.
+(luatex.def)             Requested size: 364.19667pt x 342.94954pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 378.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+
+[70<./img/foodtour.png>]
+<img/tourdetail.png, id=738, 317.68687pt x 846.91406pt>
+File: img/tourdetail.png Graphic file (type png)
+<use img/tourdetail.png>
+Package luatex.def Info: img/tourdetail.png  used on input line 381.
+(luatex.def)             Requested size: 227.62206pt x 606.83125pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 386.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [71<./img/tourdetail.png>])
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 83.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [72]
+\openout2 = tex/main/7/_index.aux
+
+(./tex/main/7/_index.tex
+<img/6.png, id=751, 1074.0125pt x 142.5325pt>
+File: img/6.png Graphic file (type png)
+<use img/6.png>
+Package luatex.def Info: img/6.png  used on input line 12.
+(luatex.def)             Requested size: 386.96027pt x 51.35297pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 36.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [73
+
+
+
+<./img/6.png>]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 67.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [74]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 93.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [75]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 118.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [76])
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 84.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [77]
+\openout2 = tex/main/8/_index.aux
+
+(./tex/main/8/_index.tex
+<img/timeline.png, id=786, 715.67375pt x 866.23625pt>
+File: img/timeline.png Graphic file (type png)
+<use img/timeline.png>
+Package luatex.def Info: img/timeline.png  used on input line 31.
+(luatex.def)             Requested size: 386.96027pt x 468.36862pt.
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 34.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [78
+
+
+
+])
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 85.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [79<./img/timeline.png>]
+\openout2 = tex/main/9/_index.aux
+
+(./tex/main/9/_index.tex)
+\openout2 = tex/main/10/_index.aux
+ (./tex/main/10/_index.tex)
+\openout2 = tex/main/11/_index.aux
+ (./tex/main/11/_index.tex)
+\openout2 = tex/main/12/_index.aux
+ (./tex/main/12/_index.tex)
+\c@mainendpage=\count374
+
+\openout2 = tex/ref.aux
+ (./tex/ref.tex) [80
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
+\openout2 = tex/appendix/_index.aux
+ (./tex/appendix/_index.tex)
+
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(./main.aux (./tex/cover.aux) (./tex/commitment.aux) (./tex/thanks.aux)
+(./tex/abstract.aux) (./tex/main/1/_index.aux) (./tex/main/2/_index.aux)
+(./tex/main/3/_index.aux) (./tex/main/4/_index.aux) (./tex/main/5/_index.aux)
+(./tex/main/6/_index.aux) (./tex/main/7/_index.aux) (./tex/main/8/_index.aux)
+(./tex/main/9/_index.aux) (./tex/main/10/_index.aux) (./tex/main/11/_index.aux) (./tex/main/12/_index.aux) (./tex/ref.aux) (./tex/appendix/_index.aux))
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+ ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.72pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+)
+
+Here is how much of LuaTeX's memory you used:
+ 33111 strings out of 476081
+ 100000,1144653 words of node,token memory allocated
+ 891 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 29 attribute, 113 glue_spe
+c, 16 attribute_list, 7 write, 3 pdf_action nodes
+   avail lists: 2:2610,3:540,4:402,5:265,6:106,7:5939,8:102,9:1315,10:13,11:260
+ 53840 multiletter control sequences out of 65536+600000
+ 126 fonts using 30785831 bytes
+ 123i,26n,114p,1025b,847s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/WINDOWS/Fonts/timesbi.ttf><d:/tools/miktex/fonts/opentype/public/lm/lmroman1
+2-regular.otf><C:/WINDOWS/Fonts/timesi.ttf><C:/WINDOWS/Fonts/times.ttf><C:/WINDO
+WS/Fonts/timesbd.ttf>
+Output written on main.pdf (81 pages, 6734488 bytes).
+
+PDF statistics: 1170 PDF objects out of 1200 (max. 8388607)
+ 222 named destinations out of 1000 (max. 1048576)
+ 832 words of extra memory for PDF output out of 10000 (max. 100000000)
+

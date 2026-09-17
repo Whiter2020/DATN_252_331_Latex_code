@@ -1,8 +1,8 @@
 \section{Hệ thống đề xuất}
 \subsection{Mô tả tổng quan hệ thống}
-Hệ thống được đề xuất trong luận văn này, với tên gọi (tạm gọi) là FoodTour Planner, là
-một ứng dụng web hỗ trợ người dùng trong việc tìm kiếm thông tin quán ăn, xây dựng và quản
-lý các hành trình ăn uống (food tour), đồng thời xác định lộ trình di chuyển hợp lý giữa nhiều
+Hệ thống được giới thiệu trong luận văn này có tên là Food Tour Planner, là
+một ứng dụng web nhằm hỗ trợ người dùng dễ dàng tìm kiếm thông tin về các quán ăn, xây dựng và quản
+lý các hành trình ăn uống (food tour), đồng thời xác định lộ trình di chuyển hợp lý và tiết kiệm thời gian giữa nhiều
 địa điểm ẩm thực trong cùng một hành trình. Hệ thống được thiết kế nhằm cung cấp một nền
 tảng tích hợp, giúp người dùng lập kế hoạch ăn uống một cách thuận tiện, hiệu quả và có khả
 năng chia sẻ với cộng đồng.
@@ -10,29 +10,51 @@ năng chia sẻ với cộng đồng.
 Các chức năng chính của hệ thống bao gồm:
 
 \begin{itemize}[label=\textbullet]
-    \item \textbf{Quản lý người dùng:} Hỗ trợ đăng ký, đăng nhập và quản lý thông tin tài khoản người dùng.
-    \item \textbf{Quản lý và tra cứu thông tin quán ăn:} Cung cấp chức năng tìm kiếm, xem thông tin chi tiết
-về các quán ăn, bao gồm vị trí và các thông tin liên quan phục vụ nhu cầu tham khảo.
-    \item \textbf{Tạo và quản lý food tour:} Cho phép người dùng tạo các food tour cá nhân bằng cách thêm
-một hoặc nhiều quán ăn vào cùng một hành trình.
-    \item \textbf{Sắp xếp lộ trình di chuyển:} Hỗ trợ xác định thứ tự ghé thăm các quán ăn trong food tour
-nhằm tối ưu hóa quãng đường và thời gian di chuyển.
+    \item \textbf{Quản lý người dùng:} Đăng ký/Đăng nhập và quản lý thông tin tài khoản người dùng.
+    \item \textbf{Quản lý và tra cứu thông tin quán ăn:} Tìm kiếm và xem thông tin chi tiết
+    về các quán ăn, bao gồm vị trí và các thông tin liên quan phục vụ nhu cầu tham khảo.
+    \item \textbf{Đóng góp thông tin nhà hàng:} Người dùng có thể gửi yêu cầu đăng tải thông tin nhà hàng mới. Các quán này
+    được công khai sau khi quản trị viên phê duyệt.
+    \item \textbf{Tạo và quản lý food tour:} Tạo các hành trình food tour cá nhân
+    bằng cách thêm một hoặc nhiều quán ăn vào cùng một lộ trình.
+    \item \textbf{Sắp xếp lộ trình di chuyển:} Xác định thứ tự ghé thăm các quán ăn trong food tour
+    nhằm tối ưu hóa quãng đường và thời gian di chuyển.
     \item \textbf{Gợi ý food tour:} Đề xuất các food tour dựa trên mức độ tương đồng giữa các quán ăn trong
-lịch sử sử dụng của người dùng và các food tour đã tồn tại.
-    \item \textbf{Chia sẻ food tour công khai:} Cho phép người dùng công khai food tour để người dùng khác
-có thể tìm kiếm, tham khảo và sử dụng lại.
+    lịch sử sử dụng của người dùng và các food tour đã tồn tại.
+    \item \textbf{Chia sẻ food tour công khai:} Công khai food tour để người dùng khác
+    có thể tìm kiếm, tham khảo và xem lại.
 \end{itemize}
 
 Hệ thống được thiết kế để đáp ứng nhu cầu của các nhóm người dùng chính sau:
 
 \begin{itemize}[label=\textbullet]
-    \item \textbf{Người dùng}: Là nhóm người dùng chính của hệ thống, sử dụng ứng dụng để tìm kiếm thông tin quán ăn, tạo và quản lý các food tour cá nhân, sắp xếp lộ trình di chuyển và chia sẻ food tour với cộng đồng. Ngoài ra, người dùng có thể tìm kiếm và tham khảo các food tour đã được chia sẻ công khai như nguồn gợi ý để xây dựng các hành trình ăn uống phù hợp với nhu cầu cá nhân. Hệ thống đóng vai trò như một công cụ hỗ trợ lập kế hoạch ăn uống, giúp người dùng tiết kiệm thời gian và nâng cao trải nghiệm khám phá ẩm thực.
-    \item \textbf{Quản trị viên hệ thống:} Chịu trách nhiệm quản lý và vận hành hệ thống, bao gồm quản lý tài khoản người dùng, quản lý dữ liệu quán ăn, giám sát nội dung food tour công khai và đảm bảo hệ thống hoạt động ổn định, an toàn.
+
+    \item \textbf{Người dùng}: 
+    Đây là nhóm người dùng chính. Họ dùng ứng dụng để tìm kiếm quán ăn, 
+    tạo và quản lý các food tour cá nhân, sắp xếp lộ trình đi lại, đánh giá 
+    quán ăn và chia sẻ food tour với cộng đồng. Ngoài ra, người dùng có thể 
+    tìm kiếm và học hỏi từ các food tour đã được chia sẻ công khai để xây dựng 
+    hành trình ăn uống phù hợp với sở thích riêng.
+
+    \item \textbf{Người dùng quản lý nhà hàng (Restaurant Owner)}:
+    Là nhóm người dùng có nhu cầu đưa thông tin nhà hàng của mình lên hệ thống.
+    Nhóm người dùng này vẫn sử dụng tài khoản người dùng thông thường nhưng được
+    cấp thêm quyền quản lý nhà hàng. Người dùng quản lý nhà hàng có thể gửi yêu
+    cầu đăng tải thông tin nhà hàng mới, cung cấp các thông tin liên quan như tên
+    nhà hàng, địa chỉ, loại hình ẩm thực, hình ảnh và mô tả. Các thông tin nhà
+    hàng chỉ được hiển thị công khai sau khi được quản trị viên kiểm tra và
+    phê duyệt.
+
+    \item \textbf{Quản trị viên hệ thống (System Administrator)}:
+    Chịu trách nhiệm kiểm duyệt các yêu cầu đăng tải nhà hàng, quản lý và vận hành hệ thống, bao gồm quản lý tài khoản
+    người dùng, quản lý dữ liệu nhà hàng, giám sát nội dung food tour công khai và đảm bảo hệ thống hoạt động
+    ổn định, an toàn.
+
 \end{itemize}
 
-Với kiến trúc hướng dịch vụ và thiết kế tập trung vào người dùng, hệ thống được xây dựng
-nhằm đảm bảo khả năng mở rộng, dễ bảo trì và phù hợp với việc phát triển thêm các chức năng
-mới trong tương lai.
+Với kiến trúc hướng dịch vụ và tập trung vào trải nghiệm người dùng, 
+hệ thống được xây dựng để có thể dễ dàng được mở rộng cùng như bảo trì và 
+linh hoạt trong việc phát triển thêm các tính năng mới trong tương lai.
 
 \subsection{Stakeholder}
 Các stakeholder là những cá nhân hoặc nhóm có liên quan trực tiếp hoặc gián tiếp đến hệ
@@ -42,7 +64,13 @@ chính và phụ như sau.
 
 Các stakeholder chính (Primary stakeholders):
 \begin{itemize}[label=\textbullet]
-    \item \textbf{Người dùng cuối (End Users)}: Là đối tượng sử dụng trực tiếp hệ thống để tìm kiếm thông tin quán ăn, tạo và quản lý các food tour cá nhân, sắp xếp lộ trình di chuyển và chia sẻ hoặc tham khảo các food tour công khai. Đây là nhóm stakeholder chính, quyết định mức độ thành công và hiệu quả sử dụng của hệ thống.
+    \item \textbf{Người dùng cuối (End Users)}: Nhóm người dùng sử dụng trực tiếp hệ thống để tìm kiếm thông tin quán ăn, tạo và quản lý các food tour cá nhân, sắp xếp lộ trình di chuyển và chia sẻ hoặc tham khảo các food tour công khai. Đây là nhóm stakeholder chính, quyết định mức độ thành công và hiệu quả sử dụng của hệ thống.
+    \item \textbf{Người dùng quản lý nhà hàng (Restaurant Owner)}:
+    Nhóm người dùng muốn đưa thông tin nhà hàng lên hệ thống.
+    Nhóm này sử dụng các chức năng gửi/yêu cầu đăng tải nhà hàng,
+    cập nhật thông tin nhà hàng và theo dõi trạng thái xử lý.
+    Các nhà hàng do nhóm người dùng này gửi chỉ được công khai trên hệ thống
+    sau khi được quản trị viên kiểm tra và phê duyệt.
     \item \textbf{Quản trị viên hệ thống (System Administrator)}:
 Là người chịu trách nhiệm quản lý và vận hành hệ thống, bao gồm quản lý tài khoản người dùng,
 quản lý dữ liệu quán ăn, giám sát nội dung food tour được chia sẻ công khai và đảm bảo hệ thống hoạt động ổn định, an toàn.
@@ -51,7 +79,7 @@ quản lý dữ liệu quán ăn, giám sát nội dung food tour được chia 
 Các stakeholder phụ (Secondary stakeholders): 
 
 \begin{itemize}[label=\textbullet]
-    \item \textbf{Nhóm phát triển hệ thống (Development Team)}: Là nhóm thiết kế và triển khai hệ thống, chịu trách nhiệm phân tích yêu cầu, thiết kế kiến trúc, xây dựng cơ sở dữ liệu và phát triển các chức năng của ứng dụng web.
+    \item \textbf{Nhóm phát triển hệ thống (Development Team)}: Là nhóm thiết kế và triển khai hệ thống, chịu trách nhiệm phân tích yêu cầu, thiết kế kiến trúc, xây dựng cơ sở dữ liệu và phát triển các chức năng của ứng dụng.
 \end{itemize}
 
 
@@ -59,105 +87,137 @@ Các stakeholder phụ (Secondary stakeholders):
 \subsection{Yêu cầu chức năng (Functional Requirements)}
 \textbf{FR1: Quản lý tài khoản người dùng}
 \begin{itemize}[label=\textbullet]
-    \item Hệ thống phải cung cấp các chức năng đăng ký tài khoản, đăng nhập, đăng xuất và quản lý mật khẩu
+    \item Cung cấp các chức năng đăng ký tài khoản, đăng nhập, đăng xuất và quản lý mật khẩu
 nhằm đảm bảo người dùng có thể truy cập và sử dụng hệ thống.
     \item Người dùng phải có khả năng xem và cập nhật các thông tin hồ sơ cá nhân cơ bản của mình.
 \end{itemize}
 
-\textbf{FR2: Quản trị hệ thống(Quản trị viên)}
+\textbf{FR2: Quản lý và kiểm duyệt hệ thốn(Quản trị viên)}
 \begin{itemize}[label=\textbullet]
-    \item Hệ thống phải cung cấp chức năng cho quản trị viên quản lý dữ liệu nền tảng, bao gồm xem,
-thêm, chỉnh sửa và xóa thông tin quán ăn/nhà hàng.
-    \item Quản trị viên phải có khả năng quản lý tài khoản người dùng, bao gồm xem danh sách người
-dùng và thực hiện các thao tác vô hiệu hóa tài khoản khi cần thiết.
+
+    \item Cung cấp chức năng cho quản trị viên quản lý
+    dữ liệu nền tảng, bao gồm quản lý tài khoản người dùng,
+    quản lý các nhà hàng đã được phê duyệt và giám sát nội dung
+    được chia sẻ trên hệ thống.
+
+    \item Quản trị viên phải có khả năng xem danh sách các yêu cầu
+    đăng tải nhà hàng từ người dùng có quyền quản lý nhà hàng.
+
+    \item Quản trị viên có thể kiểm tra thông tin nhà hàng,
+    thực hiện phê duyệt hoặc từ chối yêu cầu đăng tải.
+
+    \item Các nhà hàng chỉ được hiển thị công khai trên hệ thống
+    sau khi được quản trị viên phê duyệt.
+
 \end{itemize}
 
-\textbf{FR3: Tìm kiếm và tra cứu thông tin quán ăn/nhà hàng} 
+\textbf{FR3: Đăng ký và quản lý thông tin nhà hàng}
+
 \begin{itemize}[label=\textbullet]
-    \item Hệ thống phải cho phép người dùng tìm kiếm quán ăn theo nhiều tiêu chí khác nhau như tên
-quán, loại ẩm thực, địa điểm, mức giá, thời gian mở cửa, đánh giá và khoảng cách.
-    \item Kết quả tìm kiếm phải được hiển thị dưới dạng danh sách kèm theo thông tin tổng quan và cho
-phép người dùng xem chi tiết từng quán ăn.
-    \item Hệ thống phải hỗ trợ sắp xếp kết quả tìm kiếm theo các tiêu chí phổ biến như khoảng cách,
-mức giá và mức độ đánh giá.
+
+    \item Người dùng có quyền quản lý nhà hàng có thể gửi yêu cầu
+    đăng tải nhà hàng mới lên hệ thống.
+
+    \item Yêu cầu đăng tải nhà hàng phải bao gồm các thông tin cơ bản:
+    tên nhà hàng, địa chỉ, loại hình ẩm thực, hình ảnh,
+    mô tả và các thông tin liên quan.
+
+    \item Hệ thống phải lưu trạng thái xử lý của yêu cầu đăng tải,
+    bao gồm: Pending, Approved, Rejected.
+
+    \item Người dùng có quyền quản lý nhà hàng có thể theo dõi
+    trạng thái các yêu cầu đã gửi.
+
 \end{itemize}
 
-\textbf{FR4: Quản lý quán yêu thích} 
+\textbf{FR4: Tìm kiếm và tra cứu thông tin quán ăn/nhà hàng} 
 \begin{itemize}[label=\textbullet]
-    \item Hệ thống phải cho phép người dùng thêm hoặc loại bỏ quán ăn khỏi danh sách yêu thích cá
+    \item Người dùng có thể tìm kiếm quán ăn theo nhiều tiêu chí khác nhau như tên
+quán ăn, ẩm thực, địa điểm, giá cả, thời gian mở cửa, đánh giá và khoảng cách.
+    \item Kết quả tìm kiếm được hiển thị dưới dạng danh sách kèm theo 
+    thông tin tổng quan và cho phép người dùng xem chi tiết từng quán ăn.
+    \item Sắp xếp kết quả tìm kiếm theo các tiêu chí 
+    phổ biến như khoảng cách, mức giá và mức độ đánh giá.
+\end{itemize}
+
+\textbf{FR5: Quản lý quán ăn yêu thích} 
+\begin{itemize}[label=\textbullet]
+    \item Thêm hoặc bỏ quán ăn ra khỏi danh sách yêu thích cá
 nhân.
-    \item Người dùng phải có khả năng xem và quản lý danh sách các quán ăn đã được đánh dấu yêu
-thích.
+    \item Xem và quản lý danh sách các quán ăn đã được đánh dấu yêu thích.
 \end{itemize}
 
-\textbf{FR5: Tạo và quản lý FoodTour cá nhân} 
+\textbf{FR6: Tạo và quản lý Food Tour cá nhân} 
 \begin{itemize}[label=\textbullet]
-    \item Hệ thống phải cho phép người dùng tạo mới food tour với các thông tin cơ bản như tiêu đề và
+    \item Người dùng tạo mới food tour với các thông tin cơ bản như tiêu đề và
 mô tả.
-    \item Người dùng phải có khả năng thêm, xóa các quán ăn vào food tour và sắp xếp thứ tự các điểm
-dừng trong hành trình.
-    \item Hệ thống phải hỗ trợ cập nhật và chỉnh sửa thông tin food tour trong quá trình sử dụng.
+    \item Thêm hoặc xóa các quán ăn vào food tour và sắp xếp thứ tự các điểm ăn uống trong hành trình.
+    \item Cập nhật và chỉnh sửa thông tin food tour 
+    của người dùng trong quá trình sử dụng.
 \end{itemize}
 
-\textbf{FR6: Tối ưu lộ trình trong FoodTour} 
+\textbf{FR7: Tối ưu lộ trình Food Tour} 
 \begin{itemize}[label=\textbullet]
-    \item Từ danh sách các điểm dừng trong food tour, hệ thống phải hỗ trợ sắp xếp lộ trình di chuyển
-hợp lý nhằm giảm tổng quãng đường di chuyển.
-    \item Hệ thống phải hiển thị tổng khoảng cách di chuyển của food tour sau khi thực hiện tối ưu.
-    \item Người dùng phải có khả năng thực hiện lại việc tối ưu lộ trình khi danh sách hoặc thứ tự các
+    \item Từ danh sách các điểm ăn uống trong food tour, hệ thống hỗ trợ sắp xếp lộ trình di chuyển
+hợp lý theo yêu cầu của người dùng nhằm giảm tổng quãng đường di chuyển.
+    \item Hiển thị tổng khoảng cách di chuyển của food tour sau khi thực hiện tối ưu.
+    \item Người dùng có thể thực hiện lại việc tối ưu lộ trình khi danh sách hoặc thứ tự các
 điểm dừng thay đổi.
 \end{itemize}
 
-\textbf{FR7: Chia sẻ FoodTour (Public/Private)} 
+\textbf{FR8: Chia sẻ Food Tour (Public/Private)} 
 \begin{itemize}[label=\textbullet]
-    \item Hệ thống phải cho phép người dùng thiết lập trạng thái hiển thị của food tour ở chế độ riêng
+    \item Thiết lập trạng thái hiển thị của food tour ở chế độ riêng
 tư (private) hoặc công khai (public).
     \item Các food tour được chia sẻ ở chế độ công khai phải có thể được người dùng khác tìm kiếm và
 xem nội dung chi tiết.
 \end{itemize}
 
-\textbf{FR8: Tìm kiếm và xem FoodTour public} 
+\textbf{FR9: Tìm kiếm và xem Food Tour public} 
 \begin{itemize}[label=\textbullet]
-    \item Hệ thống phải hỗ trợ người dùng tìm kiếm các food tour công khai dựa trên từ khóa như tên
-tour hoặc mô tả.
-    \item Người dùng phải có khả năng xem chi tiết food tour công khai, bao gồm danh sách quán ăn,
-thứ tự ghé thăm và tổng khoảng cách di chuyển.
+    \item Tìm kiếm các food tour công khai dựa trên từ khóa như tên
+    tour hoặc mô tả.
+    \item Xem chi tiết food tour công khai, bao gồm danh sách quán ăn, 
+    thứ tự ghé thăm và tổng khoảng cách di chuyển.
 \end{itemize}
 
-\textbf{FR9: Lưu và yêu thích FoodTour public} 
+\textbf{FR10: Lưu và yêu thích Food Tour public} 
 \begin{itemize}[label=\textbullet]
-    \item Hệ thống phải cho phép người dùng lưu food tour công khai của người dùng khác để tham
+    \item Lưu food tour công khai của người dùng khác để tham
 khảo và sử dụng sau này.
-    \item Người dùng phải có khả năng thể hiện mức độ yêu thích đối với food tour công khai, và hệ
-thống phải hiển thị số lượt yêu thích của mỗi food tour.
+    \item Đánh giá cụ thể mức độ yêu thích đối với food tour công khai, và hệ
+thống phải hiển thị số lượt yêu thích trung bình của mỗi food tour.
 \end{itemize}
 
-\textbf{FR10: Đánh giá quán ăn (Review)} 
+\textbf{FR11: Đánh giá quán ăn (Review)} 
 \begin{itemize}[label=\textbullet]
-    \item Hệ thống phải cho phép người dùng tạo đánh giá cho quán ăn dưới dạng nội dung nhận xét và
+    \item Hệ thống cho phép người dùng tạo đánh giá cho quán ăn dưới dạng nội dung nhận xét và
 điểm đánh giá.
     \item Các đánh giá của người dùng phải được hiển thị trong trang thông tin chi tiết của quán ăn để
 phục vụ cho việc tham khảo của cộng đồng.
 \end{itemize}
 
-\textbf{FR11: Gợi ý quán ăn theo khẩu vị cá nhân} 
+\textbf{FR12: Gợi ý quán ăn theo khẩu vị cá nhân} 
 \begin{itemize}[label=\textbullet]
-    \item Hệ thống phải hỗ trợ lưu trữ thông tin khẩu vị cá nhân của người dùng như một phần của hồ sơ
+    \item Lưu trữ thông tin khẩu vị cá nhân của người dùng như một phần của hồ sơ
 người dùng.
     \item Dựa trên mức độ tương đồng giữa khẩu vị người dùng và đặc điểm ẩm thực của quán ăn, hệ
 thống đề xuất các quán ăn phù hợp nhằm cá nhân hóa trải nghiệm tìm kiếm.
-    \item Hệ thống phải hỗ trợ lưu trữ thêm thông tin khu vực ưu tiên và lịch sử food tour của người dùng để tăng độ chính xác của gợi ý.
-    \item Hệ thống phải hiển thị rõ ràng lý do gợi ý cho từng quán ăn (ví dụ: “Bạn thích món cay • Đã xuất hiện trong 2 food tour trước của bạn”).
-    \item Hỗ trợ gợi ý quán ăn ngay trong quá trình tạo food tour để người dùng dễ dàng bổ sung điểm dừng.
+    \item Lưu trữ thêm thông tin khu vực ưu tiên và lịch sử food tour của người dùng
+     để tăng độ chính xác của gợi ý.
+    \item Hiển thị rõ ràng lý do gợi ý cho từng quán ăn (ví dụ: “Bạn thích món cay • Đã 
+    xuất hiện trong 2 food tour trước của bạn”).
+    \item Hỗ trợ gợi ý quán ăn ngay trong quá trình tạo food tour để người dùng dễ dàng bổ sung 
+    điểm dừng.
     \item Kết quả gợi ý có thể được sắp xếp theo độ phù hợp, khoảng cách hoặc đánh giá.
 \end{itemize}
 
-\textbf{FR12: Hiển thị bản đồ và lộ trình FoodTour} 
+\textbf{FR13: Hiển thị bản đồ và lộ trình FoodTour} 
 \begin{itemize}[label=\textbullet]
-    \item Hệ thống phải cung cấp chức năng hiển thị bản đồ tương tác cho mỗi food tour.
+    \item Hệ thống cung cấp chức năng hiển thị bản đồ tương tác cho mỗi food tour.
     \item Trên bản đồ phải thể hiện vị trí các quán ăn, thứ tự ghé thăm và lộ trình di chuyển giữa các
 điểm dừng.
-    \item Bản đồ phải được cập nhật tương ứng khi người dùng thay đổi danh sách hoặc thứ tự các điểm
+    \item Bản đồ được cập nhật tương ứng khi người dùng thay đổi danh sách hoặc thứ tự các điểm
 dừng trong food tour.
 \end{itemize}
 
