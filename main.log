@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.6.10)  13 SEP 2026 14:33
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.6.10)  19 SEP 2026 23:15
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"d:/DATN_CODE/Bao Cao/main"
@@ -1512,7 +1512,12 @@ File: bachkhoa_logo.png Graphic file (type png)
 <use bachkhoa_logo.png>
 Package luatex.def Info: bachkhoa_logo.png  used on input line 69.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
-[6])
+[6]
+Overfull \hbox (3.25pt too wide) detected at line 111
+\TU/TimesNewRoman(0)/b/n/13 10.  
+ []
+
+)
 \tf@toc=\write4
 
 \openout4 = main.toc
@@ -1628,7 +1633,7 @@ Package luatex.def Info: bachkhoa_logo.png  used on input line 81.
 \openout2 = tex/main/5/_index.aux
 
 (./tex/main/5/_index.tex
-<img/1.png, id=380, 914.41624pt x 1195.46625pt>
+<img/1.png, id=398, 914.41624pt x 1195.46625pt>
 File: img/1.png Graphic file (type png)
 <use img/1.png>
 Package luatex.def Info: img/1.png  used on input line 16.
@@ -1720,13 +1725,13 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 547.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [35]
-<img/activity/Activity_Danh_Gia.drawio.png, id=461, 685.56125pt x 785.93625pt>
+<img/activity/Activity_Danh_Gia.drawio.png, id=479, 685.56125pt x 785.93625pt>
 File: img/activity/Activity_Danh_Gia.drawio.png Graphic file (type png)
 <use img/activity/Activity_Danh_Gia.drawio.png>
 Package luatex.def Info: img/activity/Activity_Danh_Gia.drawio.png  used on inp
 ut line 553.
 (luatex.def)             Requested size: 409.71692pt x 469.71855pt.
-<img/activity/Activity_Diagram_Login_Logout.drawio.png, id=462, 684.5575pt x 80
+<img/activity/Activity_Diagram_Login_Logout.drawio.png, id=480, 684.5575pt x 80
 5.0075pt>
 File: img/activity/Activity_Diagram_Login_Logout.drawio.png Graphic file (type 
 png)
@@ -1739,7 +1744,7 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 564.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [36<./img/activity/Activity_Danh_Gia.drawio.png>]
-<img/activity/Activity_Find_Restaurant.drawio.png, id=470, 483.8075pt x 1005.75
+<img/activity/Activity_Find_Restaurant.drawio.png, id=488, 483.8075pt x 1005.75
 75pt>
 File: img/activity/Activity_Find_Restaurant.drawio.png Graphic file (type png)
 <use img/activity/Activity_Find_Restaurant.drawio.png>
@@ -1756,7 +1761,7 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 574.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [38<./img/activity/Activity_Find_Restaurant.drawio.png>]
-<img/activity/Activity_Find_Route.png, id=485, 484.81125pt x 1046.91125pt>
+<img/activity/Activity_Find_Route.png, id=503, 484.81125pt x 1046.91125pt>
 File: img/activity/Activity_Find_Route.png Graphic file (type png)
 <use img/activity/Activity_Find_Route.png>
 Package luatex.def Info: img/activity/Activity_Find_Route.png  used on input li
@@ -1767,7 +1772,7 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 582.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [39<./img/activity/Activity_Find_Route.png>]
-<img/activity/Activity_User_Profile_Edit.drawio.png, id=493, 523.9575pt x 1005.
+<img/activity/Activity_User_Profile_Edit.drawio.png, id=511, 523.9575pt x 1005.
 7575pt>
 File: img/activity/Activity_User_Profile_Edit.drawio.png Graphic file (type png
 )
@@ -1780,7 +1785,7 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 588.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [40<./img/activity/Activity_User_Profile_Edit.drawio.png>]
-<img/activity/Activity_Quan_Ly_Du_Lieu_Quan_An.drawio.png, id=502, 523.9575pt x
+<img/activity/Activity_Quan_Ly_Du_Lieu_Quan_An.drawio.png, id=520, 523.9575pt x
  1168.365pt>
 File: img/activity/Activity_Quan_Ly_Du_Lieu_Quan_An.drawio.png Graphic file (ty
 pe png)
@@ -1803,7 +1808,7 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 608.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [42]
-<img/sequence/Sequence_Account_Management.drawio.png, id=516, 874.26625pt x 545
+<img/sequence/Sequence_Account_Management.drawio.png, id=534, 874.26625pt x 545
 .03625pt>
 File: img/sequence/Sequence_Account_Management.drawio.png Graphic file (type pn
 g)
@@ -1811,7 +1816,7 @@ g)
 Package luatex.def Info: img/sequence/Sequence_Account_Management.drawio.png  u
 sed on input line 616.
 (luatex.def)             Requested size: 455.24411pt x 283.81136pt.
-<img/sequence/Sequence_Create_Foot_Route.drawio.png, id=517, 753.81625pt x 434.
+<img/sequence/Sequence_Create_Foot_Route.drawio.png, id=535, 753.81625pt x 434.
 62375pt>
 File: img/sequence/Sequence_Create_Foot_Route.drawio.png Graphic file (type png
 )
@@ -1824,7 +1829,7 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 627.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [43<./img/sequence/Sequence_Account_Management.drawio.png>]
-<img/sequence/Sequence_Danh_Gia.drawio.png, id=525, 798.985pt x 515.9275pt>
+<img/sequence/Sequence_Danh_Gia.drawio.png, id=543, 798.985pt x 515.9275pt>
 File: img/sequence/Sequence_Danh_Gia.drawio.png Graphic file (type png)
 <use img/sequence/Sequence_Danh_Gia.drawio.png>
 Package luatex.def Info: img/sequence/Sequence_Danh_Gia.drawio.png  used on inp
@@ -1836,13 +1841,13 @@ Package luatex.def Info: bachkhoa_logo.png  used on input line 637.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [44<./img/sequence/Sequence_Create_Foot_Route.drawio.png><./img/sequence/Sequen
 ce_Danh_Gia.drawio.png>]
-<img/sequence/Sequence_Login.drawio.png, id=534, 753.81625pt x 414.54875pt>
+<img/sequence/Sequence_Login.drawio.png, id=552, 753.81625pt x 414.54875pt>
 File: img/sequence/Sequence_Login.drawio.png Graphic file (type png)
 <use img/sequence/Sequence_Login.drawio.png>
 Package luatex.def Info: img/sequence/Sequence_Login.drawio.png  used on input 
 line 640.
 (luatex.def)             Requested size: 455.24411pt x 250.3505pt.
-<img/sequence/Sequence_Restaurant_Data_Management.drawio.png, id=535, 914.41624
+<img/sequence/Sequence_Restaurant_Data_Management.drawio.png, id=553, 914.41624
 pt x 384.43625pt>
 File: img/sequence/Sequence_Restaurant_Data_Management.drawio.png Graphic file 
 (type png)
@@ -1856,7 +1861,7 @@ Package luatex.def Info: bachkhoa_logo.png  used on input line 653.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [45<./img/sequence/Sequence_Login.drawio.png><./img/sequence/Sequence_Restauran
 t_Data_Management.drawio.png>]
-<img/sequence/Sequence_Search_Restaurant.drawio.png, id=544, 793.96625pt x 394.
+<img/sequence/Sequence_Search_Restaurant.drawio.png, id=562, 793.96625pt x 394.
 47375pt>
 File: img/sequence/Sequence_Search_Restaurant.drawio.png Graphic file (type png
 )
@@ -1864,7 +1869,7 @@ File: img/sequence/Sequence_Search_Restaurant.drawio.png Graphic file (type png
 Package luatex.def Info: img/sequence/Sequence_Search_Restaurant.drawio.png  us
 ed on input line 656.
 (luatex.def)             Requested size: 455.24411pt x 226.18863pt.
-<img/sequence/Sequence_User_Profile_Edit.drawio.png, id=545, 748.7975pt x 795.9
+<img/sequence/Sequence_User_Profile_Edit.drawio.png, id=563, 748.7975pt x 795.9
 7375pt>
 File: img/sequence/Sequence_User_Profile_Edit.drawio.png Graphic file (type png
 )
@@ -1888,7 +1893,7 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 684.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [48]
-<img/4.png, id=566, 5618.9925pt x 6553.23282pt>
+<img/4.png, id=584, 5618.9925pt x 6553.23282pt>
 File: img/4.png Graphic file (type png)
 <use img/4.png>
 Package luatex.def Info: img/4.png  used on input line 688.
@@ -1902,7 +1907,7 @@ Package luatex.def Info: bachkhoa_logo.png  used on input line 82.
 \openout2 = tex/main/6/_index.aux
 
 (./tex/main/6/_index.tex
-<img/3.png, id=574, 906.38625pt x 855.195pt>
+<img/3.png, id=592, 906.38625pt x 855.195pt>
 File: img/3.png Graphic file (type png)
 <use img/3.png>
 Package luatex.def Info: img/3.png  used on input line 20.
@@ -1926,7 +1931,7 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 57.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [52]
-<img/2.png, id=595, 1631.09375pt x 788.9475pt>
+<img/2.png, id=613, 1631.09375pt x 788.9475pt>
 File: img/2.png Graphic file (type png)
 <use img/2.png>
 Package luatex.def Info: img/2.png  used on input line 76.
@@ -1955,7 +1960,7 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 191.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [56]
-<img/5.png, id=628, 4282.7503pt x 1992.69469pt>
+<img/5.png, id=646, 4282.7503pt x 1992.69469pt>
 File: img/5.png Graphic file (type png)
 <use img/5.png>
 Package luatex.def Info: img/5.png  used on input line 200.
@@ -1980,12 +1985,12 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 231.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [60]
-<img/workflow.png, id=659, 702.625pt x 263.98625pt>
+<img/workflow.png, id=677, 702.625pt x 263.98625pt>
 File: img/workflow.png Graphic file (type png)
 <use img/workflow.png>
 Package luatex.def Info: img/workflow.png  used on input line 243.
 (luatex.def)             Requested size: 455.24411pt x 171.04523pt.
-<img/signup.png, id=660, 377.91188pt x 445.665pt>
+<img/signup.png, id=678, 377.91188pt x 445.665pt>
 File: img/signup.png Graphic file (type png)
 <use img/signup.png>
 Package luatex.def Info: img/signup.png  used on input line 255.
@@ -2000,7 +2005,7 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 265.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [62<./img/signup.png>]
-<img/admin.png, id=676, 981.6675pt x 948.54375pt>
+<img/admin.png, id=694, 981.6675pt x 948.54375pt>
 File: img/admin.png Graphic file (type png)
 <use img/admin.png>
 Package luatex.def Info: img/admin.png  used on input line 270.
@@ -2010,7 +2015,7 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 278.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [63<./img/admin.png>]
-<img/home.png, id=684, 948.54375pt x 925.20656pt>
+<img/home.png, id=702, 948.54375pt x 925.20656pt>
 File: img/home.png Graphic file (type png)
 <use img/home.png>
 Package luatex.def Info: img/home.png  used on input line 291.
@@ -2025,7 +2030,7 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 301.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [65<./img/home.png>]
-<img/search.png, id=698, 1158.57843pt x 858.95906pt>
+<img/search.png, id=716, 1158.57843pt x 858.95906pt>
 File: img/search.png Graphic file (type png)
 <use img/search.png>
 Package luatex.def Info: img/search.png  used on input line 308.
@@ -2036,7 +2041,7 @@ Package luatex.def Info: bachkhoa_logo.png  used on input line 315.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
 
 [66<./img/search.png>]
-<img/restaurant.png, id=706, 1041.1397pt x 913.91437pt>
+<img/restaurant.png, id=724, 1041.1397pt x 913.91437pt>
 File: img/restaurant.png Graphic file (type png)
 <use img/restaurant.png>
 Package luatex.def Info: img/restaurant.png  used on input line 325.
@@ -2051,7 +2056,7 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 338.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [68<./img/restaurant.png>]
-<img/profile.png, id=720, 1039.63406pt x 517.18219pt>
+<img/profile.png, id=738, 1039.63406pt x 517.18219pt>
 File: img/profile.png Graphic file (type png)
 <use img/profile.png>
 Package luatex.def Info: img/profile.png  used on input line 347.
@@ -2061,7 +2066,7 @@ File: bachkhoa_logo.png Graphic file (type png)
 Package luatex.def Info: bachkhoa_logo.png  used on input line 361.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
  [69<./img/profile.png>]
-<img/foodtour.png, id=728, 722.7pt x 680.5425pt>
+<img/foodtour.png, id=746, 722.7pt x 680.5425pt>
 File: img/foodtour.png Graphic file (type png)
 <use img/foodtour.png>
 Package luatex.def Info: img/foodtour.png  used on input line 369.
@@ -2072,7 +2077,7 @@ Package luatex.def Info: bachkhoa_logo.png  used on input line 378.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
 
 [70<./img/foodtour.png>]
-<img/tourdetail.png, id=738, 317.68687pt x 846.91406pt>
+<img/tourdetail.png, id=756, 317.68687pt x 846.91406pt>
 File: img/tourdetail.png Graphic file (type png)
 <use img/tourdetail.png>
 Package luatex.def Info: img/tourdetail.png  used on input line 381.
@@ -2090,7 +2095,7 @@ Package luatex.def Info: bachkhoa_logo.png  used on input line 83.
 \openout2 = tex/main/7/_index.aux
 
 (./tex/main/7/_index.tex
-<img/6.png, id=751, 1074.0125pt x 142.5325pt>
+<img/6.png, id=769, 1074.0125pt x 142.5325pt>
 File: img/6.png Graphic file (type png)
 <use img/6.png>
 Package luatex.def Info: img/6.png  used on input line 12.
@@ -2127,41 +2132,83 @@ Package luatex.def Info: bachkhoa_logo.png  used on input line 84.
 \openout2 = tex/main/8/_index.aux
 
 (./tex/main/8/_index.tex
-<img/timeline.png, id=786, 715.67375pt x 866.23625pt>
-File: img/timeline.png Graphic file (type png)
-<use img/timeline.png>
-Package luatex.def Info: img/timeline.png  used on input line 31.
-(luatex.def)             Requested size: 386.96027pt x 468.36862pt.
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\TU/TimesNewRoman(0)/m/n/13 Đăng ký tài
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
+[]|\TU/TimesNewRoman(0)/m/n/13 Xem chi tiết
+ []
+
+
+Underfull \hbox (badness 3861) in paragraph at lines 90--90
+[]|\TU/TimesNewRoman(0)/m/n/13 Thêm quán ăn
+ []
+
+
+Underfull \hbox (badness 2529) in paragraph at lines 130--130
+[]|\TU/TimesNewRoman(0)/m/n/13 Đánh giá quán
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--138
+[]|\TU/TimesNewRoman(0)/m/n/13 Chia sẻ food
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--146
+[]|\TU/TimesNewRoman(0)/m/n/13 Đăng tải nhà
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--162
+[]|\TU/TimesNewRoman(0)/m/n/13 Quản lý tài
+ []
+
+./tex/main/8/_index.tex:169: Infinite glue shrinkage found in box being split
 File: bachkhoa_logo.png Graphic file (type png)
 <use bachkhoa_logo.png>
-Package luatex.def Info: bachkhoa_logo.png  used on input line 34.
+Package luatex.def Info: bachkhoa_logo.png  used on input line 169.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
- [78
+
+[78
 
 
 
-])
+]
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 183.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [79])
 File: bachkhoa_logo.png Graphic file (type png)
 <use bachkhoa_logo.png>
 Package luatex.def Info: bachkhoa_logo.png  used on input line 85.
 (luatex.def)             Requested size: 22.75887pt x 22.75887pt.
- [79<./img/timeline.png>]
+ [80]
 \openout2 = tex/main/9/_index.aux
+ (./tex/main/9/_index.tex)
+File: bachkhoa_logo.png Graphic file (type png)
+<use bachkhoa_logo.png>
+Package luatex.def Info: bachkhoa_logo.png  used on input line 86.
+(luatex.def)             Requested size: 22.75887pt x 22.75887pt.
+ [81
 
-(./tex/main/9/_index.tex)
+
+
+]
 \openout2 = tex/main/10/_index.aux
  (./tex/main/10/_index.tex)
 \openout2 = tex/main/11/_index.aux
- (./tex/main/11/_index.tex)
+
+(./tex/main/11/_index.tex)
 \openout2 = tex/main/12/_index.aux
  (./tex/main/12/_index.tex)
 \c@mainendpage=\count374
 
 \openout2 = tex/ref.aux
- (./tex/ref.tex) [80
-
-
-
+ (./tex/ref.tex) [82
 
 
 
@@ -2178,7 +2225,8 @@ Package luatex.def Info: bachkhoa_logo.png  used on input line 85.
 
 ]
 \openout2 = tex/appendix/_index.aux
- (./tex/appendix/_index.tex)
+
+(./tex/appendix/_index.tex)
 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./main.aux (./tex/cover.aux) (./tex/commitment.aux) (./tex/thanks.aux)
@@ -2201,21 +2249,21 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33111 strings out of 476081
- 100000,1144653 words of node,token memory allocated
+ 33127 strings out of 476081
+ 100000,1373583 words of node,token memory allocated
  891 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 29 attribute, 113 glue_spe
 c, 16 attribute_list, 7 write, 3 pdf_action nodes
-   avail lists: 2:2610,3:540,4:402,5:265,6:106,7:5939,8:102,9:1315,10:13,11:260
- 53840 multiletter control sequences out of 65536+600000
+   avail lists: 2:2697,3:534,4:468,5:266,6:106,7:5939,8:102,9:1369,10:13,11:260
+ 53844 multiletter control sequences out of 65536+600000
  126 fonts using 30785831 bytes
- 123i,26n,114p,1025b,847s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 123i,26n,114p,1000b,847s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/WINDOWS/Fonts/timesbi.ttf><d:/tools/miktex/fonts/opentype/public/lm/lmroman1
 2-regular.otf><C:/WINDOWS/Fonts/timesi.ttf><C:/WINDOWS/Fonts/times.ttf><C:/WINDO
 WS/Fonts/timesbd.ttf>
-Output written on main.pdf (81 pages, 6734488 bytes).
+Output written on main.pdf (83 pages, 6711377 bytes).
 
-PDF statistics: 1170 PDF objects out of 1200 (max. 8388607)
- 222 named destinations out of 1000 (max. 1048576)
- 832 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1226 PDF objects out of 1440 (max. 8388607)
+ 233 named destinations out of 1000 (max. 1048576)
+ 904 words of extra memory for PDF output out of 10000 (max. 100000000)
 

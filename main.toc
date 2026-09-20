@@ -97,7 +97,16 @@
 \contentsline {subsubsection}{\numberline {6.2.5.}Module đánh giá quán ăn}{77}{subsubsection.6.2.5}%
 \contentsline {subsubsection}{\numberline {6.2.6.}Module gợi ý quán ăn}{77}{subsubsection.6.2.6}%
 \contentsline {subsubsection}{\numberline {6.2.7.}Nhận xét chung về các module đã hiện thực:}{77}{subsubsection.6.2.7}%
-\contentsline {section}{\numberline {7.}Kết luận và kế hoạch giai đoạn đồ án tốt nghiệp (Giai đoạn 2)}{78}{section.7}%
-\contentsline {subsection}{\numberline {7.1.}Kết luận giai đoạn đồ án chuyên ngành (Giai đoạn 1)}{78}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2.}Kế hoạch đồ án tốt nghiệp (Giai đoạn 2)}{78}{subsection.7.2}%
-\contentsline {section}{Tài liệu tham khảo}{80}{figure.caption.30}%
+\contentsline {section}{\numberline {7.}Kiểm thử hệ thống}{78}{section.7}%
+\contentsline {subsection}{\numberline {7.1.}Mục tiêu kiểm thử}{78}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2.}Môi trường kiểm thử}{78}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3.}Kiểm thử chức năng}{78}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4.}Kiểm thử các module chính}{79}{subsection.7.4}%
+\contentsline {subsubsection}{\numberline {7.4.1.}Kiểm thử module quản lý người dùng}{79}{subsubsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.2.}Kiểm thử module tìm kiếm quán ăn}{79}{subsubsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.3.}Kiểm thử module Food Tour}{79}{subsubsection.7.4.3}%
+\contentsline {subsubsection}{\numberline {7.4.4.}Kiểm thử module gợi ý quán ăn}{79}{subsubsection.7.4.4}%
+\contentsline {section}{\numberline {8.}Đánh giá kết quả kiểm thử}{79}{section.8}%
+\contentsline {section}{\numberline {9.}Kết luận đồ án tốt nghiệp}{81}{section.9}%
+\contentsline {section}{\numberline {10.}Hướng phát triển}{81}{section.10}%
+\contentsline {section}{Tài liệu tham khảo}{82}{section.10}%
