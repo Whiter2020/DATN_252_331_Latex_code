@@ -356,8 +356,19 @@ Việc lưu trữ thông tin khẩu vị cá nhân giúp hệ thống cá nhân 
 Nhìn chung, giao diện hồ sơ người dùng được thiết kế gọn gàng, trực quan và nhất
 quán với tổng thể hệ thống, đóng vai trò hỗ trợ quan trọng trong việc cá nhân hóa trải nghiệm người dùng và nâng cao hiệu quả của các chức năng đề xuất.
 
+\subsubsubsection{Giao diện gợi ý quán ăn cá nhân hóa}
+Nhằm nâng cao tính cá nhân hóa và hỗ trợ người dùng khám phá ẩm thực phù hợp với sở thích riêng, hệ thống cung cấp phân mục gợi ý quán ăn ``Recommended for You'' ngay trên trang chủ.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/ui_recommendation.png}
+    \caption{Giao diện gợi ý quán ăn cá nhân hóa theo khẩu vị và lịch sử}
+\end{figure}
+
+Giao diện gợi ý hiển thị các thẻ quán ăn được tính toán dựa trên thuật toán kết hợp đa tiêu chí: hồ sơ khẩu vị cá nhân (\textit{taste profile}), khu vực ưu tiên, lịch sử tương tác và điểm đánh giá cộng đồng. Đặc biệt, giao diện cung cấp tính năng giải thích lý do gợi ý minh bạch (\textit{Explainable Recommendation}) ngay dưới từng quán ăn (ví dụ: \textit{``Matches your taste: BBQ $\bullet$ Located in your preferred area''} hoặc \textit{``Matches your taste: BBQ $\bullet$ Matches your food-tour history''}). Điều này giúp người dùng hiểu rõ căn cứ của từng đề xuất, gia tăng mức độ tin cậy và trải nghiệm tương tác với hệ thống.
+
 \subsubsubsection{Giao diện hỗ trợ xây dựng FoodTour}
-Hình 5.11 minh họa giao diện hỗ trợ xây dựng food tour của hệ thống CityFoodTour.Giao diện này cung cấp các chức năng tìm kiếm quán ăn, food tour và món ăn nhằm hỗ trợ người dùng lựa chọn và xây dựng hành trình ăn uống phù hợp.
+Hình 5.11 minh họa giao diện hỗ trợ xây dựng food tour của hệ thống CityFoodTour. Giao diện này cung cấp các chức năng tìm kiếm quán ăn, food tour và món ăn nhằm hỗ trợ người dùng lựa chọn và xây dựng hành trình ăn uống phù hợp.
 
 Thông qua các mục chức năng được bố trí ở thanh bên, người dùng có thể dễ dàng
 chuyển đổi giữa các hình thức tìm kiếm khác nhau trong quá trình lập kế hoạch.
@@ -369,6 +380,22 @@ thông tin trên một màn hình duy nhất.
     \includegraphics[width=0.8\textwidth]{img/foodtour.png}
     \caption{Giao diện hỗ trợ xây dựng FoodTour}
 \end{figure}
+
+\subsubsubsection{Giao diện lập kế hoạch và tối ưu hóa lộ trình FoodTour}
+Giao diện lập kế hoạch hành trình (\textit{Itinerary Planner}) là tính năng trung tâm của hệ thống, cho phép người dùng trực quan hóa toàn bộ hành trình ăn uống trên bản đồ số tương tác và tối ưu hóa lộ trình di chuyển giữa các điểm dừng.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/ui_foodtour_routing.png}
+    \caption{Giao diện tối ưu hóa lộ trình Food Tour trên bản đồ số}
+\end{figure}
+
+Giao diện được chia thành hai phân vùng chính:
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Thanh điều khiển hành trình (bên trái)}: Cho phép người dùng theo dõi thứ tự ghé thăm các quán ăn (Stop 1, Stop 2,...), thêm mới hoặc xóa địa điểm, và thiết lập điểm xuất phát tùy chọn. Khu vực tóm tắt tối ưu (\textit{Optimized route}) cung cấp các chỉ số định lượng trực quan gồm: quãng đường trước và sau tối ưu (\textit{Distance before / after}), tỷ lệ cải thiện (\textit{Improvement \%}), thông tin thuật toán áp dụng (\textit{Road-Matrix Optimized / Exact TSP}), tổng cự ly đường bộ và thời gian di chuyển ước tính (\textit{ETA}).
+    \item \textbf{Bản đồ lộ trình tương tác (bên phải)}: Tích hợp thư viện Leaflet và dịch vụ bản đồ đường bộ Geoapify Routing API để vẽ đường đi thực tế giữa các quán ăn, đánh dấu số thứ tự điểm dừng và hiển thị các địa điểm ẩm thực xung quanh.
+\end{itemize}
+
 
 \subsubsubsection{Giao diện chi tiết FoodTour}
 Giao diện chi tiết food tour được thiết kế nhằm cung cấp đầy đủ thông tin về một
