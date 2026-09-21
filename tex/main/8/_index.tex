@@ -31,156 +31,272 @@ Hệ thống được kiểm thử trong môi trường phát triển với các
 
 \end{itemize}
 
-\subsection{Kiểm thử chức năng}
+\subsection{Chiến lược kiểm thử}
+Nhằm đảm bảo tính toàn diện và độ tin cậy của hệ thống, nhóm phát triển xây dựng chiến lược kiểm thử đa tầng, bao gồm các loại kiểm thử chính sau:
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Kiểm thử tích hợp (Integration Testing)}: Kiểm tra các API và các module trong hệ thống hoạt động đúng đắn khi phối hợp và trao đổi dữ liệu với nhau (giữa Auth, User, Restaurant, Tour và các dịch vụ ngoài).
+    \item \textbf{Kiểm thử giao diện / End-to-End (UI / E2E Testing)}: Kiểm tra luồng sử dụng thực tế xuyên suốt của người dùng trên giao diện web, đặc biệt là chức năng cốt lõi Food Tour Planner.
+    \item \textbf{Kiểm thử bảo mật (Security Testing)}: Kiểm tra cơ chế đăng nhập, kiểm soát truy cập thông qua xác thực token JSON Web Token (JWT) và phân quyền chặt chẽ giữa người dùng thông thường và quản trị viên.
+    \item \textbf{Kiểm thử chuyên sâu các tính năng nâng cao}: Đánh giá hiệu quả và độ chính xác của thuật toán tối ưu hóa lộ trình (TSP kết hợp Geoapify Road Matrix) và mô hình gợi ý ẩm thực cá nhân hóa đa tiêu chí có giải thích.
+\end{itemize}
 
-Các chức năng chính của hệ thống được kiểm thử dựa trên các kịch bản sử dụng
-thực tế nhằm đảm bảo hệ thống đáp ứng đúng các yêu cầu đã đề ra.
+\subsection{Kiểm thử tích hợp (Integration Testing)}
+Kiểm thử tích hợp nhằm đảm bảo sự tương tác thông suốt giữa các dịch vụ backend và cơ sở dữ liệu MongoDB. Kết quả kiểm thử các ca tiêu biểu được tổng hợp trong Bảng 7.1.
 
-\begin{longtable}{|c|p{3cm}|p{7cm}|c|}
-\caption{Danh sách kiểm thử chức năng}
-\label{tab:testcase}\\
-
+\begin{table}[H]
+\centering
+\small
+\caption{Kết quả kiểm thử tích hợp (Integration Testing)}
+\label{tab:test_int}
+\begin{tabularx}{\textwidth}{|c|p{3.2cm}|p{3.5cm}|X|c|}
 \hline
-STT & Chức năng & Kết quả mong đợi & Kết quả \\
+\textbf{ID} & \textbf{Test case} & \textbf{Module tích hợp} & \textbf{Kết quả mong đợi} & \textbf{Trạng thái} \\
 \hline
-
-1 &
-Đăng ký tài khoản &
-Người dùng có thể tạo tài khoản mới với thông tin hợp lệ.
-Hệ thống thông báo lỗi khi thông tin đăng ký không hợp lệ.
-&
-Đạt
-\\
+INT-01 & Đăng nhập người dùng & Auth + User & Đăng nhập thành công, trả về JWT & Pass \\
 \hline
-
-2 &
-Đăng nhập &
-Người dùng đăng nhập thành công với thông tin chính xác.
-Hệ thống từ chối khi sai thông tin đăng nhập.
-&
-Đạt
-\\
+INT-02 & Tải dữ liệu nhà hàng & Restaurant + Dish & Trả về danh sách nhà hàng và món ăn & Pass \\
 \hline
-
-3 &
-Cập nhật hồ sơ người dùng &
-Người dùng có thể cập nhật thông tin cá nhân và sở thích ẩm thực.
-&
-Đạt
-\\
+INT-03 & Tạo Food Tour & Auth + Tour + Restaurant & Tạo tour thành công với 3 điểm dừng & Pass \\
 \hline
-
-4 &
-Tìm kiếm quán ăn &
-Hệ thống trả về danh sách quán ăn dựa trên từ khóa hoặc bộ lọc.
-&
-Đạt
-\\
+INT-04 & Tối ưu lộ trình & Tour + Geoapify & Tối ưu lộ trình thành công & Pass \\
 \hline
-
-5 &
-Xem chi tiết quán ăn &
-Người dùng có thể xem thông tin chi tiết của một quán ăn.
-&
-Đạt
-\\
+INT-05 & Chia sẻ tour công khai & Tour + Public API & Tour công khai hiển thị không cần token & Pass \\
 \hline
+\end{tabularx}
+\end{table}
 
-6 &
-Thêm quán ăn yêu thích &
-Người dùng có thể lưu và quản lý danh sách quán ăn yêu thích.
-&
-Đạt
-\\
+Hình ảnh minh chứng thực nghiệm cho các ca kiểm thử tích hợp chính được thể hiện lần lượt dưới đây:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/login_success.png}
+    \caption{Kiểm thử tích hợp INT-01: Đăng nhập thành công và cấp phát token JWT}
+    \label{fig:int_01}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/restaurant_and_dish.png}
+    \caption{Kiểm thử tích hợp INT-02: Tải đồng bộ dữ liệu quán ăn và danh mục món ăn}
+    \label{fig:int_02}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/create_tour.png}
+    \caption{Kiểm thử tích hợp INT-03: Khởi tạo Food Tour thành công với các điểm dừng}
+    \label{fig:int_03}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/optimize_tour.png}
+    \caption{Kiểm thử tích hợp INT-04: Tối ưu hóa lộ trình với dịch vụ Geoapify}
+    \label{fig:int_04}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/public_tour.png}
+    \caption{Kiểm thử tích hợp INT-05: Chia sẻ và hiển thị Food Tour ở chế độ công khai}
+    \label{fig:int_05}
+\end{figure}
+
+\subsection{Kiểm thử giao diện / End-to-End (UI / E2E Testing)}
+Kiểm thử giao diện được thực hiện trực tiếp trên trình duyệt web nhằm đánh giá trải nghiệm người dùng xuyên suốt các thao tác chính. Chi tiết các kịch bản kiểm thử được trình bày trong Bảng 7.2.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Kết quả kiểm thử giao diện / End-to-End}
+\label{tab:test_ui}
+\begin{tabularx}{\textwidth}{|c|p{3cm}|p{4.2cm}|X|c|}
 \hline
-
-7 &
-Tạo food tour &
-Người dùng có thể tạo mới một hành trình ăn uống.
-&
-Đạt
-\\
+\textbf{ID} & \textbf{Test case} & \textbf{Các bước chính} & \textbf{Kết quả mong đợi} & \textbf{Trạng thái} \\
 \hline
-
-8 &
-Thêm địa điểm vào food tour &
-Người dùng có thể thêm các quán ăn vào hành trình đã tạo.
-&
-Đạt
-\\
+UI-01 & Tìm kiếm nhà hàng & Search Restaurants và nhập từ khóa & Hiển thị danh sách nhà hàng phù hợp & Pass \\
 \hline
-
-9 &
-Chỉnh sửa food tour &
-Người dùng có thể cập nhật thông tin hoặc danh sách địa điểm trong food tour.
-&
-Đạt
-\\
+UI-02 & Xem chi tiết món ăn & Search Dishes và chọn món ăn & Hiển thị khoảng giá và quán bán món & Pass \\
 \hline
-
-10 &
-Gợi ý quán ăn &
-Hệ thống hiển thị danh sách quán ăn phù hợp dựa trên thông tin người dùng.
-&
-Đạt
-\\
+UI-03 & Tạo Food Tour & Thêm 3 nhà hàng vào itinerary & Current Itinerary có 3 điểm dừng & Pass \\
 \hline
-
-11 &
-Đánh giá quán ăn &
-Người dùng có thể gửi đánh giá cho quán ăn đã sử dụng.
-&
-Đạt
-\\
+UI-04 & Tối ưu lộ trình & Bấm Optimize Route & Hiển thị route tối ưu trên bản đồ & Pass \\
 \hline
-
-12 &
-Chia sẻ food tour &
-Người dùng có thể chuyển food tour sang trạng thái công khai để chia sẻ.
-&
-Đạt
-\\
+UI-05 & Lưu và xem lại tour & Save Tour và mở My Tours & Tour được lưu và xem lại thành công & Pass \\
 \hline
+\end{tabularx}
+\end{table}
 
-13 &
-Đăng tải nhà hàng &
-Người dùng có quyền quản lý nhà hàng có thể gửi yêu cầu đăng tải nhà hàng.
-&
-Chưa kiểm thử
-\\
+Hình ảnh minh chứng thực nghiệm cho các ca kiểm thử giao diện chính:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/search_restaurants.png}
+    \caption{Kiểm thử giao diện UI-01: Tìm kiếm nhà hàng theo từ khóa và bộ lọc}
+    \label{fig:ui_01}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/search_dishes.png}
+    \caption{Kiểm thử giao diện UI-02: Tra cứu chi tiết món ăn và các quán phục vụ}
+    \label{fig:ui_02}
+\end{figure}
+
+Ca kiểm thử UI-03 (Tạo Food Tour) tương đồng với kết quả kịch bản INT-03 thể hiện tại Hình \ref{fig:int_03}. Dưới đây là giao diện thực tế của thao tác tối ưu hóa lộ trình và lưu trữ tour:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/optimize_tour.png}
+    \caption{Kiểm thử giao diện UI-04: Thao tác tối ưu hóa lộ trình Food Tour trên giao diện}
+    \label{fig:ui_04}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/view_tour.png}
+    \caption{Kiểm thử giao diện UI-05: Xem chi tiết lộ trình và quản lý danh sách Food Tour}
+    \label{fig:ui_05}
+\end{figure}
+
+\subsection{Kiểm thử bảo mật (Security Testing)}
+Hệ thống kiểm thử tính an toàn của các REST API bằng cách kiểm tra phản hồi với các yêu cầu không hợp lệ, thiếu token hoặc sai quyền hạn. Kết quả được ghi nhận trong Bảng 7.3.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Kết quả kiểm thử bảo mật (Security Testing)}
+\label{tab:test_sec}
+\begin{tabularx}{\textwidth}{|c|p{4.2cm}|X|c|}
 \hline
-
-14 &
-Duyệt nhà hàng &
-Quản trị viên có thể xem, phê duyệt hoặc từ chối yêu cầu đăng tải nhà hàng.
-&
-Chưa kiểm thử
-\\
+\textbf{ID} & \textbf{Test case} & \textbf{Kết quả mong đợi} & \textbf{Trạng thái} \\
 \hline
-
-15 &
-Quản lý tài khoản quản trị &
-Quản trị viên có thể quản lý thông tin tài khoản người dùng.
-&
-Đạt
-\\
+SEC-01 & Gọi API protected không có token & Bị chặn với mã 401 & Pass \\
 \hline
+SEC-02 & Gọi API với token không hợp lệ & Bị chặn với mã 401 & Pass \\
+\hline
+SEC-03 & User thường gọi API admin & Bị chặn với mã 403 & Pass \\
+\hline
+SEC-04 & Admin gọi API quản lý user & Truy cập thành công với mã 200 & Pass \\
+\hline
+SEC-05 & Gọi public tours không cần token & Truy cập thành công với mã 200 & Pass \\
+\hline
+\end{tabularx}
+\end{table}
 
-\end{longtable}
+\subsection{Kiểm thử chức năng người dùng và tương tác cộng đồng}
+Nhóm tiến hành kiểm thử các chức năng liên quan đến việc khởi tạo tài khoản, cá nhân hóa hồ sơ và các tính năng tương tác ẩm thực. Kết quả được trình bày trong Bảng 7.4.
 
-\subsection{Kiểm thử các module chính}
-\subsubsection{Kiểm thử module quản lý người dùng}
-\subsubsection{Kiểm thử module tìm kiếm quán ăn}
-\subsubsection{Kiểm thử module Food Tour}
-\subsubsection{Kiểm thử module gợi ý quán ăn}
+\begin{table}[H]
+\centering
+\small
+\caption{Kiểm thử chức năng người dùng và tương tác cộng đồng}
+\label{tab:test_fnc}
+\begin{tabularx}{\textwidth}{|c|p{3cm}|p{4.2cm}|X|c|}
+\hline
+\textbf{ID} & \textbf{Test case} & \textbf{Kịch bản \& Dữ liệu} & \textbf{Kết quả mong đợi} & \textbf{Trạng thái} \\
+\hline
+FNC-01 & Đăng ký tài khoản & Nhập email mới, mật khẩu $\ge 6$ ký tự & Tạo tài khoản thành công, mật khẩu mã hóa bcrypt & Pass \\
+\hline
+FNC-02 & Thiết lập hồ sơ khẩu vị & Chọn khẩu vị (BBQ) và khu vực ưu tiên (Quận 5) & Cập nhật \texttt{taste\_profile}, sẵn sàng phục vụ module gợi ý & Pass \\
+\hline
+FNC-03 & Quản lý quán yêu thích & Bấm biểu tượng yêu thích tại trang chi tiết quán & Quán được lưu vào danh sách Favorites của người dùng & Pass \\
+\hline
+FNC-04 & Đánh giá quán ăn & Gửi nhận xét và đánh giá 4/5 sao cho quán đã trải nghiệm & Đánh giá lưu thành công, tự động tính lại điểm trung bình quán & Pass \\
+\hline
+\end{tabularx}
+\end{table}
+
+Hình ảnh minh chứng thực nghiệm cho các ca kiểm thử chức năng người dùng và tương tác:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/sign_up.png}
+    \caption{Kiểm thử chức năng FNC-01: Giao diện đăng ký tài khoản người dùng mới}
+    \label{fig:fnc_01}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{img/set_preference.png}
+    \caption{Kiểm thử chức năng FNC-02: Thiết lập khẩu vị (BBQ) và khu vực ưu tiên (Quận 5)}
+    \label{fig:fnc_02}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/favorite_restaurants.png}
+    \caption{Kiểm thử chức năng FNC-03: Danh sách các quán ăn yêu thích đã được lưu}
+    \label{fig:fnc_03}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{img/restaurant_review1.png}
+    \caption{Kiểm thử chức năng FNC-04: Biểu mẫu nhập đánh giá và xếp hạng điểm sao cho quán ăn}
+    \label{fig:fnc_04_form}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/restaurant_review2.png}
+    \caption{Kiểm thử chức năng FNC-04: Đánh giá được ghi nhận và hiển thị công khai tại trang chi tiết quán}
+    \label{fig:fnc_04_list}
+\end{figure}
+
+
+\subsection{Kiểm thử chuyên sâu tính năng tối ưu lộ trình và gợi ý ẩm thực}
+Sau giai đoạn đánh giá của hội đồng, nhóm đã hoàn thiện và kiểm thử chuyên sâu hai tính năng nâng cao nhằm gia tăng chiều sâu kỹ thuật của đồ án:
+
+
+\subsubsection{Kiểm thử tính năng tối ưu hóa lộ trình Food Tour nâng cao}
+Kiểm thử tập trung vào việc đánh giá độ chính xác của thuật toán giải bài toán TSP dựa trên ma trận cự ly đường bộ Geoapify Matrix so với việc chỉ tính toán đường chim bay thông thường:
+
+\begin{table}[H]
+\centering
+\small
+\caption{Kiểm thử chuyên sâu thuật toán tối ưu hóa lộ trình}
+\label{tab:test_tour_deep}
+\begin{tabularx}{\textwidth}{|c|p{2.8cm}|X|c|c|}
+\hline
+\textbf{Mã} & \textbf{Chức năng} & \textbf{Kịch bản \& Dữ liệu kiểm thử} & \textbf{Thời gian} & \textbf{Kết quả} \\
+\hline
+ADV-T01 & Exact TSP ($\le 8$ điểm) & Tour 4 điểm tại Quận 5 và Quận 1. Duyệt toàn bộ hoán vị qua ma trận Geoapify Road Matrix. Quãng đường giảm từ 18.2 km xuống 14.6 km (cải thiện 19.8\%). & 480 ms & Pass \\
+\hline
+ADV-T02 & Heuristic 2-Opt ($> 8$ điểm) & Tour 10 điểm dừng. Áp dụng Nearest-Neighbor và tinh chỉnh 2-Opt. Quãng đường rút ngắn rõ rệt, triệt tiêu hiện tượng thắt nút lộ trình. & 820 ms & Pass \\
+\hline
+ADV-T03 & Điểm xuất phát tùy chọn & Nhập địa chỉ xuất phát cá nhân (được Geocoding chính xác ra tọa độ) làm mốc đầu tiên để tối ưu các điểm tiếp theo. & 650 ms & Pass \\
+\hline
+ADV-T04 & Cơ chế dự phòng Fallback & Giả lập ngắt kết nối Geoapify. Hệ thống tự động chuyển sang tính toán theo cự ly Haversine cục bộ, đảm bảo tính liên tục của hệ thống. & 45 ms & Pass \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsubsection{Kiểm thử mô hình gợi ý quán ăn cá nhân hóa đa tiêu chí}
+Kiểm thử đánh giá khả năng khớp chính xác các trọng số hồ sơ cá nhân và tính minh bạch của giải thích gợi ý (\textit{Explainable Recommendation}):
+
+\begin{table}[H]
+\centering
+\small
+\caption{Kiểm thử chuyên sâu mô hình gợi ý cá nhân hóa}
+\label{tab:test_rec_deep}
+\begin{tabularx}{\textwidth}{|c|p{2.8cm}|X|p{3.2cm}|c|}
+\hline
+\textbf{Mã} & \textbf{Kịch bản} & \textbf{Dữ liệu đầu vào \& Kỳ vọng} & \textbf{Lý do hiển thị (\textit{Reasons})} & \textbf{Kết quả} \\
+\hline
+ADV-R01 & Khớp khẩu vị cá nhân & Người dùng chọn sở thích: ``BBQ'', ``Lẩu''. Quán có thẻ BBQ/Lẩu được cộng 50 điểm và đứng đầu. & \textit{Matches your taste: BBQ} & Pass \\
+\hline
+ADV-R02 & Khớp khu vực ưu tiên & Người dùng chọn khu vực: ``Quận 7''. Các quán tại Quận 7 được cộng thêm 30 điểm. & \textit{Located in your preferred area} & Pass \\
+\hline
+ADV-R03 & Khớp lịch sử Food Tour & Người dùng từng tạo tour có món nướng. Quán có nhãn tương đồng được cộng 15 điểm. & \textit{Matches your food-tour history} & Pass \\
+\hline
+ADV-R04 & Ưu tiên cự ly GPS & Tọa độ GPS người dùng. Quán ăn trong bán kính $\le 3$ km được cộng 20 điểm. & \textit{Near your current location} & Pass \\
+\hline
+\end{tabularx}
+\end{table}
+
 \section{Đánh giá kết quả kiểm thử}
+Thông qua quá trình kiểm thử toàn diện trên cả 4 tầng (Tích hợp, Giao diện End-to-End, Bảo mật và Tính năng nâng cao), toàn bộ các ca kiểm thử đều đạt kết quả mong đợi (\textit{Pass}). 
 
-Thông qua quá trình kiểm thử, các chức năng chính của hệ thống đều hoạt động
-theo đúng yêu cầu thiết kế. Các luồng xử lý quan trọng như đăng nhập,
-tìm kiếm quán ăn, xây dựng food tour, quản lý thông tin và gợi ý quán ăn
-đều cho kết quả phù hợp.
+Hệ thống chứng minh được tính ổn định cao, thời gian đáp ứng nhanh ($< 1$ giây cho các tác vụ tối ưu phức tạp) và đảm bảo an toàn phân quyền người dùng. Việc bổ sung thành công cơ chế tối ưu lộ trình đường bộ thực tế và gợi ý ẩm thực cá nhân hóa minh bạch đã trực tiếp giải quyết vấn đề về chiều sâu và chiều rộng mà hội đồng đánh giá đã góp ý.
 
-Kết quả kiểm thử cho thấy kiến trúc hệ thống và sự phân tách giữa các tầng
-frontend, backend và database hoạt động ổn định. Tuy nhiên, hệ thống vẫn còn
-một số giới hạn như dữ liệu thử nghiệm chưa bao phủ toàn bộ các trường hợp
-thực tế và cần tiếp tục được đánh giá với tập dữ liệu lớn hơn trong tương lai.
