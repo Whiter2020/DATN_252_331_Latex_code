@@ -126,24 +126,39 @@ Module đánh giá quán ăn đã được hiện thực và hoạt động ổn
 
 % ====================== BỔ SUNG MODULE GỢI Ý QUÁN ĂN ======================
 \subsubsection{Module gợi ý quán ăn}
-Module gợi ý quán ăn là một trong những module quan trọng được triển khai trong giai đoạn đồ án chuyên ngành. Module này chịu trách nhiệm phân tích khẩu vị cá nhân, lịch sử sử dụng và vị trí hiện tại của người dùng để đưa ra các gợi ý quán ăn phù hợp.
+Module gợi ý quán ăn là một trong những điểm nhấn quan trọng của hệ thống nhằm cá nhân hóa trải nghiệm người dùng dựa trên mô hình kết hợp đa tiêu chí (Hybrid Recommendation Scoring). Khác với các thuật toán hộp đen phức tạp, hệ thống áp dụng cơ chế chấm điểm minh bạch, có khả năng giải thích lý do cụ thể (\textit{Explainable Recommendation}) cho từng đề xuất.
 
-Các chức năng chính đã được hiện thực bao gồm:
+Thuật toán tính điểm đề xuất tổng hợp (\textit{Score}) cho mỗi quán ăn dựa trên các thành phần trọng số:
 \begin{itemize}[label=\textbullet]
-    \item Lưu trữ và quản lý thông tin khẩu vị cá nhân của người dùng.
-    \item Tính toán độ tương đồng giữa khẩu vị người dùng và đặc điểm của các quán ăn.
-    \item Kết hợp lịch sử food tour và vị trí hiện tại để tăng độ chính xác gợi ý.
-    \item Hiển thị danh sách gợi ý kèm theo lý do gợi ý rõ ràng.
-    \item Tích hợp gợi ý trực tiếp vào giao diện tạo food tour.
+    \item \textbf{Khẩu vị cá nhân (\textit{Taste Matching} - $+50$ điểm)}: So khớp từ khóa thể hiện sở thích ẩm thực trong hồ sơ người dùng (ví dụ: BBQ, Lẩu, Hải sản,...) với tên, thẻ phân loại (\textit{tags}) và danh mục món ăn của quán.
+    \item \textbf{Khu vực ưu tiên (\textit{Location Matching} - $+30$ điểm)}: Kiểm tra sự trùng khớp về tỉnh/thành phố và quận/huyện giữa khu vực ưu tiên của người dùng và địa chỉ quán ăn.
+    \item \textbf{Ngân sách mong muốn (\textit{Price Range Matching} - $+20$ điểm)}: So khớp khoảng giá của quán với phân khúc chi tiêu ưa thích (\$, \$\$, \$\$\$,...).
+    \item \textbf{Độ tương đồng với quán yêu thích (\textit{Favorite Similarity} - $+25$ điểm)}: Ưu tiên các quán có cùng nhãn phân loại với danh sách quán người dùng đã đánh dấu yêu thích.
+    \item \textbf{Độ tương đồng với lịch sử Food Tour (\textit{Tour History Matching} - $+15$ điểm)}: Gợi ý các quán ăn tương đồng về phong cách ẩm thực với các quán từng xuất hiện trong các tour trước đây của người dùng.
+    \item \textbf{Lịch sử xem và tìm kiếm (\textit{Behavior History} - $+10$ điểm)}: Ghi nhận sự tương tác gần nhất của người dùng với các từ khóa tìm kiếm và quán đã xem.
+    \item \textbf{Đánh giá cộng đồng (\textit{Community Rating} - tối đa $+10$ điểm)}: Tính điểm chuẩn hóa từ trung bình đánh giá thực tế của cộng đồng trên thang điểm 5 sao.
+    \item \textbf{Khoảng cách vị trí thực tế (\textit{Proximity Matching} - $+10$ đến $+20$ điểm)}: Nếu người dùng cấp quyền truy cập vị trí GPS hiện tại, hệ thống tính khoảng cách theo công thức Haversine để ưu tiên các địa điểm gần trong bán kính $3$ km hoặc $8$ km.
 \end{itemize}
 
-Module gợi ý quán ăn đã được triển khai và hoạt động ổn định, góp phần nâng cao tính cá nhân hóa và trải nghiệm người dùng trong hệ thống.
+Hệ thống sắp xếp kết quả theo tổng điểm số giảm dần và hiển thị kèm các lý do cụ thể (\textit{reasons}), giúp người dùng dễ dàng đưa ra quyết định lựa chọn.
 
-% ====================== KẾT THÚC BỔ SUNG ======================
+\subsubsection{Module quản lý Food Tour và tối ưu hóa lộ trình di chuyển}
+Module quản lý Food Tour và tối ưu lộ trình là tính năng cốt lõi, tạo nên sự khác biệt về chiều sâu công nghệ của CityFoodTour so với các nền tảng đánh giá quán ăn truyền thống. Module cho phép người dùng tự do xây dựng các hành trình ẩm thực đa điểm dừng và tự động giải bài toán Người du lịch (\textit{Traveling Salesperson Problem - TSP}) để tìm ra thứ tự ghé thăm tối ưu nhất.
 
-\subsubsection{Nhận xét chung về các module đã hiện thực:}
-Các module chức năng đã được hiện thực đáp ứng phần lớn các yêu cầu chức năng
-đặt ra trong hệ thống. Các module hoạt động ổn định, có sự phân tách rõ ràng về
-trách nhiệm và hỗ trợ tốt cho các chức năng cốt lõi của hệ thống CityFoodTour.
+Các chức năng kỹ thuật chính được hiện thực bao gồm:
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Quản lý điểm dừng và kéo thả trực quan}: Người dùng có thể linh hoạt bổ sung, loại bỏ hoặc thay đổi trực tiếp thứ tự các điểm dừng trong hành trình thông qua cơ chế kéo thả (\textit{Drag-and-Drop}) mượt mà trên giao diện người dùng.
+    \item \textbf{Tích hợp Ma trận khoảng cách đường bộ thực tế (\textit{Road-Matrix Integration})}: Thay vì chỉ ước tính khoảng cách đường chim bay (vốn có sai số rất lớn trong đô thị), hệ thống kết nối với Geoapify Distance Matrix API để xây dựng ma trận cự ly và thời gian di chuyển thực tế theo mạng lưới giao thông đường bộ giữa tất cả các cặp điểm dừng. Nếu gặp sự cố mạng hoặc vượt hạn mức API, hệ thống tự động kích hoạt cơ chế dự phòng (\textit{Fallback}) dựa trên cự ly Haversine.
+    \item \textbf{Thuật toán tối ưu hóa lộ trình lai}:
+    \begin{itemize}
+        \item \textit{Thuật toán tìm kiếm chính xác (Exact TSP)}: Đối với các food tour có số điểm dừng nhỏ hơn hoặc bằng $8$ điểm ($\le 8$ stops), hệ thống thực hiện duyệt toàn bộ không gian hoán vị để tìm ra chu trình có tổng chi phí thấp nhất tuyệt đối.
+        \item \textit{Thuật toán heuristic Nearest-Neighbor kết hợp 2-Opt Local Search}: Đối với các food tour có số lượng điểm dừng lớn hơn ($> 8$ stops), nhằm đảm bảo thời gian phản hồi thời gian thực ($< 2$ giây), hệ thống áp dụng chiến lược gán tham lam điểm gần nhất (\textit{Nearest-Neighbor}) để tạo lộ trình khởi tạo, sau đó áp dụng kỹ thuật tinh chỉnh cục bộ \textit{2-Opt} lặp lại tối đa 50 bước để đảo nghịch các đoạn lộ trình chéo nhau, liên tục cải thiện tổng chi phí.
+    \end{itemize}
+    \item \textbf{Hỗ trợ điểm xuất phát tùy chọn và đa mục tiêu}: Người dùng có thể tối ưu hóa theo mục tiêu cự ly di chuyển ngắn nhất (\textit{driving-distance}) hoặc thời gian nhanh nhất (\textit{driving-time}), đồng thời cho phép nhập vị trí xuất phát cá nhân (được geocoding chính xác từ địa chỉ).
+    \item \textbf{Trực quan hóa lộ trình trên bản đồ số}: Sau khi tối ưu, tọa độ chi tiết của lộ trình đường bộ (\textit{Route Geometry GeoJSON}) được gửi về và vẽ trực tiếp trên bản đồ Leaflet, kèm thông số định lượng cụ thể về quãng đường trước/sau và tỷ lệ cải thiện (\textit{Improvement \%}).
+\end{itemize}
 
-Module quản lý food tour và các chức năng liên quan đến tối ưu lộ trình và hiển thị bản đồ sẽ được tiếp tục nghiên cứu và phát triển trong các hướng mở rộng của hệ thống trong tương lai.
+\subsubsection{Nhận xét chung về các module đã hiện thực}
+Trải qua quá trình nâng cấp và hoàn thiện trong giai đoạn Đồ án tốt nghiệp, toàn bộ các module chức năng cốt lõi của hệ thống CityFoodTour đều đã được hiện thực hoàn chỉnh và tích hợp chặt chẽ với nhau. 
+
+Đặc biệt, việc ứng dụng thành công thuật toán tối ưu hóa lộ trình TSP dựa trên ma trận khoảng cách giao thông thực tế cùng cơ chế gợi ý ẩm thực cá nhân hóa đa tiêu chí có giải thích đã giúp hệ thống đạt được chiều sâu về mặt kỹ thuật, giải quyết trọn vẹn bài toán tích hợp giữa tìm kiếm, gợi ý và lập kế hoạch hành trình ăn uống thông minh.
