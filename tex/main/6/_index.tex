@@ -15,11 +15,7 @@ Trong đó, khối xử lý nghiệp vụ (Server/Application) được thiết 
 
 \subsubsection{Kiến trúc phân lớp (Layered Architecture)}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\linewidth]{img/3.png}
-    \caption{Layered Architecture}
-\end{figure}
+
 
 Hệ thống được tổ chức theo kiến trúc phân lớp nhằm đảm bảo nguyên tắc tách biệt trách nhiệm (separation of concerns), giúp tăng khả năng mở rộng, bảo trì và kiểm thử hệ thống. Kiến trúc bao gồm 5 lớp chính, được minh họa trong Hình 5.1. Các lớp chính bao gồm:
 \begin{itemize}[label=\textbullet]
@@ -42,6 +38,12 @@ Việc tách riêng lớp hạ tầng giúp hệ thống giảm sự phụ thu�
 
 \textbf{Nhận xét chung}:
 Kiến trúc phân lớp giúp hệ thống được tổ chức rõ ràng, dễ kiểm soát, hỗ trợ kiểm thử theo từng mức (unit test, integration test), đồng thời tạo điều kiện thuận lợi cho việc phát triển và mở rộng hệ thống theo hướng module hóa.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\linewidth]{img/3.png}
+    \caption{Layered Architecture}
+\end{figure}
 
 \subsubsection{Lý do lựa chọn kiến trúc}
 Việc lựa chọn kiến trúc phân lớp cho hệ thống xuất phát từ các yêu cầu của đề tài:
@@ -68,18 +70,129 @@ Module này được tích hợp trực tiếp vào giao diện tạo và quản
 
 % ====================== KẾT THÚC BỔ SUNG ======================
 
-\subsection{Thiết kế cơ sở dữ liệu}
-\subsubsection{ERD}
-ERD tổng quan của toàn bộ hệ thống được biểu diễn ở hình 5.2
+% ====================== BỔ SUNG PHẦN BẢN ĐỒ ======================
+\subsection{Thiết kế module Bản đồ}
+
+Module Bản đồ được xây dựng nhằm hỗ trợ người dùng trực quan hóa vị trí
+của các nhà hàng trong hệ thống, đồng thời cung cấp thông tin về khoảng
+cách và vị trí địa lý giữa các địa điểm trong một food tour. 
+
+Trong hệ thống, dữ liệu nhà hàng được lưu trữ trong cơ sở dữ liệu MongoDB
+bao gồm các thông tin cơ bản như tên nhà hàng, địa chỉ, kinh độ và vĩ độ.
+Để xác định tọa độ địa lý từ địa chỉ của nhà hàng, hệ thống tích hợp
+Geoapify Geocoding API. Dịch vụ này cho phép chuyển đổi dữ liệu địa chỉ
+(address) thành tọa độ địa lý (latitude, longitude), phục vụ cho việc
+hiển thị vị trí trên bản đồ.
+
+Quy trình xử lý của module Bản đồ được mô tả như sau:
+
+\begin{enumerate}
+    \item Người quản trị hoặc hệ thống nhập thông tin địa chỉ của nhà hàng.
+    \item Backend gửi yêu cầu đến Geoapify Geocoding API thông qua địa chỉ
+    tương ứng.
+    \item Geoapify trả về thông tin tọa độ địa lý gồm kinh độ (longitude)
+    và vĩ độ (latitude).
+    \item Backend lưu trữ thông tin tọa độ cùng với dữ liệu nhà hàng trong
+    MongoDB.
+    \item Frontend lấy dữ liệu vị trí từ Backend API và hiển thị nhà hàng
+    trên bản đồ tương tác.
+\end{enumerate}
+
+Luồng xử lý dữ liệu của module bản đồ được minh họa như Hình \ref{fig:geoapify_flow}.
 
 \begin{figure}[H]
     \centering
-    \makebox[\textwidth][c]{\includegraphics[angle=-90, width=0.70\textwidth]{img/2.png}}
-    \vspace{0.2em}
-    \caption{Lược đồ ERD}
+    \includegraphics[width=0.8\textwidth]{img/geoapify_flow.png}
+    \caption{Luồng xử lý dữ liệu vị trí sử dụng Geoapify API}
+    \label{fig:geoapify_flow}
 \end{figure}
 
-\newpage
+
+\subsubsection{Tích hợp Geoapify API}
+
+Geoapify được lựa chọn thay thế cho các dịch vụ bản đồ thương mại có chi
+phí cao nhằm phù hợp với phạm vi của đề tài. Hệ thống chỉ sử dụng các
+chức năng cần thiết gồm:
+
+\begin{itemize}
+    \item \textbf{Geocoding API}: chuyển đổi địa chỉ nhà hàng thành tọa độ
+    địa lý để xác định vị trí trên bản đồ.
+    
+    \item \textbf{Map Tiles}: cung cấp lớp bản đồ nền giúp hiển thị vị trí
+    nhà hàng trên giao diện người dùng.
+    
+    \item \textbf{Routing/Road Matrix API}: hỗ trợ tính toán khoảng cách
+    giữa các địa điểm, phục vụ cho chức năng xây dựng food tour.
+\end{itemize}
+
+
+Dữ liệu tọa độ sau khi được xử lý được lưu trữ trong collection
+\textit{restaurants} với cấu trúc:
+
+\begin{verbatim}
+{
+    name: "Restaurant A",
+    address: "Ho Chi Minh City",
+    location: {
+        latitude: 10.762622,
+        longitude: 106.660172
+    }
+}
+\end{verbatim}
+
+
+Việc lưu trữ trực tiếp tọa độ địa lý giúp hệ thống giảm số lần gọi API,
+tăng tốc độ truy xuất dữ liệu và hỗ trợ các chức năng tìm kiếm nhà hàng
+theo vị trí.
+
+
+\subsubsection{Thiết kế hiển thị bản đồ trên giao diện}
+
+Ở phía Frontend, dữ liệu vị trí của nhà hàng được lấy thông qua Backend
+API. Mỗi nhà hàng được biểu diễn bằng một marker trên bản đồ với các
+thông tin gồm:
+
+\begin{itemize}
+    \item Tên nhà hàng.
+    \item Địa chỉ.
+    \item Thông tin đánh giá.
+    \item Các thông tin liên quan đến food tour.
+\end{itemize}
+
+Khi người dùng lựa chọn một nhà hàng, hệ thống hiển thị thông tin chi tiết
+và hỗ trợ người dùng xác định vị trí của địa điểm trong hành trình khám
+phá ẩm thực. Kiến trúc tổng quát của module bản đồ được mô tả trong hình 5.3
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{img/map_architecture.png}
+    \caption{Kiến trúc tích hợp module bản đồ}
+    \label{fig:map_architecture}
+\end{figure}
+
+Trong đó:
+
+\begin{itemize}
+    \item \textbf{Frontend}: chịu trách nhiệm hiển thị bản đồ và tương tác
+    với người dùng.
+    
+    \item \textbf{Backend API}: xử lý dữ liệu nhà hàng, quản lý yêu cầu
+    từ Frontend và giao tiếp với các dịch vụ bên ngoài.
+    
+    \item \textbf{MongoDB Cloud}: lưu trữ thông tin nhà hàng cùng dữ liệu
+    tọa độ địa lý.
+    
+    \item \textbf{Geoapify API}: cung cấp dịch vụ chuyển đổi địa chỉ,
+    dữ liệu bản đồ và thông tin khoảng cách.
+\end{itemize}
+
+Việc tích hợp Geoapify giúp hệ thống có khả năng hiển thị vị trí nhà hàng
+một cách trực quan, hỗ trợ người dùng tìm kiếm địa điểm ăn uống dễ dàng
+hơn và tạo nền tảng cho chức năng xây dựng food tour trong hệ thống.
+% ====================== KẾT THÚC BỔ SUNG ======================
+\subsection{Thiết kế cơ sở dữ liệu}
+\subsubsection{ERD}
+ERD tổng quan của toàn bộ hệ thống được biểu diễn ở hình 5.2
 
 \subsubsubsection{Thực thể Users}
 \begin{itemize}[label=\textbullet]
@@ -99,6 +212,12 @@ ERD tổng quan của toàn bộ hệ thống được biểu diễn ở hình 5
         \item Writes – với Reviews (1--N)
         \item Creates – với Foodtour (1--N)
         \item Save – với Foodtour (N--M)
+        \begin{figure}[H]
+            \centering
+            \makebox[\textwidth][c]{\includegraphics[angle=-90, width=0.70\textwidth]{img/2.png}}
+            \vspace{0.2em}
+            \caption{Lược đồ ERD}
+        \end{figure}
         \item Favorites\_restaurant – với Restaurants (N--M)
     \end{itemize}
 \end{itemize}
@@ -192,9 +311,11 @@ ERD tổng quan của toàn bộ hệ thống được biểu diễn ở hình 5
     \end{itemize}
     \item \textbf{Quan hệ}:
     \begin{itemize}
-        \item Serves – với Restaurants (N--M)
+        \item Serves - với Restaurants (N--M)
     \end{itemize}
 \end{itemize}
+
+
 
 
 \subsubsection{Collection Schema}

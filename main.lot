@@ -1,12 +1,18 @@
 \babel@toc {vietnamese}{}\relax 
-\contentsline {table}{\numberline {4.1}{\ignorespaces Usecase: Đăng nhập, đăng xuất}}{25}{table.4.1}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Usecase: Quản lý hồ sơ người dùng}}{25}{table.4.2}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Use case: Tìm kiếm quán ăn, địa điểm ẩm thực}}{26}{table.4.3}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Use case: Tạo lộ trình ăn uống}}{27}{table.4.4}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Use case: Đánh giá quán ăn }}{28}{table.4.5}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Use case: Quản lý food tour}}{29}{table.4.6}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Use case: Xem food tour}}{31}{table.4.7}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces Use case: Quản lý tài khoản người dùng}}{32}{table.4.8}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces Use case: Quản lý dữ liệu quán ăn}}{33}{table.4.9}%
-\contentsline {table}{\numberline {4.10}{\ignorespaces Use case: Quản lý nội dung food tour}}{34}{table.4.10}%
-\contentsline {table}{\numberline {7.1}{\ignorespaces Danh sách kiểm thử chức năng}}{78}{table.7.1}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Usecase: Đăng nhập, đăng xuất}}{28}{table.4.1}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Usecase: Quản lý hồ sơ người dùng}}{28}{table.4.2}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Use case: Tìm kiếm quán ăn, địa điểm ẩm thực}}{29}{table.4.3}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Use case: Tạo lộ trình ăn uống}}{30}{table.4.4}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Use case: Đánh giá quán ăn }}{31}{table.4.5}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Use case: Quản lý food tour}}{33}{table.4.6}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Use case: Xem food tour}}{34}{table.4.7}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Use case: Quản lý tài khoản người dùng}}{35}{table.4.8}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Use case: Quản lý dữ liệu quán ăn}}{36}{table.4.9}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces Use case: Quản lý nội dung food tour}}{38}{table.4.10}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces So sánh kỹ thuật tối ưu hóa lộ trình: Google Maps, Mapbox Optimization API và CityFoodTour}}{86}{table.6.1}%
+\contentsline {table}{\numberline {7.1}{\ignorespaces Kết quả kiểm thử tích hợp (Integration Testing)}}{90}{table.caption.34}%
+\contentsline {table}{\numberline {7.2}{\ignorespaces Kết quả kiểm thử giao diện / End-to-End}}{93}{table.caption.38}%
+\contentsline {table}{\numberline {7.3}{\ignorespaces Kết quả kiểm thử bảo mật (Security Testing)}}{96}{table.caption.44}%
+\contentsline {table}{\numberline {7.4}{\ignorespaces Kiểm thử chức năng người dùng và tương tác cộng đồng}}{96}{table.caption.45}%
+\contentsline {table}{\numberline {7.5}{\ignorespaces Kiểm thử chuyên sâu thuật toán tối ưu hóa lộ trình}}{100}{table.caption.51}%
+\contentsline {table}{\numberline {7.6}{\ignorespaces Kiểm thử chuyên sâu mô hình gợi ý cá nhân hóa}}{103}{table.caption.57}%
