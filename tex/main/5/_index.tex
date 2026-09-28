@@ -17,12 +17,15 @@ giữa các tác nhân (actors) với hệ thống.
     \caption{Use Case tổng quan}
 \end{figure}
 
-\newpage
 
 \subsection{Đặc tả Usecase (Usecase Detail)}
 
 % ==== Đăng nhập, đăng xuất ====
 \subsubsection{Usecase: Đăng nhập, đăng xuất}
+Bảng 4.1 mô tả chi tiết Use case Đăng nhập, đăng xuất của người dùng, bao gồm
+luồng xử lý chính khi người dùng xác thực thông tin và tạo phiên làm việc, cùng
+các trường hợp ngoại lệ như sai thông tin đăng nhập hoặc tài khoản bị khóa.
+
 \begin{longtable}{|p{4cm}|p{10cm}|}
 \caption{Usecase: Đăng nhập, đăng xuất}
 \\
@@ -62,6 +65,10 @@ giữa các tác nhân (actors) với hệ thống.
 
 % ==== Quản lý hồ sơ người dùng ====
 \subsubsection{Usecase: Quản lý hồ sơ người dùng}
+Bảng 4.2 mô tả chi tiết Use case Quản lý hồ sơ người dùng, bao gồm các bước
+người dùng cập nhật thông tin cá nhân và thiết lập khẩu vị nhằm phục vụ cơ chế
+gợi ý cá nhân hóa của hệ thống.
+
 \begin{longtable}{|p{4cm}|p{10cm}|}
 \caption{Usecase: Quản lý hồ sơ người dùng}
 \\
@@ -102,6 +109,9 @@ giữa các tác nhân (actors) với hệ thống.
 % ==== Tìm kiếm quán ăn, địa điểm ẩm thực ====
 % ==== Tìm kiếm quán ăn, địa điểm ẩm thực ====
 \subsubsection{Use case: Tìm kiếm quán ăn, địa điểm ẩm thực}
+Bảng 4.3 mô tả chi tiết Use case Tìm kiếm quán ăn và địa điểm ẩm thực của người
+dùng, bao gồm các bước nhập từ khóa, áp dụng bộ lọc nâng cao và xem kết quả tìm
+kiếm; đồng thời nêu rõ các trường hợp không tìm thấy kết quả phù hợp.
 
 \begin{longtable}{|p{4cm}|p{10cm}|}
 \caption{Use case: Tìm kiếm quán ăn, địa điểm ẩm thực}
@@ -158,6 +168,9 @@ xem thông tin chi tiết hoặc lưu quán ăn vào danh sách yêu thích. \\ 
 
 % ==== Tạo lộ trình ăn uống (FoodTour) ====
 \subsubsection{Use case: Tạo lộ trình ăn uống}
+Bảng 4.4 mô tả chi tiết Use case Tạo lộ trình ăn uống (Food Tour), bao gồm các
+bước người dùng khởi tạo food tour, thêm các điểm dừng và hệ thống tính toán
+hiển thị lộ trình di chuyển hợp lý trên bản đồ.
 
 \begin{longtable}{|p{4cm}|p{10cm}|}
 \caption{Use case: Tạo lộ trình ăn uống}
@@ -214,6 +227,9 @@ Food tour được tạo và lưu trong hệ thống; lộ trình di chuyển đ
 
 % ==== Đánh giá quán ăn  ====
 \subsubsection{Use case: Đánh giá quán ăn }
+Bảng 4.5 mô tả chi tiết Use case Đánh giá quán ăn, bao gồm các bước người dùng
+gửi nhận xét và xếp hạng sao cho quán đã trải nghiệm; nêu rõ các điều kiện hợp
+lệ của nội dung và cách hệ thống cập nhật điểm trung bình đánh giá của quán.
 
 \begin{longtable}{|p{4cm}|p{10cm}|}
 \caption{Use case: Đánh giá quán ăn }
@@ -268,6 +284,9 @@ Người dùng đã đăng nhập vào hệ thống và có lịch sử tương 
 
 % ==== Quản lý food tour ====
 \subsubsection{Use case: Quản lý food tour}
+Bảng 4.6 mô tả chi tiết Use case Quản lý food tour, bao gồm các bước người dùng
+tạo, chỉnh sửa và quản lý food tour cá nhân như cập nhật thông tin, thêm/xóa
+quán ăn và sắp xếp lại thứ tự các điểm dừng trong lộ trình.
 
 \begin{longtable}{|p{4cm}|p{10cm}|}
 \caption{Use case: Quản lý food tour}
@@ -322,9 +341,12 @@ Thông tin food tour và danh sách điểm dừng được cập nhật và lư
 - Output: Food tour được cập nhật và hiển thị theo nội dung mới. \\ \hline
 
 \end{longtable}
-\newpage
+
 % ==== Xem food tour ====
 \subsubsection{Use case: Xem food tour}
+Bảng 4.7 mô tả chi tiết Use case Xem food tour, bao gồm các bước người dùng
+truy cập và xem thông tin chi tiết của food tour cá nhân hoặc food tour công khai,
+kèm theo việc hiển thị lộ trình di chuyển trên bản đồ tương tác.
 
 \begin{longtable}{|p{4cm}|p{10cm}|}
 \caption{Use case: Xem food tour}
@@ -384,6 +406,9 @@ Thông tin chi tiết food tour được hiển thị; người dùng có thể 
 
 % ==== Quản lý tài khoản ====
 \subsubsection{Use case: Quản lý tài khoản người dùng}
+Bảng 4.8 mô tả chi tiết Use case Quản lý tài khoản người dùng dành cho Quản trị
+viên, bao gồm các thao tác tìm kiếm, xem thông tin và thực hiện khóa/mở khóa tài
+khoản nhằm đảm bảo hệ thống vận hành an toàn và ổn định.
 
 \begin{longtable}{|p{4cm}|p{10cm}|}
 \caption{Use case: Quản lý tài khoản người dùng}
@@ -438,6 +463,9 @@ Trạng thái tài khoản người dùng được cập nhật và lưu trữ t
 
 % ==== Quản lý dữ liệu quán ăn ====
 \subsubsection{Use case: Quản lý dữ liệu quán ăn}
+Bảng 4.9 mô tả chi tiết Use case Quản lý dữ liệu quán ăn dành cho Quản trị viên,
+bao gồm các thao tác tạo mới, cập nhật và xóa thông tin quán ăn nhằm đảm bảo
+dữ liệu hiển thị cho người dùng luôn chính xác và đầy đủ.
 
 \begin{longtable}{|p{4cm}|p{10cm}|}
 \caption{Use case: Quản lý dữ liệu quán ăn}
@@ -492,6 +520,9 @@ Dữ liệu quán ăn được cập nhật trong cơ sở dữ liệu và đồ
 
 % ==== Quản lý nội dung food tour ====
 \subsubsection{Use case: Quản lý nội dung food tour}
+Bảng 4.10 mô tả chi tiết Use case Quản lý nội dung food tour dành cho Quản trị
+viên, bao gồm các bước kiểm tra và xử lý các food tour được chia sẻ công khai
+nhằm đảm bảo nội dung phù hợp với quy định của nền tảng.
 
 \begin{longtable}{|p{4cm}|p{10cm}|}
 \caption{Use case: Quản lý nội dung food tour}
@@ -544,7 +575,7 @@ Trạng thái hoặc nội dung food tour được cập nhật theo quyết đ�
 \end{longtable}
 \subsection{Activity Diagram }
 Trong quá trình thiết kế hệ thống, bên cạnh việc xác định cấu trúc dữ liệu và các lớp nghiệp vụ, việc mô tả chi tiết luồng xử lý của các chức năng chính đóng vai trò quan trọng nhằm làm rõ cách thức hệ thống tương tác với người dùng trong từng kịch bản sử dụng. Biểu đồ hoạt động (Activity Diagram) được sử dụng để mô tả trình tự các bước xử lý, các điểm rẽ nhánh điều kiện và sự phối hợp giữa người dùng và hệ thống trong quá trình thực hiện một chức năng cụ thể.
-\newpage
+
 
 Hình 4.2 minh họa biểu đồ hoạt động cho chức năng đánh giá quán ăn của hệ thống. Biểu đồ thể hiện các bước chính từ khi người dùng nhập nội dung đánh giá đến quá trình hệ thống kiểm tra tính hợp lệ của dữ liệu và quyết định lưu hoặc xóa đánh giá.
 
@@ -681,14 +712,17 @@ Lớp Restaurant mô tả dữ liệu quán ăn/nhà hàng, bao gồm thông tin
 Lớp Review biểu diễn đánh giá của người dùng đối với quán ăn, với các thuộc tính chính gồm user\_id, restaurant\_id, rating và content. Mối quan hệ giữa User và Review là 1–n (một người dùng có thể viết nhiều đánh giá), tương tự Restaurant và Review cũng là 1–n (một quán có nhiều đánh giá). Thiết kế này phù hợp với yêu cầu hiển thị danh sách đánh giá trong trang chi tiết quán ăn, đồng thời tạo nền tảng để tính toán trung bình đánh giá cho Restaurant.
 
 Bên cạnh các lớp dữ liệu (entity), hệ thống có lớp AdminService nhằm thể hiện các chức năng quản trị như quản lý dữ liệu quán ăn (thêm/sửa/xóa), quản lý tài khoản người dùng (khóa/mở khóa) và kiểm duyệt nội dung food tour công khai. Việc đặt các hành vi quản trị trong lớp dịch vụ thay vì gắn trực tiếp vào lớp User nhằm đảm bảo nguyên tắc phân tách trách nhiệm và hỗ trợ kiểm soát phân quyền rõ ràng. 
-\newpage
+
 Hình 4.16 trình bày class diagram tổng quan của hệ thống theo các nhóm lớp nêu trên.
 \begin{figure}[H]
     \centering
-    \includegraphics[page=1,width=1\textwidth]{img/4.png}
+    \makebox[\textwidth][c]{\includegraphics[height=0.88\textheight,keepaspectratio]{img/4.png}}
+    \vspace{0.3em}
     \caption{Class Diagram}
 \end{figure}
 
 
 
 
+
+\cleardoublepage
