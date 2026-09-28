@@ -69,37 +69,23 @@ Hình ảnh minh chứng thực nghiệm cho các ca kiểm thử tích hợp ch
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{img/login_success.png}
-    \caption{Kiểm thử tích hợp INT-01: Đăng nhập thành công và cấp phát token JWT}
-    \label{fig:int_01}
+    \includegraphics[width=1\textwidth]{img/intergration_testing.png}
+    \caption{Kiểm thử tích hợp: Kết quả chạy bộ kiểm thử tích hợp bằng Postman. Tất cả test case đều chạy thành công, không có lỗi, thời gian phản hồi trung bình là 393 ms}
+    \label{fig:int_runner}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{img/restaurant_and_dish.png}
-    \caption{Kiểm thử tích hợp INT-02: Tải đồng bộ dữ liệu quán ăn và danh mục món ăn}
-    \label{fig:int_02}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{img/create_tour.png}
-    \caption{Kiểm thử tích hợp INT-03: Khởi tạo Food Tour thành công với các điểm dừng}
+    \includegraphics[width=1\textwidth]{img/INT-03.png}
+    \caption{Kiểm thử tích hợp INT-03: API khởi tạo Food Tour trả về mã 201 Created. Tour được tạo thành công với các điểm dừng trong lịch trình}
     \label{fig:int_03}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{img/optimize_tour.png}
-    \caption{Kiểm thử tích hợp INT-04: Tối ưu hóa lộ trình với dịch vụ Geoapify}
+    \includegraphics[width=1\textwidth]{img/INT-04.png}
+    \caption{Kiểm thử tích hợp INT-04: API tối ưu lộ trình trả về mã 200 OK. Tour được tối ưu thành công và trả về thông tin các điểm dừng trong lịch trình}
     \label{fig:int_04}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\textwidth]{img/public_tour.png}
-    \caption{Kiểm thử tích hợp INT-05: Chia sẻ và hiển thị Food Tour ở chế độ công khai}
-    \label{fig:int_05}
 \end{figure}
 
 \subsection{Kiểm thử giao diện / End-to-End (UI / E2E Testing)}
@@ -131,30 +117,37 @@ Hình ảnh minh chứng thực nghiệm cho các ca kiểm thử giao diện ch
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{img/search_restaurants.png}
+    \includegraphics[width=1\textwidth]{img/search_restaurants.png}
     \caption{Kiểm thử giao diện UI-01: Tìm kiếm nhà hàng theo từ khóa và bộ lọc}
     \label{fig:ui_01}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{img/search_dishes.png}
+    \includegraphics[width=1\textwidth]{img/search_dishes.png}
     \caption{Kiểm thử giao diện UI-02: Tra cứu chi tiết món ăn và các quán phục vụ}
     \label{fig:ui_02}
 \end{figure}
 
-Ca kiểm thử UI-03 (Tạo Food Tour) tương đồng với kết quả kịch bản INT-03 thể hiện tại Hình \ref{fig:int_03}. Dưới đây là giao diện thực tế của thao tác tối ưu hóa lộ trình và lưu trữ tour:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/create_tour.png}
+    \caption{Kiểm thử giao diện UI-03: Thao tác tạo Food Tour và thêm các điểm dừng vào hành trình}
+    \label{fig:ui_03}
+\end{figure}
+
+Dưới đây là giao diện thực tế của thao tác tối ưu hóa lộ trình và lưu trữ tour:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{img/optimize_tour.png}
+    \includegraphics[width=1\textwidth]{img/optimize_tour.png}
     \caption{Kiểm thử giao diện UI-04: Thao tác tối ưu hóa lộ trình Food Tour trên giao diện}
     \label{fig:ui_04}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{img/view_tour.png}
+    \includegraphics[width=1\textwidth]{img/view_tour.png}
     \caption{Kiểm thử giao diện UI-05: Xem chi tiết lộ trình và quản lý danh sách Food Tour}
     \label{fig:ui_05}
 \end{figure}
@@ -211,35 +204,35 @@ Hình ảnh minh chứng thực nghiệm cho các ca kiểm thử chức năng n
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{img/sign_up.png}
+    \includegraphics[width=1\textwidth]{img/sign_up.png}
     \caption{Kiểm thử chức năng FNC-01: Giao diện đăng ký tài khoản người dùng mới}
     \label{fig:fnc_01}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.65\textwidth]{img/set_preference.png}
+    \includegraphics[width=1\textwidth]{img/set_preference.png}
     \caption{Kiểm thử chức năng FNC-02: Thiết lập khẩu vị (BBQ) và khu vực ưu tiên (Quận 5)}
     \label{fig:fnc_02}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{img/favorite_restaurants.png}
+    \includegraphics[width=1\textwidth]{img/favorite_restaurants.png}
     \caption{Kiểm thử chức năng FNC-03: Danh sách các quán ăn yêu thích đã được lưu}
     \label{fig:fnc_03}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.65\textwidth]{img/restaurant_review1.png}
+    \includegraphics[width=1\textwidth]{img/restaurant_review1.png}
     \caption{Kiểm thử chức năng FNC-04: Biểu mẫu nhập đánh giá và xếp hạng điểm sao cho quán ăn}
     \label{fig:fnc_04_form}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{img/restaurant_review2.png}
+    \includegraphics[width=1\textwidth]{img/restaurant_review2.png}
     \caption{Kiểm thử chức năng FNC-04: Đánh giá được ghi nhận và hiển thị công khai tại trang chi tiết quán}
     \label{fig:fnc_04_list}
 \end{figure}
@@ -261,16 +254,53 @@ Kiểm thử tập trung vào việc đánh giá độ chính xác của thuật
 \hline
 \textbf{Mã} & \textbf{Chức năng} & \textbf{Kịch bản \& Dữ liệu kiểm thử} & \textbf{Thời gian} & \textbf{Kết quả} \\
 \hline
-ADV-T01 & Exact TSP ($\le 8$ điểm) & Tour 4 điểm tại Quận 5 và Quận 1. Duyệt toàn bộ hoán vị qua ma trận Geoapify Road Matrix. Quãng đường giảm từ 18.2 km xuống 14.6 km (cải thiện 19.8\%). & 480 ms & Pass \\
+ADV-T01 & Exact TSP ($\le 8$ điểm) & Tour 4 điểm tại Quận 5 và Quận 1. Duyệt toàn bộ hoán vị qua ma trận Geoapify Road Matrix. & 480 ms & Pass \\
 \hline
 ADV-T02 & Heuristic 2-Opt ($> 8$ điểm) & Tour 10 điểm dừng. Áp dụng Nearest-Neighbor và tinh chỉnh 2-Opt. Quãng đường rút ngắn rõ rệt, triệt tiêu hiện tượng thắt nút lộ trình. & 820 ms & Pass \\
 \hline
-ADV-T03 & Điểm xuất phát tùy chọn & Nhập địa chỉ xuất phát cá nhân (được Geocoding chính xác ra tọa độ) làm mốc đầu tiên để tối ưu các điểm tiếp theo. & 650 ms & Pass \\
+ADV-T03 & Điểm xuất phát tùy chọn & Chọn địa chỉ xuất phát cá nhân trên bản đồ làm mốc đầu tiên để tối ưu các điểm tiếp theo. & 650 ms & Pass \\
 \hline
 ADV-T04 & Cơ chế dự phòng Fallback & Giả lập ngắt kết nối Geoapify. Hệ thống tự động chuyển sang tính toán theo cự ly Haversine cục bộ, đảm bảo tính liên tục của hệ thống. & 45 ms & Pass \\
 \hline
 \end{tabularx}
 \end{table}
+
+Hình ảnh minh chứng thực nghiệm cho các ca kiểm thử tối ưu hóa lộ trình Food Tour nâng cao được thể hiện lần lượt dưới đây:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/tour_routing_1.png}
+    \caption{Kiểm thử nâng cao ADV-T01: Tối ưu hóa lộ trình chính xác Exact TSP cho hành trình $\le 8$ điểm dừng}
+    \label{fig:adv_t01}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/tour_routing_2.png}
+    \caption{Kiểm thử nâng cao ADV-T02: Tối ưu hóa lộ trình Heuristic 2-Opt cho hành trình nhiều điểm dừng}
+    \label{fig:adv_t02}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/tour_routing_3.png}
+    \caption{Kiểm thử nâng cao ADV-T03: Tối ưu hóa lộ trình kết hợp điểm xuất phát tùy chọn của người dùng}
+    \label{fig:adv_t03}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/haversine_fallback1.png}
+    \caption{Kiểm thử nâng cao ADV-T04: Giao diện chuyển sang chế độ dự phòng Distance Estimate khi ngắt kết nối Geoapify}
+    \label{fig:adv_t04_ui}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/haversine_fallback2.png}
+    \caption{Kiểm thử nâng cao ADV-T04: Nhật ký hệ thống ghi nhận lỗi ngoại lệ và kích hoạt cơ chế Haversine Fallback}
+    \label{fig:adv_t04_log}
+\end{figure}
 
 \subsubsection{Kiểm thử mô hình gợi ý quán ăn cá nhân hóa đa tiêu chí}
 Kiểm thử đánh giá khả năng khớp chính xác các trọng số hồ sơ cá nhân và tính minh bạch của giải thích gợi ý (\textit{Explainable Recommendation}):
@@ -284,7 +314,7 @@ Kiểm thử đánh giá khả năng khớp chính xác các trọng số hồ s
 \hline
 \textbf{Mã} & \textbf{Kịch bản} & \textbf{Dữ liệu đầu vào \& Kỳ vọng} & \textbf{Lý do hiển thị (\textit{Reasons})} & \textbf{Kết quả} \\
 \hline
-ADV-R01 & Khớp khẩu vị cá nhân & Người dùng chọn sở thích: ``BBQ'', ``Lẩu''. Quán có thẻ BBQ/Lẩu được cộng 50 điểm và đứng đầu. & \textit{Matches your taste: BBQ} & Pass \\
+ADV-R01 & Khớp khẩu vị cá nhân & Người dùng chọn sở thích: ``BBQ''. Quán có thẻ BBQ/Lẩu được cộng 50 điểm và đứng đầu. & \textit{Matches your taste: BBQ} & Pass \\
 \hline
 ADV-R02 & Khớp khu vực ưu tiên & Người dùng chọn khu vực: ``Quận 7''. Các quán tại Quận 7 được cộng thêm 30 điểm. & \textit{Located in your preferred area} & Pass \\
 \hline
@@ -295,8 +325,40 @@ ADV-R04 & Ưu tiên cự ly GPS & Tọa độ GPS người dùng. Quán ăn tron
 \end{tabularx}
 \end{table}
 
-\section{Đánh giá kết quả kiểm thử}
-Thông qua quá trình kiểm thử toàn diện trên cả 4 tầng (Tích hợp, Giao diện End-to-End, Bảo mật và Tính năng nâng cao), toàn bộ các ca kiểm thử đều đạt kết quả mong đợi (\textit{Pass}). 
+Hình ảnh minh chứng thực nghiệm cho cơ chế giải thích gợi ý quán ăn cá nhân hóa đa tiêu chí được thể hiện lần lượt dưới đây:
 
-Hệ thống chứng minh được tính ổn định cao, thời gian đáp ứng nhanh ($< 1$ giây cho các tác vụ tối ưu phức tạp) và đảm bảo an toàn phân quyền người dùng. Việc bổ sung thành công cơ chế tối ưu lộ trình đường bộ thực tế và gợi ý ẩm thực cá nhân hóa minh bạch đã trực tiếp giải quyết vấn đề về chiều sâu và chiều rộng mà hội đồng đánh giá đã góp ý.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/match_taste.png}
+    \caption{Kiểm thử gợi ý ADV-R01: Gợi ý quán ăn khớp với sở thích khẩu vị cá nhân (Matches your taste)}
+    \label{fig:adv_r01}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/preferred_area.png}
+    \caption{Kiểm thử gợi ý ADV-R02: Gợi ý quán ăn theo khu vực ưu tiên (Located in your preferred area)}
+    \label{fig:adv_r02}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/foodtour_history.png}
+    \caption{Kiểm thử gợi ý ADV-R03: Gợi ý quán ăn dựa trên lịch sử tạo Food Tour (Matches your food-tour history)}
+    \label{fig:adv_r03}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/near_your_location.png}
+    \caption{Kiểm thử gợi ý ADV-R04: Gợi ý quán ăn theo vị trí thực tế gần nhất (Near your current location)}
+    \label{fig:adv_r04}
+\end{figure}
+
+\subsection{Đánh giá hệ thống dựa trên kết quả kiểm thử}
+Thông qua quá trình kiểm thử toàn diện trên cả 4 tầng, toàn bộ các testcase đều đạt kết quả mong đợi (\textit{Pass}).
+
+Hệ thống chứng minh được tính ổn định cao, thời gian phản hồi nhanh ($< 1$ giây cho các tác vụ tối ưu phức tạp) và đảm bảo an toàn phân quyền người dùng. Việc bổ sung thành công chức năng tối ưu lộ trình food tour và gợi ý ẩm thực cá nhân hóa minh bạch đã trực tiếp giải quyết vấn đề về chiều sâu và chiều rộng mà hội đồng đã đánh giá và góp ý.
+
+\cleardoublepage
 
