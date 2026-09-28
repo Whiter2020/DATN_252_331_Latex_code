@@ -56,7 +56,7 @@ Với kiến trúc hướng dịch vụ và tập trung vào trải nghiệm ng�
 hệ thống được xây dựng để có thể dễ dàng được mở rộng cùng như bảo trì và 
 linh hoạt trong việc phát triển thêm các tính năng mới trong tương lai.
 
-\subsection{Stakeholder}
+\subsection{Stakeholders}
 Các stakeholder là những cá nhân hoặc nhóm có liên quan trực tiếp hoặc gián tiếp đến hệ
 thống, có lợi ích bị ảnh hưởng hoặc tham gia vào quá trình phát triển, vận hành và sử dụng hệ
 thống. Dựa trên mức độ liên quan, các stakeholder của hệ thống được phân thành các nhóm
@@ -226,43 +226,53 @@ dừng trong food tour.
 
 \textbf{NFR1: Hiệu năng (Performance)} 
 \begin{itemize}[label=\textbullet]
-    \item Hệ thống phải đảm bảo thời gian phản hồi nhanh dưới 2s trong các thao tác chính như tìm kiếm quán
-ăn, tìm kiếm food tour và xem thông tin chi tiết, nhằm không làm gián đoạn trải nghiệm người
-dùng.
+    \item Thời gian phản hồi của các API chính (tìm kiếm quán ăn, xem danh sách food tour, xem
+thông tin chi tiết) phải đạt dưới 2 giây trong điều kiện hoạt động thông thường.
     \item Chức năng hiển thị bản đồ và lộ trình di chuyển phải hoạt động mượt mà, đảm bảo khả năng
 tương tác liên tục khi người dùng thay đổi lộ trình.
-    \item Hiệu năng của hệ thống phải được duy trì ổn định khi số lượng người dùng dưới 50 người.
+    \item Thuật toán tối ưu hóa lộ trình (TSP) phải hoàn tất tính toán trong dưới 1 giây đối với
+food tour có tối đa 8 điểm dừng.
+    \item Hiệu năng của hệ thống phải được duy trì ổn định khi có tối thiểu 50 người dùng truy cập
+đồng thời.
 \end{itemize}
 
 \textbf{NFR2: Độ tin cậy và tính sẵn sàng (Reliability \& Availability)} 
 \begin{itemize}[label=\textbullet]
-    \item Hệ thống phải đảm bảo độ ổn định cao và có khả năng hoạt động liên tục trong điều kiện sử
-dụng thông thường.
-    \item Hệ thống có cơ chế xử lý lỗi và ghi nhận log để thuận tiện cho việc khắc phục
+    \item Tính sẵn sàng của hệ thống phải đạt tối thiểu $99.5\%$ trong điều kiện vận hành bình thường,
+đảm bảo người dùng có thể truy cập hệ thống ổn định.
+    \item Thời gian phục hồi sau sự cố (Mean Time To Recovery -- MTTR) phải dưới 1 giờ.
+    \item Hệ thống có cơ chế xử lý lỗi và ghi nhận log để thuận tiện cho việc khắc phục sự cố.
 \end{itemize}
 
 \textbf{NFR3: Bảo mật (Security)} 
 \begin{itemize}[label=\textbullet]
-    \item Thông tin người dùng, bao gồm thông tin cá nhân, khẩu vị và lịch sử sử dụng, phải được lưu
-trữ và bảo vệ an toàn.
-    \item Thông tin đăng nhập của người dùng phải được mã hóa và không lưu trữ dưới dạng rõ.
-    \item Hệ thống phải có cơ chế kiểm soát truy cập, đảm bảo người dùng chỉ có thể thao tác trên các
-tài nguyên phù hợp với quyền hạn của mình.
+    \item Mật khẩu người dùng phải được băm bằng thuật toán \texttt{bcrypt} với \texttt{salt rounds = 10}
+trước khi lưu trữ; tuyệt đối không lưu mật khẩu dưới dạng rõ ràng (plaintext).
+    \item Phiên xác thực người dùng được quản lý thông qua JWT (Json Web Token) có thời hạn 24 giờ;
+sau khi hết hạn, người dùng phải đăng nhập lại để nhận token mới.
+    \item Hệ thống phải có cơ chế kiểm soát truy cập phân quyền RBAC (Role-Based Access Control)
+cho 3 vai trò: Người dùng thông thường, Restaurant Owner và Quản trị viên (Admin), đảm bảo
+mỗi vai trò chỉ truy cập được tài nguyên phù hợp.
     \item Các food tour ở chế độ riêng tư (private) chỉ được phép truy cập bởi chủ sở hữu.
 \end{itemize}
 
 \textbf{NFR4: Tính khả dụng (Usability)} 
 \begin{itemize}[label=\textbullet]
-    \item Giao diện người dùng phải được thiết kế trực quan, dễ hiểu và dễ sử dụng, phù hợp với cả
-những người dùng không có nhiều kiến thức kỹ thuật.
+    \item Người dùng mới có thể tự tạo thành công một Food Tour gồm 3 điểm dừng trong vòng dưới
+3 phút mà không cần đọc tài liệu hướng dẫn.
     \item Các chức năng chính như tìm kiếm quán ăn, tạo food tour và chia sẻ food tour phải được
 trình bày rõ ràng, giúp người dùng dễ dàng thao tác và làm quen với hệ thống.
+    \item Giao diện người dùng phải được thiết kế trực quan, phù hợp với cả những người dùng không
+có nhiều kiến thức kỹ thuật.
 \end{itemize}
 
 \textbf{NFR5: Khả năng mở rộng và bảo trì (Scalability \& Maintainability)} 
 \begin{itemize}[label=\textbullet]
-    \item Hệ thống phải được thiết kế theo hướng module hóa, giúp dễ dàng mở rộng hoặc bổ sung
-chức năng trong tương lai.
-    \item Cấu trúc hệ thống phải hỗ trợ việc bảo trì, chỉnh sửa và nâng cấp mà không ảnh hưởng lớn
-đến các chức năng hiện có.
+    \item Hệ thống phải được thiết kế theo hướng module hóa và kiến trúc phân lớp rõ ràng, cho phép
+thay thế từng module độc lập mà không ảnh hưởng đến các thành phần khác.
+    \item Mã nguồn phải tuân thủ tiêu chuẩn ESLint và TypeScript strict mode nhằm giảm thiểu lỗi
+tiềm ẩn và tăng khả năng đọc hiểu, bảo trì.
+    \item Cấu trúc hệ thống phải hỗ trợ việc nâng cấp chức năng mới mà không ảnh hưởng lớn đến
+các chức năng hiện có.
 \end{itemize}
+\cleardoublepage
