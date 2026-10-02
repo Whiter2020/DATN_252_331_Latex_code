@@ -177,6 +177,49 @@ SEC-05 & Gọi public tours không cần token & Truy cập thành công với m
 \end{tabularx}
 \end{table}
 
+Để hiện thực hóa việc kiểm thử tự động toàn diện trên công cụ Postman Collection Runner, nhóm phát triển đã tổ chức kịch bản kiểm thử bảo mật theo một quy trình liên hoàn, bao quát toàn bộ các cơ chế xác thực và phân quyền cốt lõi của hệ thống:
+
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Ca kiểm thử SEC-01 (Chặn truy cập khi thiếu mã xác thực)}: 
+    Thực hiện gửi yêu cầu \texttt{GET /api/tours} đến endpoint quản lý tour cá nhân mà không đính kèm bất kỳ thông tin xác thực nào. Middleware kiểm tra xác thực (\texttt{authMiddleware}) lập tức chặn yêu cầu và phản hồi mã lỗi \textbf{401 Unauthorized}, bảo đảm các tài nguyên nhạy cảm không bị rò rỉ cho đối tượng chưa đăng nhập.
+
+    \item \textbf{Ca kiểm thử SEC-02 (Từ chối token không hợp lệ hoặc bị giả mạo)}: 
+    Gửi yêu cầu \texttt{GET /api/users/me} kèm mã Bearer Token giả mạo hoặc có chữ ký số sai lệch. Thư viện \texttt{jsonwebtoken} tại backend xác minh chữ ký thất bại và trả về mã lỗi \textbf{401 Unauthorized}, ngăn ngừa nguy cơ giả mạo phiên làm việc của người dùng.
+
+    \item \textbf{Ca kiểm thử SEC-03 (Kiểm soát phân quyền của người dùng thông thường)}: 
+    Kiểm tra cơ chế ngăn chặn leo thang đặc quyền (\textit{Privilege Escalation}) qua quy trình 2 bước liên hoàn:
+    \begin{itemize}
+        \item \textit{SEC-03A (Login Normal User)}: Gửi yêu cầu \texttt{POST /api/auth/login} với tài khoản người dùng thông thường để nhận mã JSON Web Token hợp lệ và tự động lưu vào biến môi trường \texttt{userToken}.
+        \item \textit{SEC-03B (Normal User Cannot Access Users API)}: Sử dụng \texttt{userToken} vừa nhận để truy cập vào API quản trị danh sách người dùng (\texttt{GET /api/users}). Middleware phân quyền (\texttt{adminMiddleware}) đối soát vai trò (\textit{role: user}) và chặn truy cập bằng mã lỗi \textbf{403 Forbidden}, minh chứng người dùng thông thường không thể can thiệp vào tài nguyên quản trị.
+    \end{itemize}
+
+    \item \textbf{Ca kiểm thử SEC-04 (Xác nhận thẩm quyền của Quản trị viên)}: 
+    Xác minh các đặc quyền của tài khoản Admin qua quy trình 2 bước liên hoàn:
+    \begin{itemize}
+        \item \textit{SEC-04A (Login Admin)}: Gửi yêu cầu \texttt{POST /api/auth/login} với thông tin tài khoản Quản trị viên để nhận mã xác thực và lưu vào biến môi trường \texttt{adminToken}.
+        \item \textit{SEC-04B (Admin Can Access Users API)}: Sử dụng \texttt{adminToken} để truy cập vào API quản trị (\texttt{GET /api/users}). Hệ thống xác nhận vai trò quản trị viên (\textit{role: admin}), phản hồi mã thành công \textbf{200 OK} và trả về toàn bộ mảng dữ liệu danh sách người dùng phục vụ công tác quản lý.
+    \end{itemize}
+
+    \item \textbf{Ca kiểm thử SEC-05 (Cho phép truy cập tài nguyên công khai không cần token)}: 
+    Gửi yêu cầu \texttt{GET /api/tours/public} mà không kèm token xác thực. Hệ thống xử lý thành công và phản hồi mã \textbf{200 OK} kèm dữ liệu mảng các food tour được người dùng chia sẻ công khai, bảo đảm tính sẵn sàng phục vụ khách vãng lai và cộng đồng theo đúng thiết kế kiến trúc.
+\end{itemize}
+
+Kết quả thực thi tự động toàn bộ 9/9 bước kiểm thử bảo mật thành công 100\% trên Postman Collection Runner được minh chứng qua Hình \ref{fig:sec_runner_1} và Hình \ref{fig:sec_runner_2}:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/security_testing1.png}
+    \caption{Kiểm thử bảo mật (Phần 1): Kết quả thực thi tự động các ca kiểm thử SEC-01 đến SEC-03B trên Postman Runner}
+    \label{fig:sec_runner_1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/security_testing2.png}
+    \caption{Kiểm thử bảo mật (Phần 2): Kết quả thực thi tự động các ca kiểm thử SEC-04A đến SEC-05 trên Postman Runner}
+    \label{fig:sec_runner_2}
+\end{figure}
+
 \subsection{Kiểm thử chức năng người dùng và tương tác cộng đồng}
 Nhóm tiến hành kiểm thử các chức năng liên quan đến việc khởi tạo tài khoản, cá nhân hóa hồ sơ và các tính năng tương tác ẩm thực. Kết quả được trình bày trong Bảng 7.4.
 
