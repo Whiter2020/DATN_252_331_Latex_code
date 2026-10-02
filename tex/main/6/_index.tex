@@ -474,12 +474,14 @@ Hình 5.10 minh họa giao diện hồ sơ người dùng của hệ thống. T�
 \end{figure}
 
 Giao diện hồ sơ người dùng bao gồm các mục chức năng như danh sách food tour đã
-lưu, danh sách quán ăn yêu thích và phần thiết lập khẩu vị cá nhân (Preferences). Trong đó, mục thiết lập khẩu vị cho phép người dùng lựa chọn các loại ẩm thực yêu thích nhằm phục vụ cho việc gợi ý quán ăn và food tour phù hợp.
+lưu, danh sách quán ăn yêu thích, phần thiết lập khẩu vị cá nhân (Preferences) và tính năng đề xuất quán ăn. Trong đó, mục thiết lập khẩu vị cho phép người dùng lựa chọn các loại ẩm thực yêu thích nhằm phục vụ cho việc gợi ý quán ăn và food tour phù hợp.
 
 Việc lưu trữ thông tin khẩu vị cá nhân giúp hệ thống cá nhân hóa kết quả đề xuất, tăng mức độ phù hợp của các quán ăn và hành trình ăn uống được gợi ý. Các thao tác cập nhật được thiết kế đơn giản, giúp người dùng dễ dàng thay đổi tùy chọn và lưu lại thông tin.
 
+Ngoài các chức năng quản lý cá nhân, giao diện hồ sơ người dùng còn tích hợp tính năng \textbf{đề xuất quán ăn} (\textit{Suggest Restaurant}). Thông qua nút ``Suggest a Restaurant'' được bố trí ngay trên trang hồ sơ, người dùng có thể điền thông tin quán ăn mà họ muốn giới thiệu lên hệ thống, bao gồm tên quán, địa chỉ, mô tả và loại ẩm thực. Sau khi gửi, yêu cầu sẽ được lưu vào hệ thống ở trạng thái \textit{pending} và chờ quản trị viên xem xét. Luồng xử lý này đảm bảo chất lượng dữ liệu quán ăn trong hệ thống thông qua bước kiểm duyệt trước khi chính thức đưa vào khai thác.
+
 Nhìn chung, giao diện hồ sơ người dùng được thiết kế gọn gàng, trực quan và nhất
-quán với tổng thể hệ thống, đóng vai trò hỗ trợ quan trọng trong việc cá nhân hóa trải nghiệm người dùng và nâng cao hiệu quả của các chức năng đề xuất.
+quán với tổng thể hệ thống, đóng vai trò hỗ trợ quan trọng trong việc cá nhân hóa trải nghiệm người dùng, nâng cao hiệu quả của các chức năng đề xuất, cũng như khuyến khích sự đóng góp nội dung từ cộng đồng người dùng.
 
 \subsubsubsection{Giao diện gợi ý quán ăn cá nhân hóa}
 Nhằm nâng cao tính cá nhân hóa và hỗ trợ người dùng khám phá ẩm thực phù hợp với sở thích riêng, hệ thống cung cấp phân mục gợi ý quán ăn ``Recommended for You'' ngay trên trang chủ.

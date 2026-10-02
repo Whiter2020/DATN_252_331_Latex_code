@@ -13,8 +13,7 @@ Các chức năng chính của hệ thống bao gồm:
     \item \textbf{Quản lý người dùng:} Đăng ký/Đăng nhập và quản lý thông tin tài khoản người dùng.
     \item \textbf{Quản lý và tra cứu thông tin quán ăn:} Tìm kiếm và xem thông tin chi tiết
     về các quán ăn, bao gồm vị trí và các thông tin liên quan phục vụ nhu cầu tham khảo.
-    \item \textbf{Đóng góp thông tin nhà hàng:} Người dùng có thể gửi yêu cầu đăng tải thông tin nhà hàng mới. Các quán này
-    được công khai sau khi quản trị viên phê duyệt.
+    \item \textbf{Đóng góp thông tin nhà hàng:} Người dùng có thể gửi yêu cầu đề xuất thông tin quán ăn mới kèm thực đơn và giờ phục vụ. Quán ăn sẽ được hiển thị công khai sau khi quản trị viên phê duyệt.
     \item \textbf{Tạo và quản lý food tour:} Tạo các hành trình food tour cá nhân
     bằng cách thêm một hoặc nhiều quán ăn vào cùng một lộ trình.
     \item \textbf{Sắp xếp lộ trình di chuyển:} Xác định thứ tự ghé thăm các quán ăn trong food tour
@@ -23,6 +22,7 @@ Các chức năng chính của hệ thống bao gồm:
     lịch sử sử dụng của người dùng và các food tour đã tồn tại.
     \item \textbf{Chia sẻ food tour công khai:} Công khai food tour để người dùng khác
     có thể tìm kiếm, tham khảo và xem lại.
+    \item \textbf{Nhắn tin trực tiếp giữa khách hàng và chủ quán (In-App Messaging):} Cung cấp kênh đối thoại 1-1 trực tiếp giữa thực khách và chủ quán ăn để hỏi đáp thông tin món ăn, giờ phục vụ, đặt bàn hoặc phản hồi ý kiến.
 \end{itemize}
 
 Hệ thống được thiết kế để đáp ứng nhu cầu của các nhóm người dùng chính sau:
@@ -39,11 +39,12 @@ Hệ thống được thiết kế để đáp ứng nhu cầu của các nhóm 
     \item \textbf{Người dùng quản lý nhà hàng (Restaurant Owner)}:
     Là nhóm người dùng có nhu cầu đưa thông tin nhà hàng của mình lên hệ thống.
     Nhóm người dùng này vẫn sử dụng tài khoản người dùng thông thường nhưng được
-    cấp thêm quyền quản lý nhà hàng. Người dùng quản lý nhà hàng có thể gửi yêu
-    cầu đăng tải thông tin nhà hàng mới, cung cấp các thông tin liên quan như tên
-    nhà hàng, địa chỉ, loại hình ẩm thực, hình ảnh và mô tả. Các thông tin nhà
-    hàng chỉ được hiển thị công khai sau khi được quản trị viên kiểm tra và
-    phê duyệt.
+    cấp thêm quyền quản lý nhà hàng sau khi yêu cầu đề xuất quán được phê duyệt.
+    Người dùng quản lý nhà hàng có thể gửi yêu cầu đề xuất thông tin quán ăn mới,
+    cung cấp các thông tin liên quan như tên quán, địa chỉ, thực đơn món ăn,
+    thời gian hoạt động và hình ảnh. Các thông tin chỉ được hiển thị công khai sau khi
+    được quản trị viên kiểm tra và phê duyệt. Đồng thời, chủ quán có thể nhận và phản hồi
+    tin nhắn trực tiếp từ khách hàng thông qua hộp thư trò chuyện nội bộ.
 
     \item \textbf{Quản trị viên hệ thống (System Administrator)}:
     Chịu trách nhiệm kiểm duyệt các yêu cầu đăng tải nhà hàng, quản lý và vận hành hệ thống, bao gồm quản lý tài khoản
@@ -66,9 +67,9 @@ Các stakeholder chính (Primary stakeholders):
 \begin{itemize}[label=\textbullet]
     \item \textbf{Người dùng cuối (End Users)}: Nhóm người dùng sử dụng trực tiếp hệ thống để tìm kiếm thông tin quán ăn, tạo và quản lý các food tour cá nhân, sắp xếp lộ trình di chuyển và chia sẻ hoặc tham khảo các food tour công khai. Đây là nhóm stakeholder chính, quyết định mức độ thành công và hiệu quả sử dụng của hệ thống.
     \item \textbf{Người dùng quản lý nhà hàng (Restaurant Owner)}:
-    Nhóm người dùng muốn đưa thông tin nhà hàng lên hệ thống.
-    Nhóm này sử dụng các chức năng gửi/yêu cầu đăng tải nhà hàng,
-    cập nhật thông tin nhà hàng và theo dõi trạng thái xử lý.
+    Nhóm người dùng muốn đưa thông tin nhà hàng lên hệ thống và trực tiếp quản lý quán ăn của mình.
+    Nhóm này sử dụng các chức năng gửi đề xuất quán ăn mới, theo dõi trạng thái kiểm duyệt, và tương tác
+    trực tiếp với khách hàng qua tính năng nhắn tin nội bộ.  
     Các nhà hàng do nhóm người dùng này gửi chỉ được công khai trên hệ thống
     sau khi được quản trị viên kiểm tra và phê duyệt.
     \item \textbf{Quản trị viên hệ thống (System Administrator)}:
@@ -92,42 +93,22 @@ nhằm đảm bảo người dùng có thể truy cập và sử dụng hệ th�
     \item Người dùng phải có khả năng xem và cập nhật các thông tin hồ sơ cá nhân cơ bản của mình.
 \end{itemize}
 
-\textbf{FR2: Quản lý và kiểm duyệt hệ thốn(Quản trị viên)}
+\textbf{FR2: Quản lý và kiểm duyệt hệ thống (Quản trị viên)}
 \begin{itemize}[label=\textbullet]
-
-    \item Cung cấp chức năng cho quản trị viên quản lý
-    dữ liệu nền tảng, bao gồm quản lý tài khoản người dùng,
-    quản lý các nhà hàng đã được phê duyệt và giám sát nội dung
-    được chia sẻ trên hệ thống.
-
-    \item Quản trị viên phải có khả năng xem danh sách các yêu cầu
-    đăng tải nhà hàng từ người dùng có quyền quản lý nhà hàng.
-
-    \item Quản trị viên có thể kiểm tra thông tin nhà hàng,
-    thực hiện phê duyệt hoặc từ chối yêu cầu đăng tải.
-
-    \item Các nhà hàng chỉ được hiển thị công khai trên hệ thống
-    sau khi được quản trị viên phê duyệt.
-
+    \item Cung cấp chức năng cho quản trị viên quản lý dữ liệu nền tảng, bao gồm quản lý tài khoản người dùng,
+    quản lý các nhà hàng đã được phê duyệt và giám sát nội dung được chia sẻ trên hệ thống.
+    \item Quản trị viên có khả năng xem danh sách toàn bộ các yêu cầu đề xuất quán ăn từ người dùng cùng thông tin chi tiết (địa chỉ, thực đơn, giờ mở cửa, ảnh).
+    \item Quản trị viên có thể thực hiện phê duyệt hoặc từ chối yêu cầu (kèm ghi chú lý do từ chối nếu có).
+    \item Khi phê duyệt, hệ thống tự động tích hợp dịch vụ Geocoding để chuẩn hóa tọa độ và phân loại địa bàn hành chính, chuyển thông tin đề xuất thành quán ăn chính thức và gắn quyền quản lý quán cho người gửi.
+    \item Các nhà hàng chỉ được hiển thị công khai trên hệ thống sau khi được quản trị viên phê duyệt.
 \end{itemize}
 
-\textbf{FR3: Đăng ký và quản lý thông tin nhà hàng}
-
+\textbf{FR3: Đề xuất và quản lý thông tin quán ăn mới}
 \begin{itemize}[label=\textbullet]
-
-    \item Người dùng có quyền quản lý nhà hàng có thể gửi yêu cầu
-    đăng tải nhà hàng mới lên hệ thống.
-
-    \item Yêu cầu đăng tải nhà hàng phải bao gồm các thông tin cơ bản:
-    tên nhà hàng, địa chỉ, loại hình ẩm thực, hình ảnh,
-    mô tả và các thông tin liên quan.
-
-    \item Hệ thống phải lưu trạng thái xử lý của yêu cầu đăng tải,
-    bao gồm: Pending, Approved, Rejected.
-
-    \item Người dùng có quyền quản lý nhà hàng có thể theo dõi
-    trạng thái các yêu cầu đã gửi.
-
+    \item Người dùng có thể gửi yêu cầu đề xuất quán ăn mới lên hệ thống trực tiếp từ trang cá nhân.
+    \item Yêu cầu đề xuất quán ăn bao gồm các thông tin chi tiết: tên quán, địa chỉ (địa chỉ cụ thể (số nhà, tên đường), phường/xã, quận/huyện, tỉnh/thành phố), giờ mở/đóng cửa, danh sách món ăn kèm giá và hình ảnh, thẻ phân loại ẩm thực (\textit{tags}), tiện ích đi kèm và mô tả.
+    \item Hệ thống lưu trữ và hiển thị trạng thái xử lý của yêu cầu, bao gồm: \textit{Pending} (Đang chờ duyệt), \textit{Approved} (Đã phê duyệt), \textit{Rejected} (Bị từ chối).
+    \item Người dùng có thể theo dõi danh sách và tiến độ xét duyệt các yêu cầu do chính mình gửi lên hệ thống.
 \end{itemize}
 
 \textbf{FR4: Tìm kiếm và tra cứu thông tin quán ăn/nhà hàng} 
@@ -219,6 +200,15 @@ thống đề xuất các quán ăn phù hợp nhằm cá nhân hóa trải nghi
 điểm dừng.
     \item Bản đồ được cập nhật tương ứng khi người dùng thay đổi danh sách hoặc thứ tự các điểm
 dừng trong food tour.
+\end{itemize}
+
+\textbf{FR14: Nhắn tin trao đổi giữa người dùng và chủ quán (In-App Messaging)} 
+\begin{itemize}[label=\textbullet]
+    \item Hệ thống cung cấp chức năng nhắn tin trực tiếp 1-1 giữa người dùng (thực khách) và chủ quán ăn (Restaurant Owner) thông qua nút liên hệ trên trang chi tiết quán ăn.
+    \item Tự động khởi tạo hoặc mở lại phiên hội thoại tương ứng giữa người dùng và quán ăn, ngăn chặn việc tạo trùng lặp cuộc trò chuyện thông qua chỉ mục duy nhất.
+    \item Gửi và nhận tin nhắn văn bản với cơ chế xác thực vai trò phía máy chủ (\textit{senderRole: customer/owner}), bảo đảm tính toàn vẹn và ngăn chặn giả mạo danh tính người gửi.
+    \item Cung cấp danh sách các cuộc hội thoại kèm theo nội dung tóm tắt, thời gian của tin nhắn gần nhất và số lượng tin nhắn chưa đọc (\textit{unread count}).
+    \item Tự động cập nhật trạng thái đã đọc (\textit{isRead}) khi người dùng mở xem nội dung cuộc hội thoại.
 \end{itemize}
 
 
