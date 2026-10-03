@@ -245,6 +245,28 @@ vượt trội so với heuristic của cả Google Maps lẫn Mapbox; và
 trong một nền tảng thống nhất hướng đến trải nghiệm ẩm thực — điều mà các API
 định tuyến thuần túy không thực hiện được.}
 
+\subsubsection{Module đề xuất quán ăn từ cộng đồng (Suggest Restaurant)}
+Module Suggest Restaurant cung cấp cơ chế để người dùng đóng góp thông tin quán ăn mới vào hệ thống, thông qua quy trình kiểm duyệt hai giai đoạn nhằm đảm bảo chất lượng dữ liệu.
+
+Luồng xử lý chính bao gồm:
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Bước 1 --- Người dùng gửi đề xuất}: Từ trang hồ sơ cá nhân, người dùng điền thông tin quán ăn (tên, địa chỉ, mô tả, loại ẩm thực) và gửi yêu cầu. Yêu cầu được lưu vào collection \texttt{RestaurantRequest} với trạng thái \texttt{pending}.
+    \item \textbf{Bước 2 --- Quản trị viên xét duyệt}: Quản trị viên xem danh sách yêu cầu chờ duyệt trên Admin Dashboard. Khi phê duyệt, hệ thống tự động gọi Geoapify Geocoding API để chuyển địa chỉ thành tọa độ GPS, tạo bản ghi mới trong collection \texttt{Restaurant} và gán quyền sở hữu cho người đề xuất. Khi từ chối, trạng thái cập nhật thành \texttt{rejected}.
+\end{itemize}
+
+Cơ chế phân tách giữa \texttt{RestaurantRequest} và \texttt{Restaurant} đảm bảo mọi dữ liệu quán ăn đều qua bước kiểm soát chất lượng trước khi công bố cho người dùng.
+
+\subsubsection{Module nhắn tin (Messaging)}
+Module Messaging hiện thực kênh giao tiếp 1--1 giữa người dùng (\textit{customer}) và chủ quán ăn (\textit{owner}) ngay trong nền tảng CityFoodTour, hỗ trợ trao đổi thông tin về thực đơn, giờ mở cửa và các vấn đề liên quan.
+
+Các đặc điểm kỹ thuật chính:
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Mô hình hội thoại duy nhất}: Mỗi cặp (\textit{userId}, \textit{restaurantId}) được ràng buộc bởi unique compound index trên collection \texttt{Conversation}, đảm bảo chỉ tồn tại một luồng hội thoại cho mỗi cặp người dùng -- quán ăn.
+    \item \textbf{Phân quyền người gửi phía server}: Trường \texttt{senderRole} (\texttt{customer} | \texttt{owner}) được xác định và gán bởi server dựa trên JWT token, thay vì nhận từ client, ngăn chặn giả mạo vai trò người gửi.
+    \item \textbf{Tổng hợp tin nhắn chưa đọc}: Hệ thống sử dụng MongoDB Aggregation Pipeline để tính toán số lượng tin nhắn chưa đọc (\textit{unread count}) trên toàn bộ hội thoại của người dùng.
+    \item \textbf{Giao diện phân chia hai cột}: Danh sách hội thoại ở cột trái và nội dung tin nhắn ở cột phải giúp người dùng quản lý nhiều cuộc trò chuyện trực quan.
+\end{itemize}
+
 \subsubsection{Nhận xét chung về các module đã hiện thực}
 Trải qua quá trình nâng cấp và hoàn thiện trong giai đoạn Đồ án tốt nghiệp, toàn bộ các module chức năng cốt lõi của hệ thống CityFoodTour đều đã được hiện thực hoàn chỉnh và tích hợp chặt chẽ với nhau. 
 

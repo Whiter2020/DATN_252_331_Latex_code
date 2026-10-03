@@ -483,6 +483,19 @@ Ngoài các chức năng quản lý cá nhân, giao diện hồ sơ người dù
 Nhìn chung, giao diện hồ sơ người dùng được thiết kế gọn gàng, trực quan và nhất
 quán với tổng thể hệ thống, đóng vai trò hỗ trợ quan trọng trong việc cá nhân hóa trải nghiệm người dùng, nâng cao hiệu quả của các chức năng đề xuất, cũng như khuyến khích sự đóng góp nội dung từ cộng đồng người dùng.
 
+\subsubsubsection{Giao diện nhắn tin}
+Giao diện nhắn tin (Messaging) được thiết kế để hỗ trợ kênh liên lạc trực tiếp giữa người dùng và chủ quán ăn trong hệ thống CityFoodTour. Tính năng này giúp người dùng dễ dàng đặt câu hỏi về thực đơn, giờ mở cửa hoặc trao đổi thông tin với nhà hàng mà không cần rời khỏi nền tảng.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/messaging.png}
+    \caption{Giao diện nhắn tin giữa người dùng và chủ quán ăn}
+\end{figure}
+
+Giao diện nhắn tin được tổ chức theo mô hình hội thoại 1--1 (\textit{one-to-one conversation}), trong đó mỗi cặp người dùng -- quán ăn chỉ tồn tại một cuộc hội thoại duy nhất. Danh sách hội thoại được hiển thị ở bảng bên trái, cho phép người dùng nhanh chóng chuyển đổi giữa các cuộc trò chuyện. Khung soạn tin ở phía dưới hỗ trợ gửi tin nhắn văn bản tức thì, cùng với chỉ số tin nhắn chưa đọc (\textit{unread count}) được cập nhật theo thời gian thực.
+
+Về mặt kỹ thuật, vai trò người gửi (\textit{senderRole}: \texttt{customer} hoặc \texttt{owner}) được xác định và gán bởi server thay vì client, ngăn chặn khả năng giả mạo danh tính trong quá trình trao đổi. Cơ chế này đảm bảo tính toàn vẹn và an toàn cho hệ thống nhắn tin.
+
 \subsubsubsection{Giao diện gợi ý quán ăn cá nhân hóa}
 Nhằm nâng cao tính cá nhân hóa và hỗ trợ người dùng khám phá ẩm thực phù hợp với sở thích riêng, hệ thống cung cấp phân mục gợi ý quán ăn ``Recommended for You'' ngay trên trang chủ.
 
