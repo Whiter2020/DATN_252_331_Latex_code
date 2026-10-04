@@ -1,18 +1,21 @@
 \babel@toc {vietnamese}{}\relax 
-\contentsline {table}{\numberline {4.1}{\ignorespaces Usecase: Đăng nhập, đăng xuất}}{28}{table.4.1}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Usecase: Quản lý hồ sơ người dùng}}{28}{table.4.2}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Use case: Tìm kiếm quán ăn, địa điểm ẩm thực}}{29}{table.4.3}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Use case: Tạo lộ trình ăn uống}}{30}{table.4.4}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Use case: Đánh giá quán ăn }}{31}{table.4.5}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Use case: Quản lý food tour}}{33}{table.4.6}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Use case: Xem food tour}}{34}{table.4.7}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces Use case: Quản lý tài khoản người dùng}}{35}{table.4.8}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces Use case: Quản lý dữ liệu quán ăn}}{36}{table.4.9}%
-\contentsline {table}{\numberline {4.10}{\ignorespaces Use case: Quản lý nội dung food tour}}{38}{table.4.10}%
-\contentsline {table}{\numberline {6.1}{\ignorespaces So sánh kỹ thuật tối ưu hóa lộ trình: Google Maps, Mapbox Optimization API và CityFoodTour}}{86}{table.6.1}%
-\contentsline {table}{\numberline {7.1}{\ignorespaces Kết quả kiểm thử tích hợp (Integration Testing)}}{90}{table.caption.34}%
-\contentsline {table}{\numberline {7.2}{\ignorespaces Kết quả kiểm thử giao diện / End-to-End}}{93}{table.caption.38}%
-\contentsline {table}{\numberline {7.3}{\ignorespaces Kết quả kiểm thử bảo mật (Security Testing)}}{96}{table.caption.44}%
-\contentsline {table}{\numberline {7.4}{\ignorespaces Kiểm thử chức năng người dùng và tương tác cộng đồng}}{96}{table.caption.45}%
-\contentsline {table}{\numberline {7.5}{\ignorespaces Kiểm thử chuyên sâu thuật toán tối ưu hóa lộ trình}}{100}{table.caption.51}%
-\contentsline {table}{\numberline {7.6}{\ignorespaces Kiểm thử chuyên sâu mô hình gợi ý cá nhân hóa}}{103}{table.caption.57}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Usecase: Đăng nhập, đăng xuất}}{29}{table.4.1}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Usecase: Quản lý hồ sơ người dùng}}{29}{table.4.2}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Use case: Tìm kiếm quán ăn, địa điểm ẩm thực}}{30}{table.4.3}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Use case: Tạo lộ trình ăn uống}}{31}{table.4.4}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Use case: Đánh giá quán ăn}}{33}{table.4.5}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Use case: Quản lý food tour}}{34}{table.4.6}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Use case: Xem food tour}}{35}{table.4.7}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Use case: Đăng ký thông tin quán ăn}}{37}{table.4.8}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Use case: Quản lý tài khoản người dùng}}{38}{table.4.9}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces Use case: Gửi tin nhắn}}{39}{table.4.10}%
+\contentsline {table}{\numberline {4.11}{\ignorespaces Use case: Quản lý dữ liệu quán ăn}}{41}{table.4.11}%
+\contentsline {table}{\numberline {4.12}{\ignorespaces Use case: Quản lý nội dung food tour}}{42}{table.4.12}%
+\contentsline {table}{\numberline {4.13}{\ignorespaces Use case: Đăng ký thông tin quán ăn}}{43}{table.4.13}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces So sánh kỹ thuật tối ưu hóa lộ trình: Google Maps, Mapbox Optimization API và CityFoodTour}}{94}{table.6.1}%
+\contentsline {table}{\numberline {7.1}{\ignorespaces Kết quả kiểm thử tích hợp (Integration Testing)}}{99}{table.caption.35}%
+\contentsline {table}{\numberline {7.2}{\ignorespaces Kết quả kiểm thử giao diện / End-to-End}}{102}{table.caption.39}%
+\contentsline {table}{\numberline {7.3}{\ignorespaces Kết quả kiểm thử bảo mật (Security Testing)}}{105}{table.caption.45}%
+\contentsline {table}{\numberline {7.4}{\ignorespaces Kiểm thử chức năng người dùng và tương tác cộng đồng}}{107}{table.caption.48}%
+\contentsline {table}{\numberline {7.5}{\ignorespaces Kiểm thử chuyên sâu thuật toán tối ưu hóa lộ trình}}{111}{table.caption.54}%
+\contentsline {table}{\numberline {7.6}{\ignorespaces Kiểm thử chuyên sâu mô hình gợi ý cá nhân hóa}}{114}{table.caption.60}%

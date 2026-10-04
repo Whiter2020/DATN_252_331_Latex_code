@@ -212,13 +212,15 @@ ERD tổng quan của toàn bộ hệ thống được biểu diễn ở hình 5
         \item Writes – với Reviews (1--N)
         \item Creates – với Foodtour (1--N)
         \item Save – với Foodtour (N--M)
-        \begin{figure}[H]
+        \item Starts/Participates -- với Conversations (1--N)
+        \item Sends -- với Messages (1--N)
+        \item Favorites\_restaurant – với Restaurants (N--M)
+        \begin{figure}[p]
             \centering
-            \makebox[\textwidth][c]{\includegraphics[angle=-90, width=0.70\textwidth]{img/2.png}}
+            \makebox[\textwidth][c]{\includegraphics[angle=-90, width=0.88\textwidth]{img/ERD_Diagram.png}}
             \vspace{0.2em}
             \caption{Lược đồ ERD}
         \end{figure}
-        \item Favorites\_restaurant – với Restaurants (N--M)
     \end{itemize}
 \end{itemize}
 
@@ -244,6 +246,7 @@ ERD tổng quan của toàn bộ hệ thống được biểu diễn ở hình 5
         \item Includes – với FoodtourStop (1--N)
         \item Serves – với Food (N--M)
         \item Favorites\_restaurant – với Users (N--M)
+        \item Has -- với Conversations (1--N)
     \end{itemize}
 \end{itemize}
 
@@ -312,6 +315,49 @@ ERD tổng quan của toàn bộ hệ thống được biểu diễn ở hình 5
     \item \textbf{Quan hệ}:
     \begin{itemize}
         \item Serves - với Restaurants (N--M)
+    \end{itemize}
+\end{itemize}
+
+\subsubsubsection{Thực thể Conversations}
+
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Thuộc tính}:
+    \begin{itemize}
+        \item conversation\_id (khóa chính)
+        \item user\_id
+        \item restaurant\_id
+        \item last\_message
+        \item last\_message\_at
+        \item is\_active
+    \end{itemize}
+
+    \item \textbf{Quan hệ}:
+    \begin{itemize}
+        \item Belongs to -- với Users (N--1)
+        \item Belongs to -- với Restaurants (N--1)
+        \item Contains -- với Messages (1--N)
+    \end{itemize}
+\end{itemize}
+
+\subsubsubsection{Thực thể Messages}
+
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Thuộc tính}:
+    \begin{itemize}
+        \item message\_id (khóa chính)
+        \item conversation\_id
+        \item sender\_id
+        \item sender\_role
+        \item content
+        \item is\_read
+        \item message\_type
+        \item created\_at
+    \end{itemize}
+
+    \item \textbf{Quan hệ}:
+    \begin{itemize}
+        \item Belongs to -- với Conversations (N--1)
+        \item Sent by -- với Users (N--1)
     \end{itemize}
 \end{itemize}
 
@@ -411,17 +457,18 @@ vai trò là điểm khởi đầu cho hầu hết các thao tác của người
 
 Hình 5.7 minh họa giao diện trang chủ của hệ thống. Tại khu vực đầu trang, hệ thống hiển thị thanh tìm kiếm và bộ lọc cho phép người dùng tra cứu quán ăn theo nhiều tiêu chí khác nhau như loại ẩm thực, vị trí, thời gian mở cửa, mức đánh giá và ngân sách. Việc tích hợp các bộ lọc này ngay trên trang chủ giúp người dùng dễ dàng bắt đầu quá trình tìm kiếm mà không cần chuyển sang màn hình khác.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{img/home.png}
-    \caption{Giao diện trang chủ}
-\end{figure}
 Bên dưới khu vực tìm kiếm, giao diện cung cấp các danh mục ẩm thực phổ biến dưới
 dạng biểu tượng, hỗ trợ người dùng khám phá nhanh các nhóm quán ăn theo sở thích. Ngoài ra, hệ thống hiển thị danh sách các quán ăn được đề xuất dựa trên hồ sơ khẩu vị của người dùng, giúp cá nhân hóa trải nghiệm sử dụng.
 
 Trang chủ cũng hiển thị danh sách các food tour phổ biến, cho phép người dùng tham khảo các hành trình ăn uống đã được xây dựng sẵn. Từ đây, người dùng có thể xem chi tiết từng food tour hoặc khởi tạo food tour mới thông qua chức năng lập kế hoạch hành trình.
 
 Nhìn chung, giao diện trang chủ được thiết kế trực quan, rõ ràng và nhất quán với tổng thể hệ thống, đóng vai trò quan trọng trong việc hỗ trợ người dùng khám phá ẩm thực và xây dựng các hành trình ăn uống một cách thuận tiện và hiệu quả.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{img/home.png}
+    \caption{Giao diện trang chủ}
+\end{figure}
+
 
 \subsubsubsection{Giao diện kết quả tìm kiếm}
 Giao diện kết quả tìm kiếm được thiết kế nhằm hiển thị danh sách các quán ăn phù hợp với tiêu chí tìm kiếm mà người dùng đã lựa chọn. Đây là giao diện đóng vai trò quan trọng trong việc hỗ trợ người dùng so sánh và lựa chọn quán ăn phù hợp với nhu cầu cá nhân.
@@ -524,17 +571,19 @@ thông tin trên một màn hình duy nhất.
 \subsubsubsection{Giao diện lập kế hoạch và tối ưu hóa lộ trình FoodTour}
 Giao diện lập kế hoạch hành trình (\textit{Itinerary Planner}) là tính năng trung tâm của hệ thống, cho phép người dùng trực quan hóa toàn bộ hành trình ăn uống trên bản đồ số tương tác và tối ưu hóa lộ trình di chuyển giữa các điểm dừng.
 
+Giao diện được chia thành hai phân vùng chính:
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Thanh điều khiển hành trình (bên trái)}: Cho phép người dùng theo dõi thứ tự ghé thăm các quán ăn (Stop 1, Stop 2,...), thêm mới hoặc xóa địa điểm, và thiết lập điểm xuất phát tùy chọn. Khu vực tóm tắt tối ưu (\textit{Optimized route}) cung cấp các chỉ số định lượng trực quan gồm: quãng đường trước và sau tối ưu (\textit{Distance before / after}), tỷ lệ cải thiện (\textit{Improvement \%}), thông tin thuật toán áp dụng (\textit{Road-Matrix Optimized / Exact TSP}), tổng cự ly đường bộ và thời gian di chuyển ước tính (\textit{ETA}).
+    \item \textbf{Bản đồ lộ trình tương tác (bên phải)}: Tích hợp thư viện Leaflet và dịch vụ bản đồ đường bộ Geoapify Routing API để vẽ đường đi thực tế giữa các quán ăn, đánh dấu số thứ tự điểm dừng và hiển thị các địa điểm ẩm thực xung quanh.
+\end{itemize}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{img/ui_foodtour_routing.png}
     \caption{Giao diện tối ưu hóa lộ trình Food Tour trên bản đồ số}
 \end{figure}
 
-Giao diện được chia thành hai phân vùng chính:
-\begin{itemize}[label=\textbullet]
-    \item \textbf{Thanh điều khiển hành trình (bên trái)}: Cho phép người dùng theo dõi thứ tự ghé thăm các quán ăn (Stop 1, Stop 2,...), thêm mới hoặc xóa địa điểm, và thiết lập điểm xuất phát tùy chọn. Khu vực tóm tắt tối ưu (\textit{Optimized route}) cung cấp các chỉ số định lượng trực quan gồm: quãng đường trước và sau tối ưu (\textit{Distance before / after}), tỷ lệ cải thiện (\textit{Improvement \%}), thông tin thuật toán áp dụng (\textit{Road-Matrix Optimized / Exact TSP}), tổng cự ly đường bộ và thời gian di chuyển ước tính (\textit{ETA}).
-    \item \textbf{Bản đồ lộ trình tương tác (bên phải)}: Tích hợp thư viện Leaflet và dịch vụ bản đồ đường bộ Geoapify Routing API để vẽ đường đi thực tế giữa các quán ăn, đánh dấu số thứ tự điểm dừng và hiển thị các địa điểm ẩm thực xung quanh.
-\end{itemize}
+
 
 
 \subsubsubsection{Giao diện chi tiết FoodTour}
@@ -542,6 +591,13 @@ Giao diện chi tiết food tour được thiết kế nhằm cung cấp đầy 
 hành trình ăn uống cụ thể, hỗ trợ người dùng hiểu rõ nội dung và cấu trúc của food tour trước khi lựa chọn hoặc sử dụng.
 
 Hình 5.12 minh họa giao diện chi tiết food tour của hệ thống CityFoodTour. Tại khu vực đầu trang, giao diện hiển thị hình ảnh minh họa, tên food tour, điểm đánh giá trung bình, thời lượng dự kiến, số lượng điểm dừng và tổng quãng đường di chuyển. Các thông tin này giúp người dùng nhanh chóng nắm bắt quy mô và đặc điểm tổng quan của hành trình.
+
+Bên dưới phần thông tin tổng quan, giao diện cung cấp mô tả ngắn về nội dung food tour, giúp người dùng hiểu rõ chủ đề và trải nghiệm mà hành trình mang lại. Các thẻ nhãn (tags) được sử dụng để phân loại food tour theo loại hình ẩm thực và phong cách, hỗ trợ việc tìm kiếm và gợi ý.
+
+Giao diện chi tiết food tour cho phép người dùng thực hiện các thao tác như lưu food tour, xem chi tiết đầy đủ hoặc tải food tour vào trình lập kế hoạch nhằm phục vụ việc xây dựng hành trình cá nhân. Các chức năng này giúp tăng khả năng tái sử dụng và chia sẻ food tour trong hệ thống.
+
+Bên dưới phần thông tin tổng quan, giao diện cung cấp mô tả ngắn về nội dung food tour, giúp người dùng hiểu rõ chủ đề và trải nghiệm mà hành trình mang lại. Các thẻ nhãn (tags) được sử dụng để phân loại food tour theo loại hình ẩm thực và phong cách, hỗ trợ việc tìm kiếm và gợi ý.
+
 
 \begin{figure}[H]
     \centering
