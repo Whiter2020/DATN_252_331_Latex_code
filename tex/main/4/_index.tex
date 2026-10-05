@@ -141,6 +141,7 @@ mô tả.
 \begin{itemize}[label=\textbullet]
     \item Từ danh sách các điểm ăn uống trong food tour, hệ thống hỗ trợ sắp xếp lộ trình di chuyển
 hợp lý theo yêu cầu của người dùng nhằm giảm tổng quãng đường di chuyển.
+    \item Hỗ trợ chế độ tối ưu hóa theo trình tự ẩm thực (\textit{Course-Aware Optimization}): Tự động nhóm và sắp xếp các quán ăn theo thứ tự trải nghiệm hợp lý (Món khai vị $\rightarrow$ Món chính $\rightarrow$ Món tráng miệng/Đồ uống) kết hợp giải thuật tối ưu khoảng cách đường bộ.
     \item Hiển thị tổng khoảng cách di chuyển của food tour sau khi thực hiện tối ưu.
     \item Người dùng có thể thực hiện lại việc tối ưu lộ trình khi danh sách hoặc thứ tự các
 điểm dừng thay đổi.
@@ -209,6 +210,15 @@ dừng trong food tour.
     \item Gửi và nhận tin nhắn văn bản với cơ chế xác thực vai trò phía máy chủ (\textit{senderRole: customer/owner}), bảo đảm tính toàn vẹn và ngăn chặn giả mạo danh tính người gửi.
     \item Cung cấp danh sách các cuộc hội thoại kèm theo nội dung tóm tắt, thời gian của tin nhắn gần nhất và số lượng tin nhắn chưa đọc (\textit{unread count}).
     \item Tự động cập nhật trạng thái đã đọc (\textit{isRead}) khi người dùng mở xem nội dung cuộc hội thoại.
+\end{itemize}
+
+\textbf{FR15: Khởi động và theo dõi hành trình thực tế (Trip Session)} 
+\begin{itemize}[label=\textbullet]
+    \item Cho phép người dùng bắt đầu chạy một food tour đã lên lịch trình trong điều kiện thực tế (\textit{Active Food Tour}) từ tọa độ vị trí hiện tại (GPS Geolocation) hoặc điểm xuất phát tùy chọn.
+    \item Cung cấp cơ chế quản lý máy trạng thái từng điểm dừng theo thời gian thực: đang di chuyển (\textit{en\_route}), đã đến quán (\textit{arrived}), đang thưởng thức món ăn (\textit{dining}), hoàn thành (\textit{completed}) hoặc bỏ qua (\textit{skipped}).
+    \item Hiển thị hướng dẫn di chuyển chi tiết từng bước (\textit{turn-by-turn maneuvers}), thời gian dự kiến đến nơi (\textit{ETA}) và thời gian kết thúc bữa ăn ước tính theo khung giờ phục vụ của từng quán.
+    \item Hỗ trợ tính toán lại lộ trình các điểm dừng còn lại (\textit{Recalculate remaining route}) theo thời gian thực khi vị trí xuất phát hoặc thời gian ăn uống thực tế bị thay đổi.
+    \item Lưu trữ toàn bộ lịch sử các chặng đã hoàn thành vào cơ sở dữ liệu làm cơ sở nâng cao độ chính xác cho module gợi ý ẩm thực cá nhân hóa.
 \end{itemize}
 
 

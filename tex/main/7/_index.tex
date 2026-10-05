@@ -155,6 +155,7 @@ Các chức năng kỹ thuật chính được hiện thực bao gồm:
         \item \textit{Thuật toán heuristic Nearest-Neighbor kết hợp 2-Opt Local Search}: Đối với các food tour có số lượng điểm dừng lớn hơn ($> 8$ stops), nhằm đảm bảo thời gian phản hồi thời gian thực ($< 2$ giây), hệ thống áp dụng chiến lược gán tham lam điểm gần nhất (\textit{Nearest-Neighbor}) để tạo lộ trình khởi tạo, sau đó áp dụng kỹ thuật tinh chỉnh cục bộ \textit{2-Opt} lặp lại tối đa 50 bước để đảo nghịch các đoạn lộ trình chéo nhau, liên tục cải thiện tổng chi phí.
     \end{itemize}
     \item \textbf{Hỗ trợ điểm xuất phát tùy chọn và đa mục tiêu}: Người dùng có thể tối ưu hóa theo mục tiêu cự ly di chuyển ngắn nhất (\textit{driving-distance}) hoặc thời gian nhanh nhất (\textit{driving-time}), đồng thời cho phép nhập vị trí xuất phát cá nhân (được geocoding chính xác từ địa chỉ qua Geoapify).
+    \item \textbf{Tối ưu hóa theo trình tự ẩm thực (Course-Aware Itinerary Optimization)}: Bên cạnh tiêu chí khoảng cách di chuyển thuần túy, hệ thống hỗ trợ cơ chế sắp xếp có tính đến văn hóa thưởng thức món ăn. Các điểm dừng được phân loại theo danh mục: Khai vị (\textit{Appetizer}) $\rightarrow$ Món chính (\textit{Main Course}) $\rightarrow$ Tráng miệng / Thức uống (\textit{Dessert / Drink}). Thuật toán đảm bảo việc tối ưu khoảng cách đường bộ diễn ra hợp lý bên trong và giữa các nhóm món, tránh tình trạng hành trình bị đảo lộn phi thực tế (ví dụ: dùng món tráng miệng trước món chính).
     \item \textbf{Trực quan hóa lộ trình trên bản đồ số}: Sau khi tối ưu, tọa độ chi tiết của lộ trình đường bộ (\textit{Route Geometry GeoJSON}) được gửi về và vẽ trực tiếp trên bản đồ Leaflet, kèm thông số định lượng cụ thể về quãng đường trước/sau và tỷ lệ cải thiện (\textit{Improvement \%}).
 \end{itemize}
 
@@ -212,7 +213,7 @@ Có (geocoding địa chỉ qua Geoapify). \\ \hline
 \textbf{Dẫn đường chi tiết (turn-by-turn)} &
 Có; GPS thời gian thực, thông tin giao thông trực tiếp. &
 Có (qua Mapbox Directions API riêng biệt). &
-Không hỗ trợ; hiển thị lộ trình tổng thể trên bản đồ Leaflet. \\ \hline
+Hỗ trợ qua module Trip Session: hiển thị chỉ dẫn chuyển hướng (maneuvers), ETA, thời gian ăn uống và tính toán lại lộ trình từ vị trí hiện tại. \\ \hline
 
 \textbf{Dữ liệu bản đồ nền} &
 Độc quyền Google, cập nhật liên tục, độ chính xác rất cao. &
@@ -266,6 +267,32 @@ Các đặc điểm kỹ thuật chính:
     \item \textbf{Phân quyền người gửi phía server}: Trường \texttt{senderRole} (\texttt{customer} | \texttt{owner}) được xác định và gán bởi server dựa trên JWT token, thay vì nhận từ client, ngăn chặn giả mạo vai trò người gửi.
     \item \textbf{Tổng hợp tin nhắn chưa đọc}: Hệ thống sử dụng MongoDB Aggregation Pipeline để tính toán số lượng tin nhắn chưa đọc (\textit{unread count}) trên toàn bộ hội thoại của người dùng.
     \item \textbf{Giao diện phân chia hai cột}: Danh sách hội thoại ở cột trái và nội dung tin nhắn ở cột phải giúp người dùng quản lý nhiều cuộc trò chuyện trực quan.
+\end{itemize}
+
+\subsubsection{Module khởi động và theo dõi hành trình thực tế (Trip Session)}
+Module Trip Session đóng vai trò chuyển hóa một kế hoạch food tour tĩnh thành một phiên trải nghiệm ẩm thực sống động trên thực địa. Thay vì chỉ hiển thị đường đi trên bản đồ, module cung cấp khả năng tương tác hai chiều, đồng hành cùng người dùng xuyên suốt từng chặng di chuyển và từng bữa ăn theo thời gian thực.
+
+\paragraph{Mô hình dữ liệu phiên hành trình (TripSession Schema)}
+Để quản lý toàn diện trạng thái của một chuyến đi thực tế, hệ thống xây dựng mô hình dữ liệu \texttt{TripSession} trong MongoDB với cấu trúc phân tầng:
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Cấp độ phiên làm việc (\textit{Session Level})}: Lưu trữ các thông tin bao gồm mã người dùng (\texttt{user}), mã food tour gốc (\texttt{tour}), trạng thái phiên (\texttt{status}: \texttt{active}, \texttt{completed}, \texttt{cancelled}), vị trí tức thời (\texttt{currentLocation}), thời điểm bắt đầu (\texttt{startedAt}), thời điểm hoàn tất (\texttt{completedAt}) và mảng lưu vết các chặng đã hoàn thành (\texttt{completedRouteHistory}).
+    \item \textbf{Cấp độ điểm dừng (\textit{Stop Subdocument})}: Mỗi điểm dừng trong mảng \texttt{stops} được quản lý bởi một máy trạng thái (\textit{State Machine}) gồm:
+    \begin{equation*}
+        \text{planned} \longrightarrow \text{en\_route} \longrightarrow \text{arrived} \longrightarrow \text{dining} \longrightarrow \text{completed (hoặc skipped)}
+    \end{equation*}
+    Đi kèm là các trường định lượng thời gian: thời lượng dùng bữa mong muốn (\texttt{diningMinutes}, mặc định 30 phút), thời điểm dự kiến đến và rời đi (\texttt{plannedArrival}, \texttt{plannedDeparture}), thời gian di chuyển (\texttt{travelMinutes}), thời gian chờ quán mở cửa (\texttt{waitingMinutes}), thời điểm thực tế check-in (\texttt{arrivedAt}) và kết thúc bữa ăn (\texttt{mealEndsAt}). Đồng thời, trường \texttt{restaurantSnapshot} sao lưu toàn bộ thông tin quán tại thời điểm khởi tạo nhằm đảm bảo tính toàn vẹn dữ liệu ngay cả khi thông tin quán gốc có sự điều chỉnh.
+\end{itemize}
+
+\paragraph{Cơ chế nghiệp vụ và luồng xử lý chính}
+Các luồng tương tác cốt lõi của module bao gồm:
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Khởi tạo phiên hành trình (\textit{Start Trip})}: Khi người dùng kích hoạt \textit{Start Tour} từ giao diện lập kế hoạch, API \texttt{POST} \texttt{/api/trips/tours/:id/start} tiếp nhận tọa độ GPS thực tế của người dùng. Hệ thống tự động phân tích khung giờ mở/đóng cửa của từng quán ăn thông qua thuật toán \textit{Service Window Matching} (hỗ trợ cả các quán hoạt động xuyên đêm, ví dụ 17:00 -- 02:00 sáng hôm sau), gán trạng thái \texttt{en\_route} cho điểm dừng đầu tiên và vẽ lộ trình từ vị trí người dùng đến quán.
+    \item \textbf{Ghi nhận đến quán và thưởng thức (\textit{Arrive \& Dining})}: Khi tới nơi, người dùng nhấn nút \textit{``I've arrived''} (gọi API \texttt{POST} \texttt{/api/trips/:tripId/arrive}). Hệ thống chuyển trạng thái điểm dừng sang \texttt{dining}, lưu dấu mốc \texttt{arrivedAt} và tự động tính toán thời điểm dự kiến dùng bữa xong:
+    \begin{equation*}
+        \texttt{mealEndsAt} = \texttt{arrivedAt} + \texttt{diningMinutes}
+    \end{equation*}
+    \item \textbf{Hoàn thành điểm dừng (\textit{Complete Stop})}: Sau khi thưởng thức món ăn, người dùng xác nhận hoàn thành (API \texttt{POST} \texttt{/api/trips/:tripId/complete-stop}). Chặng di chuyển vừa qua được đóng gói lưu vào \texttt{completedRouteHistory} (hiển thị màu xanh lá cây trên bản đồ). Điểm dừng tiếp theo tự động chuyển sang trạng thái \texttt{en\_route}, và hệ thống tự động gọi API Geoapify để vẽ chặng di chuyển kế tiếp (màu cam). Nếu đây là điểm dừng cuối cùng, toàn bộ phiên \texttt{TripSession} được cập nhật sang \texttt{completed}.
+    \item \textbf{Tái lập lịch trình theo thời gian thực (\textit{Recalculate Route})}: Trong trường hợp người dùng ăn uống lâu hơn dự kiến, dừng chân nghỉ ngơi hoặc đi lệch lộ trình ban đầu, nút chức năng \textit{``Recalculate remaining route''} (gọi API \texttt{POST} \texttt{/api/trips/:tripId/recalculate}) cho phép hệ thống lập tức cập nhật lại tọa độ GPS hiện tại làm gốc xuất phát mới, tính toán lại thời gian di chuyển, giờ đến dự kiến cho toàn bộ các điểm dừng chưa ghé thăm còn lại.
 \end{itemize}
 
 \subsubsection{Nhận xét chung về các module đã hiện thực}

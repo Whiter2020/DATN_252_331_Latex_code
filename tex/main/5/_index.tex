@@ -1,4 +1,4 @@
-\section{Phân tích hệ thống}
+﻿\section{Phân tích hệ thống}
 
 Chương này trình bày quá trình phân tích hệ thống của đề tài nhằm làm rõ các chức năng, luồng xử lý và cấu trúc của hệ thống thông qua các mô hình phân tích chuẩn trong kỹ thuật phần mềm. Dựa trên các yêu cầu chức năng và phi chức năng đã được xác định ở chương trước, hệ thống được mô hình hóa bằng các Use case Diagram, Activity Diagram, Sequence Diagram và Class Diagram. Các sơ đồ này giúp mô tả một cách trực quan mối quan hệ giữa người dùng và hệ thống, các luồng xử lý nghiệp vụ chính, trình tự tương tác giữa các thành phần, cũng như cấu trúc dữ liệu và mối quan hệ giữa các lớp trong hệ thống. Qua đó, chương này đóng vai trò là cơ sở cho việc thiết kế và triển khai hệ thống ở các giai đoạn tiếp theo.
 
@@ -810,74 +810,8 @@ Input: Food tour được chọn, thao tác quản lý. \newline Output: Trạng
 \hline
 
 \end{longtable}
-
-% ==== Đăng ký thông tin quán ăn ====
-\subsubsection{Use case: Đăng ký thông tin quán ăn}
-
-Bảng 4.13 mô tả chi tiết Use case Đăng ký thông tin quán ăn,
-bao gồm các bước người dùng gửi thông tin quán ăn mới lên hệ thống, hệ thống kiểm tra dữ liệu
-và chuyển yêu cầu sang trạng thái chờ quản trị viên xét duyệt.
-
-\begin{longtable}{|p{4cm}|p{10cm}|}
-\caption{Use case: Đăng ký thông tin quán ăn}
-\label{tab:usecase-register-restaurant} \\
-
-\endfirsthead
-
-\endhead
-
-\endfoot
-
-\endlastfoot
-
-\hline
-\textbf{Use case name} &
-Đăng ký thông tin quán ăn \\
-\hline
-
-\textbf{Description} &
-Cho phép người dùng gửi thông tin quán ăn mới lên hệ thống. Thông tin này được lưu dưới dạng yêu cầu chờ duyệt để quản trị viên kiểm tra trước khi công bố cho người dùng khác. \\
-\hline
-
-\textbf{Actors} &
-Người dùng \\
-\hline
-
-\textbf{Trigger} &
-Người dùng chọn chức năng đăng ký hoặc đề xuất quán ăn mới trên giao diện hệ thống. \\
-\hline
-
-\textbf{Preconditions} &
-Người dùng đã đăng nhập vào hệ thống và có thông tin quán ăn cần gửi. \\
-\hline
-
-\textbf{Post-conditions} &
-Yêu cầu đăng ký thông tin quán ăn được lưu trong hệ thống với trạng thái chờ xét duyệt. Quản trị viên có thể xem và xử lý yêu cầu này trong giao diện quản trị. \\
-\hline
-
-\textbf{Main flow} &
-1. Người dùng truy cập chức năng đăng ký hoặc đề xuất quán ăn mới. \newline
-2. Người dùng nhập thông tin quán ăn như tên quán, địa chỉ, mô tả, loại ẩm thực và các thông tin liên quan. \newline
-3. Người dùng gửi yêu cầu đăng ký thông tin quán ăn. \newline
-4. Hệ thống kiểm tra các trường thông tin bắt buộc. \newline
-5. Hệ thống lưu yêu cầu vào cơ sở dữ liệu với trạng thái chờ duyệt. \newline
-6. Hệ thống hiển thị thông báo gửi yêu cầu thành công cho người dùng. \\
-\hline
-
-\textbf{Alternative flow} &
-1. Người dùng nhập thiếu thông tin bắt buộc: hệ thống hiển thị thông báo và yêu cầu bổ sung. \newline
-2. Địa chỉ hoặc thông tin quán ăn không hợp lệ: hệ thống yêu cầu người dùng kiểm tra và nhập lại. \newline
-3. Xảy ra lỗi hệ thống hoặc mất kết nối: hệ thống thông báo lỗi và yêu cầu người dùng thử lại sau. \\
-\hline
-
-\textbf{Input / Output} &
-Input: Tên quán, địa chỉ, mô tả, loại ẩm thực và các thông tin liên quan của quán ăn. \newline
-Output: Yêu cầu đăng ký quán ăn được tạo và chờ quản trị viên xét duyệt. \\
-\hline
-
-\end{longtable}
-
 \endgroup
+
 
 \subsection{Activity Diagram }
 

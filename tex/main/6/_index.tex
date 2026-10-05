@@ -17,7 +17,7 @@ Trong đó, khối xử lý nghiệp vụ (Server/Application) được thiết 
 
 
 
-Hệ thống được tổ chức theo kiến trúc phân lớp nhằm đảm bảo nguyên tắc tách biệt trách nhiệm (separation of concerns), giúp tăng khả năng mở rộng, bảo trì và kiểm thử hệ thống. Kiến trúc bao gồm 5 lớp chính, được minh họa trong Hình 5.1. Các lớp chính bao gồm:
+Hệ thống được tổ chức theo kiến trúc phân lớp nhằm đảm bảo nguyên tắc tách biệt trách nhiệm (separation of concerns), giúp tăng khả năng mở rộng, bảo trì và kiểm thử hệ thống. Kiến trúc bao gồm 5 lớp chính, được minh họa trong Hình~\ref{fig:layered_architecture}. Các lớp chính bao gồm:
 \begin{itemize}[label=\textbullet]
     \item \textbf{Presentation Layer (Lớp trình bày)}: Lớp trình bày chịu trách nhiệm cung cấp giao diện tương tác trực tiếp với người dùng. Lớp này cho phép người dùng thực hiện các chức năng như tìm kiếm và duyệt quán ăn, tạo và quản lý food tour, xem bản đồ và lộ trình di chuyển, cũng như lưu/yêu thích và chia sẻ food tour.
 Presentation Layer tập trung vào trải nghiệm người dùng, điều hướng trang và hiển thị dữ liệu; không xử lý logic nghiệp vụ.
@@ -43,6 +43,7 @@ Kiến trúc phân lớp giúp hệ thống được tổ chức rõ ràng, dễ
     \centering
     \includegraphics[width=0.85\linewidth]{img/3.png}
     \caption{Layered Architecture}
+    \label{fig:layered_architecture}
 \end{figure}
 
 \subsubsection{Lý do lựa chọn kiến trúc}
@@ -161,7 +162,7 @@ thông tin gồm:
 
 Khi người dùng lựa chọn một nhà hàng, hệ thống hiển thị thông tin chi tiết
 và hỗ trợ người dùng xác định vị trí của địa điểm trong hành trình khám
-phá ẩm thực. Kiến trúc tổng quát của module bản đồ được mô tả trong hình 5.3
+phá ẩm thực. Kiến trúc tổng quát của module bản đồ được mô tả trong Hình~\ref{fig:map_architecture}
 
 \begin{figure}[H]
     \centering
@@ -192,7 +193,16 @@ hơn và tạo nền tảng cho chức năng xây dựng food tour trong hệ th
 % ====================== KẾT THÚC BỔ SUNG ======================
 \subsection{Thiết kế cơ sở dữ liệu}
 \subsubsection{ERD}
-ERD tổng quan của toàn bộ hệ thống được biểu diễn ở hình 5.2
+Lược đồ quan hệ thực thể (ERD) tổng quan của toàn bộ hệ thống được biểu diễn ở Hình~\ref{fig:erd_diagram}.
+
+\begin{figure}[p]
+    \centering
+    \makebox[\textwidth][c]{\includegraphics[angle=-90, width=0.88\textwidth]{img/ERD_Diagram.png}}
+    \vspace{0.2em}
+    \caption{Lược đồ ERD}
+    \label{fig:erd_diagram}
+\end{figure}
+
 
 \subsubsubsection{Thực thể Users}
 \begin{itemize}[label=\textbullet]
@@ -215,12 +225,6 @@ ERD tổng quan của toàn bộ hệ thống được biểu diễn ở hình 5
         \item Starts/Participates -- với Conversations (1--N)
         \item Sends -- với Messages (1--N)
         \item Favorites\_restaurant – với Restaurants (N--M)
-        \begin{figure}[p]
-            \centering
-            \makebox[\textwidth][c]{\includegraphics[angle=-90, width=0.88\textwidth]{img/ERD_Diagram.png}}
-            \vspace{0.2em}
-            \caption{Lược đồ ERD}
-        \end{figure}
     \end{itemize}
 \end{itemize}
 
@@ -370,9 +374,10 @@ Sau khi xây dựng mô hình dữ liệu ở mức logic thông qua ERD, hệ t
     \centering
     \includegraphics[page=1, angle=-90,width=0.68\textwidth]{img/5.png}
     \caption{Collection Schema Diagram}
+    \label{fig:collection_schema}
 \end{figure}
 
-Hình 5.3 minh họa lược đồ dữ liệu mức logic của hệ thống CityFoodTour, được thiết kế theo mô hình hướng tài liệu (document-oriented) của cơ sở dữ liệu MongoDB. Lược đồ thể hiện các collection chính của hệ thống cùng mối quan hệ logic giữa chúng thông qua các trường tham chiếu (reference), phù hợp với đặc thù schema linh hoạt của NoSQL.
+Hình~\ref{fig:collection_schema} minh họa lược đồ dữ liệu mức logic của hệ thống CityFoodTour, được thiết kế theo mô hình hướng tài liệu (document-oriented) của cơ sở dữ liệu MongoDB. Lược đồ thể hiện các collection chính của hệ thống cùng mối quan hệ logic giữa chúng thông qua các trường tham chiếu (reference), phù hợp với đặc thù schema linh hoạt của NoSQL.
 
 Collection users lưu trữ thông tin người dùng, bao gồm các thuộc tính cơ bản như email, tên người dùng, số điện thoại, mật khẩu đã mã hóa và vai trò trong hệ thống. Ngoài ra, collection này còn lưu trữ hồ sơ khẩu vị (tasteProfile), danh sách các quán ăn yêu thích (favoriteRestaurantIds) và các food tour đã lưu (savedTourIds), phục vụ cho việc cá nhân hóa trải nghiệm người dùng.
 
@@ -408,16 +413,17 @@ chính như tìm kiếm quán ăn, quản lý food tour hoặc quản trị dữ
 
 Trong sơ đồ luồng giao diện, mỗi hình chữ nhật đại diện cho một màn hình giao diện
 của hệ thống, trong khi các mũi tên biểu diễn luồng điều hướng giữa các màn hình thông
-qua thao tác của người dùng hoặc quản trị viên. User interface workflow của hệ thống được biểu diễn ở Hình 5.4
+qua thao tác của người dùng hoặc quản trị viên. User interface workflow của hệ thống được biểu diễn ở Hình~\ref{fig:ui_workflow}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{img/workflow.png}
     \caption{User Interface Workflow}
+    \label{fig:ui_workflow}
 \end{figure}
 
 \subsubsection{Chi tiết giao diện hệ thống}
 \subsubsubsection{Giao diện đăng nhập}
-Hình 5.5 minh họa giao diện đăng nhập của hệ thống CityFoodTour. Đây là màn hình
+Hình~\ref{fig:ui_login} minh họa giao diện đăng nhập của hệ thống CityFoodTour. Đây là màn hình
 đầu tiên mà người dùng tương tác khi truy cập vào hệ thống, cho phép người dùng
 xác thực tài khoản để sử dụng các chức năng chính.
 
@@ -425,6 +431,7 @@ xác thực tài khoản để sử dụng các chức năng chính.
     \centering
     \includegraphics[width=0.8\textwidth]{img/signup.png}
     \caption{Giao diện đăng nhập}
+    \label{fig:ui_login}
 \end{figure}
 
 Giao diện đăng nhập yêu cầu người dùng nhập thông tin email và mật khẩu đã được
@@ -434,12 +441,13 @@ Ngoài ra, giao diện cung cấp liên kết chuyển sang chức năng đăng 
 
 Về mặt thiết kế, giao diện được xây dựng theo hướng đơn giản và nhất quán với tổng thể hệ thống, tập trung vào chức năng cốt lõi và hạn chế các thành phần không cần thiết. Hệ thống đồng thời cung cấp phản hồi trực quan khi thông tin đăng nhập không hợp lệ, giúp người dùng dễ dàng nhận biết và điều chỉnh thao tác.
 \subsubsubsection{Giao diện quản trị hệ thống}
-Hình 5.6 minh họa giao diện quản trị hệ thống (Admin Dashboard), được thiết kế dành riêng cho quản trị viên nhằm hỗ trợ việc giám sát và quản lý dữ liệu của hệ thống CityFoodTour.
+Hình~\ref{fig:ui_admin} minh họa giao diện quản trị hệ thống (Admin Dashboard), được thiết kế dành riêng cho quản trị viên nhằm hỗ trợ việc giám sát và quản lý dữ liệu của hệ thống CityFoodTour.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{img/admin.png}
     \caption{Giao diện quản trị hệ thống}
+    \label{fig:ui_admin}
 \end{figure}
 Giao diện dashboard cung cấp các thông tin thống kê tổng quan, bao gồm tổng số
 người dùng, số lượng quán ăn, số lượt đánh giá và số lượng food tour hiện có trong hệ thống. Các chỉ số này được hiển thị trực quan, giúp quản trị viên nhanh chóng nắm bắt tình trạng hoạt động chung của hệ thống.
@@ -455,7 +463,7 @@ Nhìn chung, giao diện Admin Dashboard được thiết kế đơn giản, rõ
 Giao diện trang chủ (Home) là màn hình trung tâm của hệ thống CityFoodTour, đóng
 vai trò là điểm khởi đầu cho hầu hết các thao tác của người dùng sau khi đăng nhập. Giao diện này được thiết kế nhằm cung cấp cái nhìn tổng quan về hệ thống cũng như hỗ trợ người dùng nhanh chóng tiếp cận các chức năng chính.
 
-Hình 5.7 minh họa giao diện trang chủ của hệ thống. Tại khu vực đầu trang, hệ thống hiển thị thanh tìm kiếm và bộ lọc cho phép người dùng tra cứu quán ăn theo nhiều tiêu chí khác nhau như loại ẩm thực, vị trí, thời gian mở cửa, mức đánh giá và ngân sách. Việc tích hợp các bộ lọc này ngay trên trang chủ giúp người dùng dễ dàng bắt đầu quá trình tìm kiếm mà không cần chuyển sang màn hình khác.
+Hình~\ref{fig:ui_home} minh họa giao diện trang chủ của hệ thống. Tại khu vực đầu trang, hệ thống hiển thị thanh tìm kiếm và bộ lọc cho phép người dùng tra cứu quán ăn theo nhiều tiêu chí khác nhau như loại ẩm thực, vị trí, thời gian mở cửa, mức đánh giá và ngân sách. Việc tích hợp các bộ lọc này ngay trên trang chủ giúp người dùng dễ dàng bắt đầu quá trình tìm kiếm mà không cần chuyển sang màn hình khác.
 
 Bên dưới khu vực tìm kiếm, giao diện cung cấp các danh mục ẩm thực phổ biến dưới
 dạng biểu tượng, hỗ trợ người dùng khám phá nhanh các nhóm quán ăn theo sở thích. Ngoài ra, hệ thống hiển thị danh sách các quán ăn được đề xuất dựa trên hồ sơ khẩu vị của người dùng, giúp cá nhân hóa trải nghiệm sử dụng.
@@ -467,18 +475,20 @@ Nhìn chung, giao diện trang chủ được thiết kế trực quan, rõ ràn
     \centering
     \includegraphics[width=1\textwidth]{img/home.png}
     \caption{Giao diện trang chủ}
+    \label{fig:ui_home}
 \end{figure}
 
 
 \subsubsubsection{Giao diện kết quả tìm kiếm}
 Giao diện kết quả tìm kiếm được thiết kế nhằm hiển thị danh sách các quán ăn phù hợp với tiêu chí tìm kiếm mà người dùng đã lựa chọn. Đây là giao diện đóng vai trò quan trọng trong việc hỗ trợ người dùng so sánh và lựa chọn quán ăn phù hợp với nhu cầu cá nhân.
 
-Hình 5.8 minh họa giao diện kết quả tìm kiếm của hệ thống. Tại khu vực đầu trang, hệ thống cung cấp thanh tìm kiếm kết hợp với các bộ lọc cho phép người dùng điều chỉnh và tinh chỉnh lại tiêu chí tìm kiếm như loại ẩm thực, vị trí, thời gian mở cửa, mức đánh giá và ngân sách. Việc cho phép thay đổi bộ lọc trực tiếp trên trang kết quả giúp người dùng nhanh chóng cập nhật danh sách quán ăn mà không cần quay lại trang chủ.
+Hình~\ref{fig:ui_search} minh họa giao diện kết quả tìm kiếm của hệ thống. Tại khu vực đầu trang, hệ thống cung cấp thanh tìm kiếm kết hợp với các bộ lọc cho phép người dùng điều chỉnh và tinh chỉnh lại tiêu chí tìm kiếm như loại ẩm thực, vị trí, thời gian mở cửa, mức đánh giá và ngân sách. Việc cho phép thay đổi bộ lọc trực tiếp trên trang kết quả giúp người dùng nhanh chóng cập nhật danh sách quán ăn mà không cần quay lại trang chủ.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{img/search.png}
     \caption{Giao diện kết quả tìm kiếm}
+    \label{fig:ui_search}
 \end{figure}
 
 Danh sách kết quả được hiển thị dưới dạng các thẻ thông tin, mỗi thẻ đại diện cho một quán ăn. Thông tin tổng quan của quán ăn bao gồm hình ảnh minh họa, tên quán, địa chỉ, mức giá, loại ẩm thực và điểm đánh giá trung bình. Cách trình bày này giúp người dùng dễ dàng so sánh các lựa chọn và đưa ra quyết định phù hợp.
@@ -490,12 +500,13 @@ Nhìn chung, giao diện kết quả tìm kiếm đáp ứng tốt yêu cầu v�
 \subsubsubsection{Giao diện chi tiết quán ăn}
 Giao diện chi tiết quán ăn được thiết kế nhằm cung cấp đầy đủ thông tin về một quán ăn cụ thể, hỗ trợ người dùng đánh giá và quyết định lựa chọn quán ăn phù hợp trong quá trình xây dựng food tour.
 
-Hình 5.9 minh họa giao diện chi tiết quán ăn của hệ thống CityFoodTour. Tại khu vực đầu trang, giao diện hiển thị hình ảnh minh họa, tên quán, điểm đánh giá trung bình và các thông tin tổng quan như loại ẩm thực và trạng thái hoạt động của quán. Các chức năng như xem vị trí trên bản đồ và viết đánh giá được cung cấp nhằm hỗ trợ tương tác trực tiếp với quán ăn.
+Hình~\ref{fig:ui_restaurant_detail} minh họa giao diện chi tiết quán ăn của hệ thống CityFoodTour. Tại khu vực đầu trang, giao diện hiển thị hình ảnh minh họa, tên quán, điểm đánh giá trung bình và các thông tin tổng quan như loại ẩm thực và trạng thái hoạt động của quán. Các chức năng như xem vị trí trên bản đồ và viết đánh giá được cung cấp nhằm hỗ trợ tương tác trực tiếp với quán ăn.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{img/restaurant.png}
     \caption{Giao diện chi tiết quán ăn}
+    \label{fig:ui_restaurant_detail}
 \end{figure}
 
 Bên cạnh các thông tin tổng quan, giao diện hiển thị bản đồ thu nhỏ giúp người dùng xác định vị trí địa lý của quán ăn và thuận tiện cho việc dẫn đường. Các thông tin liên hệ cơ bản như giờ mở cửa và số điện thoại cũng được hiển thị rõ ràng để phục vụ nhu cầu tham khảo.
@@ -512,12 +523,13 @@ Nhìn chung, giao diện chi tiết quán ăn được thiết kế trực quan,
 Giao diện hồ sơ người dùng (Profile) được thiết kế nhằm cho phép người dùng quản
 lý thông tin cá nhân và thiết lập các tùy chọn liên quan đến trải nghiệm sử dụng hệ thống CityFoodTour. Đây là giao diện hỗ trợ cá nhân hóa hệ thống dựa trên nhu cầu và sở thích của từng người dùng.
 
-Hình 5.10 minh họa giao diện hồ sơ người dùng của hệ thống. Tại khu vực thông tin cá nhân, giao diện hiển thị các thông tin cơ bản của người dùng như tên hiển thị và thông tin liên hệ, đồng thời cung cấp chức năng chỉnh sửa hồ sơ khi cần thiết.
+Hình~\ref{fig:ui_profile} minh họa giao diện hồ sơ người dùng của hệ thống. Tại khu vực thông tin cá nhân, giao diện hiển thị các thông tin cơ bản của người dùng như tên hiển thị và thông tin liên hệ, đồng thời cung cấp chức năng chỉnh sửa hồ sơ khi cần thiết.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{img/profile.png}
     \caption{Giao diện hồ sơ người dùng}
+    \label{fig:ui_profile}
 \end{figure}
 
 Giao diện hồ sơ người dùng bao gồm các mục chức năng như danh sách food tour đã
@@ -531,12 +543,13 @@ Nhìn chung, giao diện hồ sơ người dùng được thiết kế gọn gà
 quán với tổng thể hệ thống, đóng vai trò hỗ trợ quan trọng trong việc cá nhân hóa trải nghiệm người dùng, nâng cao hiệu quả của các chức năng đề xuất, cũng như khuyến khích sự đóng góp nội dung từ cộng đồng người dùng.
 
 \subsubsubsection{Giao diện nhắn tin}
-Giao diện nhắn tin (Messaging) được thiết kế để hỗ trợ kênh liên lạc trực tiếp giữa người dùng và chủ quán ăn trong hệ thống CityFoodTour. Tính năng này giúp người dùng dễ dàng đặt câu hỏi về thực đơn, giờ mở cửa hoặc trao đổi thông tin với nhà hàng mà không cần rời khỏi nền tảng.
+Giao diện nhắn tin (Messaging) được minh họa ở Hình~\ref{fig:ui_messaging}, được thiết kế để hỗ trợ kênh liên lạc trực tiếp giữa người dùng và chủ quán ăn trong hệ thống CityFoodTour. Tính năng này giúp người dùng dễ dàng đặt câu hỏi về thực đơn, giờ mở cửa hoặc trao đổi thông tin với nhà hàng mà không cần rời khỏi nền tảng.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{img/messaging.png}
     \caption{Giao diện nhắn tin giữa người dùng và chủ quán ăn}
+    \label{fig:ui_messaging}
 \end{figure}
 
 Giao diện nhắn tin được tổ chức theo mô hình hội thoại 1--1 (\textit{one-to-one conversation}), trong đó mỗi cặp người dùng -- quán ăn chỉ tồn tại một cuộc hội thoại duy nhất. Danh sách hội thoại được hiển thị ở bảng bên trái, cho phép người dùng nhanh chóng chuyển đổi giữa các cuộc trò chuyện. Khung soạn tin ở phía dưới hỗ trợ gửi tin nhắn văn bản tức thì, cùng với chỉ số tin nhắn chưa đọc (\textit{unread count}) được cập nhật theo thời gian thực.
@@ -544,18 +557,19 @@ Giao diện nhắn tin được tổ chức theo mô hình hội thoại 1--1 (\
 Về mặt kỹ thuật, vai trò người gửi (\textit{senderRole}: \texttt{customer} hoặc \texttt{owner}) được xác định và gán bởi server thay vì client, ngăn chặn khả năng giả mạo danh tính trong quá trình trao đổi. Cơ chế này đảm bảo tính toàn vẹn và an toàn cho hệ thống nhắn tin.
 
 \subsubsubsection{Giao diện gợi ý quán ăn cá nhân hóa}
-Nhằm nâng cao tính cá nhân hóa và hỗ trợ người dùng khám phá ẩm thực phù hợp với sở thích riêng, hệ thống cung cấp phân mục gợi ý quán ăn ``Recommended for You'' ngay trên trang chủ.
+Nhằm nâng cao tính cá nhân hóa và hỗ trợ người dùng khám phá ẩm thực phù hợp với sở thích riêng, hệ thống cung cấp phân mục gợi ý quán ăn ``Recommended for You'' ngay trên trang chủ, được minh họa ở Hình~\ref{fig:ui_recommendation}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{img/ui_recommendation.png}
     \caption{Giao diện gợi ý quán ăn cá nhân hóa theo khẩu vị và lịch sử}
+    \label{fig:ui_recommendation}
 \end{figure}
 
 Giao diện gợi ý hiển thị các thẻ quán ăn được tính toán dựa trên thuật toán kết hợp đa tiêu chí: hồ sơ khẩu vị cá nhân (\textit{taste profile}), khu vực ưu tiên, lịch sử tương tác và điểm đánh giá cộng đồng. Đặc biệt, giao diện cung cấp tính năng giải thích lý do gợi ý minh bạch (\textit{Explainable Recommendation}) ngay dưới từng quán ăn (ví dụ: \textit{``Matches your taste: BBQ $\bullet$ Located in your preferred area''} hoặc \textit{``Matches your taste: BBQ $\bullet$ Matches your food-tour history''}). Điều này giúp người dùng hiểu rõ căn cứ của từng đề xuất, gia tăng mức độ tin cậy và trải nghiệm tương tác với hệ thống.
 
 \subsubsubsection{Giao diện hỗ trợ xây dựng FoodTour}
-Hình 5.11 minh họa giao diện hỗ trợ xây dựng food tour của hệ thống CityFoodTour. Giao diện này cung cấp các chức năng tìm kiếm quán ăn, food tour và món ăn nhằm hỗ trợ người dùng lựa chọn và xây dựng hành trình ăn uống phù hợp.
+Hình~\ref{fig:ui_build_foodtour} minh họa giao diện hỗ trợ xây dựng food tour của hệ thống CityFoodTour. Giao diện này cung cấp các chức năng tìm kiếm quán ăn, food tour và món ăn nhằm hỗ trợ người dùng lựa chọn và xây dựng hành trình ăn uống phù hợp.
 
 Thông qua các mục chức năng được bố trí ở thanh bên, người dùng có thể dễ dàng
 chuyển đổi giữa các hình thức tìm kiếm khác nhau trong quá trình lập kế hoạch.
@@ -566,10 +580,11 @@ thông tin trên một màn hình duy nhất.
     \centering
     \includegraphics[width=0.8\textwidth]{img/foodtour.png}
     \caption{Giao diện hỗ trợ xây dựng FoodTour}
+    \label{fig:ui_build_foodtour}
 \end{figure}
 
 \subsubsubsection{Giao diện lập kế hoạch và tối ưu hóa lộ trình FoodTour}
-Giao diện lập kế hoạch hành trình (\textit{Itinerary Planner}) là tính năng trung tâm của hệ thống, cho phép người dùng trực quan hóa toàn bộ hành trình ăn uống trên bản đồ số tương tác và tối ưu hóa lộ trình di chuyển giữa các điểm dừng.
+Giao diện lập kế hoạch hành trình (\textit{Itinerary Planner}) được minh họa ở Hình~\ref{fig:ui_foodtour_routing}, là tính năng trung tâm của hệ thống, cho phép người dùng trực quan hóa toàn bộ hành trình ăn uống trên bản đồ số tương tác và tối ưu hóa lộ trình di chuyển giữa các điểm dừng.
 
 Giao diện được chia thành hai phân vùng chính:
 \begin{itemize}[label=\textbullet]
@@ -581,6 +596,7 @@ Giao diện được chia thành hai phân vùng chính:
     \centering
     \includegraphics[width=1\textwidth]{img/ui_foodtour_routing.png}
     \caption{Giao diện tối ưu hóa lộ trình Food Tour trên bản đồ số}
+    \label{fig:ui_foodtour_routing}
 \end{figure}
 
 
@@ -590,19 +606,13 @@ Giao diện được chia thành hai phân vùng chính:
 Giao diện chi tiết food tour được thiết kế nhằm cung cấp đầy đủ thông tin về một
 hành trình ăn uống cụ thể, hỗ trợ người dùng hiểu rõ nội dung và cấu trúc của food tour trước khi lựa chọn hoặc sử dụng.
 
-Hình 5.12 minh họa giao diện chi tiết food tour của hệ thống CityFoodTour. Tại khu vực đầu trang, giao diện hiển thị hình ảnh minh họa, tên food tour, điểm đánh giá trung bình, thời lượng dự kiến, số lượng điểm dừng và tổng quãng đường di chuyển. Các thông tin này giúp người dùng nhanh chóng nắm bắt quy mô và đặc điểm tổng quan của hành trình.
-
-Bên dưới phần thông tin tổng quan, giao diện cung cấp mô tả ngắn về nội dung food tour, giúp người dùng hiểu rõ chủ đề và trải nghiệm mà hành trình mang lại. Các thẻ nhãn (tags) được sử dụng để phân loại food tour theo loại hình ẩm thực và phong cách, hỗ trợ việc tìm kiếm và gợi ý.
-
-Giao diện chi tiết food tour cho phép người dùng thực hiện các thao tác như lưu food tour, xem chi tiết đầy đủ hoặc tải food tour vào trình lập kế hoạch nhằm phục vụ việc xây dựng hành trình cá nhân. Các chức năng này giúp tăng khả năng tái sử dụng và chia sẻ food tour trong hệ thống.
-
-Bên dưới phần thông tin tổng quan, giao diện cung cấp mô tả ngắn về nội dung food tour, giúp người dùng hiểu rõ chủ đề và trải nghiệm mà hành trình mang lại. Các thẻ nhãn (tags) được sử dụng để phân loại food tour theo loại hình ẩm thực và phong cách, hỗ trợ việc tìm kiếm và gợi ý.
-
+Hình~\ref{fig:ui_tour_detail} minh họa giao diện chi tiết food tour của hệ thống CityFoodTour. Tại khu vực đầu trang, giao diện hiển thị hình ảnh minh họa, tên food tour, điểm đánh giá trung bình, thời lượng dự kiến, số lượng điểm dừng và tổng quãng đường di chuyển. Các thông tin này giúp người dùng nhanh chóng nắm bắt quy mô và đặc điểm tổng quan của hành trình.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{img/tourdetail.png}
     \caption{Giao diện chi tiết FoodTour}
+    \label{fig:ui_tour_detail}
 \end{figure}
 
 Bên dưới phần thông tin tổng quan, giao diện cung cấp mô tả ngắn về nội dung food tour, giúp người dùng hiểu rõ chủ đề và trải nghiệm mà hành trình mang lại. Các thẻ nhãn (tags) được sử dụng để phân loại food tour theo loại hình ẩm thực và phong cách, hỗ trợ việc tìm kiếm và gợi ý.
@@ -615,4 +625,22 @@ Danh sách các điểm dừng trong food tour được hiển thị theo thứ 
 hành trình và các địa điểm sẽ ghé thăm.
 
 Nhìn chung, giao diện chi tiết food tour được thiết kế trực quan, đầy đủ thông tin và nhất quán với tổng thể hệ thống, đóng vai trò quan trọng trong việc hỗ trợ người dùng khám phá, lựa chọn và sử dụng các hành trình ăn uống một cách hiệu quả.
+
+\subsubsubsection{Giao diện chạy food tour thực tế (Active Food Tour)}
+Sau khi hoàn tất việc lập kế hoạch và tối ưu hóa lộ trình, người dùng có thể kích hoạt phiên trải nghiệm thực tế thông qua tính năng khởi động hành trình (\textit{Start Tour}). Giao diện theo dõi hành trình trực tiếp (\textit{Active Food Tour}) được minh họa chi tiết ở Hình~\ref{fig:ui_start_tour}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{img/start_tour.png}
+    \caption{Giao diện khởi động và theo dõi hành trình thực tế (Active Food Tour)}
+    \label{fig:ui_start_tour}
+\end{figure}
+
+Giao diện được thiết kế chuyên biệt cho việc sử dụng trên thực địa, bao gồm các phân vùng chức năng chính:
+\begin{itemize}[label=\textbullet]
+    \item \textbf{Bản đồ trực quan hóa tiến độ hành trình (khu vực bên trái)}: Tích hợp thư viện Leaflet hiển thị toàn bộ lộ trình di chuyển với cơ chế phân biệt trạng thái bằng ba gam màu trực quan: màu cam (\textit{Orange}) thể hiện chặng đang di chuyển hiện tại (\textit{current leg}), màu xám (\textit{Gray}) thể hiện các chặng dự kiến kế tiếp (\textit{later legs}), và màu xanh lá cây (\textit{Green}) biểu thị các chặng đã hoàn thành. Vị trí thực tế của người dùng được đồng bộ và đánh dấu bằng biểu tượng GPS trực tiếp.
+    \item \textbf{Bảng điều khiển điểm dừng hiện tại (góc trên bên phải)}: Hiển thị trạng thái hành trình theo thời gian thực (ví dụ nhãn \textit{EN ROUTE}), tên quán ăn tiếp theo, thời gian dự kiến đến quán (\textit{Expected arrival}) và thời lượng dùng bữa dự kiến (ví dụ: \textit{30 min dining after arrival}). Nút bấm tương tác nổi bật \textit{“I've arrived”} cho phép người dùng xác nhận đã tới quán, tự động chuyển trạng thái chặng sang \textit{Dining} và kích hoạt khung thời gian dùng bữa.
+    \item \textbf{Chỉ dẫn di chuyển từng bước (Next directions)}: Cung cấp danh sách các chỉ dẫn chuyển hướng (\textit{turn-by-turn maneuvers}) theo mạng lưới giao thông đường bộ từ Geoapify (bao gồm khoảng cách từng đoạn, thao tác rẽ, chuyển làn hoặc quay đầu), giúp người dùng dễ dàng định hướng di chuyển giữa các địa điểm ẩm thực.
+    \item \textbf{Tái tính toán lộ trình linh hoạt (Recalculate remaining route)}: Nút chức năng ở thanh công cụ cho phép người dùng tính toán lại lộ trình và thời gian dự kiến cho các điểm dừng còn lại xuất phát từ vị trí hiện tại của người dùng, đặc biệt hữu ích khi phát sinh độ trễ về thời gian dùng bữa hoặc thay đổi hướng đi thực tế.
+\end{itemize}
 \cleardoublepage
