@@ -49,82 +49,93 @@
 \contentsline {subsubsection}{\numberline {4.2.10.}Use case: Gửi tin nhắn}{39}{subsubsection.4.2.10}%
 \contentsline {subsubsection}{\numberline {4.2.11.}Use case: Quản lý dữ liệu quán ăn}{41}{subsubsection.4.2.11}%
 \contentsline {subsubsection}{\numberline {4.2.12.}Use case: Quản lý nội dung food tour}{42}{subsubsection.4.2.12}%
-\contentsline {subsubsection}{\numberline {4.2.13.}Use case: Đăng ký thông tin quán ăn}{43}{subsubsection.4.2.13}%
-\contentsline {subsection}{\numberline {4.3.}Activity Diagram }{44}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4.}Sequence Diagram }{52}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5.}Class Diagram }{57}{subsection.4.5}%
-\contentsline {section}{\numberline {5.}Thiết kế hệ thống}{60}{section.5}%
-\contentsline {subsection}{\numberline {5.1.}Kiến trúc hệ thống}{60}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1.}Kiến trúc tổng thể}{60}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2.}Kiến trúc phân lớp (Layered Architecture)}{60}{subsubsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.3.}Lý do lựa chọn kiến trúc}{61}{subsubsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.2.}Thiết kế module Gợi ý quán ăn}{63}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3.}Thiết kế module Bản đồ}{63}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1.}Tích hợp Geoapify API}{64}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2.}Thiết kế hiển thị bản đồ trên giao diện}{65}{subsubsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.4.}Thiết kế cơ sở dữ liệu}{66}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1.}ERD}{66}{subsubsection.5.4.1}%
-\contentsline {subsubsubsection}{\numberline {a.}Thực thể Users}{66}{subsubsubsection.5.4.1.1}%
-\contentsline {subsubsubsection}{\numberline {b.}Thực thể Restaurants}{66}{subsubsubsection.5.4.1.2}%
-\contentsline {subsubsubsection}{\numberline {c.}Thực thể Reviews}{68}{subsubsubsection.5.4.1.3}%
-\contentsline {subsubsubsection}{\numberline {d.}Thực thể Foodtour}{68}{subsubsubsection.5.4.1.4}%
-\contentsline {subsubsubsection}{\numberline {e.}Thực thể FoodtourStop}{69}{subsubsubsection.5.4.1.5}%
-\contentsline {subsubsubsection}{\numberline {f.}Thực thể Food}{69}{subsubsubsection.5.4.1.6}%
-\contentsline {subsubsubsection}{\numberline {g.}Thực thể Conversations}{69}{subsubsubsection.5.4.1.7}%
-\contentsline {subsubsubsection}{\numberline {h.}Thực thể Messages}{69}{subsubsubsection.5.4.1.8}%
-\contentsline {subsubsection}{\numberline {5.4.2.}Collection Schema}{70}{subsubsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.5.}Thiết kế giao diện}{73}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1.}Nguyên tắc thiết kế}{73}{subsubsection.5.5.1}%
-\contentsline {subsubsubsection}{\numberline {a.}Tính nhất quán}{73}{subsubsubsection.5.5.1.1}%
-\contentsline {subsubsubsection}{\numberline {b.}Tính đơn giản}{73}{subsubsubsection.5.5.1.2}%
-\contentsline {subsubsubsection}{\numberline {c.}Khả năng tiếp cận}{73}{subsubsubsection.5.5.1.3}%
-\contentsline {subsubsubsection}{\numberline {d.}Phản hồi trực quan}{73}{subsubsubsection.5.5.1.4}%
-\contentsline {subsubsubsection}{\numberline {e.}Phân cấp thông tin}{74}{subsubsubsection.5.5.1.5}%
-\contentsline {subsubsection}{\numberline {5.5.2.}Thiết kế luồng giao diện hệ thống}{74}{subsubsection.5.5.2}%
-\contentsline {subsubsection}{\numberline {5.5.3.}Chi tiết giao diện hệ thống}{74}{subsubsection.5.5.3}%
-\contentsline {subsubsubsection}{\numberline {a.}Giao diện đăng nhập}{74}{subsubsubsection.5.5.3.1}%
-\contentsline {subsubsubsection}{\numberline {b.}Giao diện quản trị hệ thống}{76}{subsubsubsection.5.5.3.2}%
-\contentsline {subsubsubsection}{\numberline {c.}Giao diện trang chủ}{77}{subsubsubsection.5.5.3.3}%
-\contentsline {subsubsubsection}{\numberline {d.}Giao diện kết quả tìm kiếm}{78}{subsubsubsection.5.5.3.4}%
-\contentsline {subsubsubsection}{\numberline {e.}Giao diện chi tiết quán ăn}{79}{subsubsubsection.5.5.3.5}%
-\contentsline {subsubsubsection}{\numberline {f.}Giao diện hồ sơ người dùng}{81}{subsubsubsection.5.5.3.6}%
-\contentsline {subsubsubsection}{\numberline {g.}Giao diện nhắn tin}{82}{subsubsubsection.5.5.3.7}%
-\contentsline {subsubsubsection}{\numberline {h.}Giao diện gợi ý quán ăn cá nhân hóa}{83}{subsubsubsection.5.5.3.8}%
-\contentsline {subsubsubsection}{\numberline {i.}Giao diện hỗ trợ xây dựng FoodTour}{83}{subsubsubsection.5.5.3.9}%
-\contentsline {subsubsubsection}{\numberline {j.}Giao diện lập kế hoạch và tối ưu hóa lộ trình FoodTour}{84}{subsubsubsection.5.5.3.10}%
-\contentsline {subsubsubsection}{\numberline {k.}Giao diện chi tiết FoodTour}{85}{subsubsubsection.5.5.3.11}%
-\contentsline {section}{\numberline {6.}Hiện thực hệ thống}{88}{section.6}%
-\contentsline {subsection}{\numberline {6.1.}Kiến trúc hiện thực hệ thống}{88}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1.}Phân tích kiến trúc tổng thể}{88}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2.}Công nghệ sử dụng trong hệ thống}{88}{subsubsection.6.1.2}%
-\contentsline {subsubsubsection}{\numberline {a.}React và TypeScript – Tầng giao diện người dùng}{88}{subsubsubsection.6.1.2.1}%
-\contentsline {subsubsubsection}{\numberline {b.}Node.js và Express – Tầng backend}{89}{subsubsubsection.6.1.2.2}%
-\contentsline {subsubsubsection}{\numberline {c.}MongoDB – Hệ quản trị cơ sở dữ liệu}{89}{subsubsubsection.6.1.2.3}%
-\contentsline {subsection}{\numberline {6.2.}Các module chức năng chính của hệ thống}{90}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1.}Module quản lý người dùng}{90}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2.}Module quản trị hệ thống}{91}{subsubsection.6.2.2}%
-\contentsline {subsubsection}{\numberline {6.2.3.}Module tìm kiếm và tra cứu quán ăn}{91}{subsubsection.6.2.3}%
-\contentsline {subsubsection}{\numberline {6.2.4.}Module quản lý quán ăn yêu thích}{91}{subsubsection.6.2.4}%
-\contentsline {subsubsection}{\numberline {6.2.5.}Module đánh giá quán ăn}{92}{subsubsection.6.2.5}%
-\contentsline {subsubsection}{\numberline {6.2.6.}Module gợi ý quán ăn}{92}{subsubsection.6.2.6}%
-\contentsline {subsubsection}{\numberline {6.2.7.}Module quản lý Food Tour và tối ưu hóa lộ trình di chuyển}{93}{subsubsection.6.2.7}%
-\contentsline {subsubsection}{\numberline {6.2.8.}So sánh kỹ thuật tối ưu hóa lộ trình với các giải pháp tương tự}{94}{subsubsection.6.2.8}%
+\contentsline {subsection}{\numberline {4.3.}Activity Diagram }{43}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4.}Sequence Diagram }{50}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5.}Class Diagram }{55}{subsection.4.5}%
+\contentsline {section}{\numberline {5.}Thiết kế hệ thống}{58}{section.5}%
+\contentsline {subsection}{\numberline {5.1.}Kiến trúc hệ thống}{58}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.}Kiến trúc tổng thể}{58}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.}Kiến trúc phân lớp (Layered Architecture)}{58}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3.}Lý do lựa chọn kiến trúc}{59}{subsubsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.2.}Thiết kế module Gợi ý quán ăn}{61}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3.}Thiết kế module Bản đồ}{61}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1.}Tích hợp Geoapify API}{62}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2.}Thiết kế hiển thị bản đồ trên giao diện}{63}{subsubsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.4.}Thiết kế cơ sở dữ liệu}{64}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1.}ERD}{64}{subsubsection.5.4.1}%
+\contentsline {subsubsubsection}{\numberline {a.}Thực thể Users}{64}{subsubsubsection.5.4.1.1}%
+\contentsline {subsubsubsection}{\numberline {b.}Thực thể Restaurants}{64}{subsubsubsection.5.4.1.2}%
+\contentsline {subsubsubsection}{\numberline {c.}Thực thể Reviews}{66}{subsubsubsection.5.4.1.3}%
+\contentsline {subsubsubsection}{\numberline {d.}Thực thể Foodtour}{66}{subsubsubsection.5.4.1.4}%
+\contentsline {subsubsubsection}{\numberline {e.}Thực thể FoodtourStop}{67}{subsubsubsection.5.4.1.5}%
+\contentsline {subsubsubsection}{\numberline {f.}Thực thể Food}{67}{subsubsubsection.5.4.1.6}%
+\contentsline {subsubsubsection}{\numberline {g.}Thực thể Conversations}{67}{subsubsubsection.5.4.1.7}%
+\contentsline {subsubsubsection}{\numberline {h.}Thực thể Messages}{67}{subsubsubsection.5.4.1.8}%
+\contentsline {subsubsection}{\numberline {5.4.2.}Collection Schema}{68}{subsubsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.5.}Thiết kế giao diện}{71}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1.}Nguyên tắc thiết kế}{71}{subsubsection.5.5.1}%
+\contentsline {subsubsubsection}{\numberline {a.}Tính nhất quán}{71}{subsubsubsection.5.5.1.1}%
+\contentsline {subsubsubsection}{\numberline {b.}Tính đơn giản}{71}{subsubsubsection.5.5.1.2}%
+\contentsline {subsubsubsection}{\numberline {c.}Khả năng tiếp cận}{71}{subsubsubsection.5.5.1.3}%
+\contentsline {subsubsubsection}{\numberline {d.}Phản hồi trực quan}{71}{subsubsubsection.5.5.1.4}%
+\contentsline {subsubsubsection}{\numberline {e.}Phân cấp thông tin}{72}{subsubsubsection.5.5.1.5}%
+\contentsline {subsubsection}{\numberline {5.5.2.}Thiết kế luồng giao diện hệ thống}{72}{subsubsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.3.}Chi tiết giao diện hệ thống}{72}{subsubsection.5.5.3}%
+\contentsline {subsubsubsection}{\numberline {a.}Giao diện đăng nhập}{72}{subsubsubsection.5.5.3.1}%
+\contentsline {subsubsubsection}{\numberline {b.}Giao diện quản trị hệ thống}{74}{subsubsubsection.5.5.3.2}%
+\contentsline {subsubsubsection}{\numberline {c.}Giao diện trang chủ}{75}{subsubsubsection.5.5.3.3}%
+\contentsline {subsubsubsection}{\numberline {d.}Giao diện kết quả tìm kiếm}{76}{subsubsubsection.5.5.3.4}%
+\contentsline {subsubsubsection}{\numberline {e.}Giao diện chi tiết quán ăn}{77}{subsubsubsection.5.5.3.5}%
+\contentsline {subsubsubsection}{\numberline {f.}Giao diện hồ sơ người dùng}{79}{subsubsubsection.5.5.3.6}%
+\contentsline {subsubsubsection}{\numberline {g.}Giao diện nhắn tin}{80}{subsubsubsection.5.5.3.7}%
+\contentsline {subsubsubsection}{\numberline {h.}Giao diện gợi ý quán ăn cá nhân hóa}{81}{subsubsubsection.5.5.3.8}%
+\contentsline {subsubsubsection}{\numberline {i.}Giao diện hỗ trợ xây dựng FoodTour}{81}{subsubsubsection.5.5.3.9}%
+\contentsline {subsubsubsection}{\numberline {j.}Giao diện lập kế hoạch và tối ưu hóa lộ trình FoodTour}{82}{subsubsubsection.5.5.3.10}%
+\contentsline {subsubsubsection}{\numberline {k.}Giao diện chi tiết FoodTour}{83}{subsubsubsection.5.5.3.11}%
+\contentsline {subsubsubsection}{\numberline {l.}Giao diện chạy food tour thực tế (Active Food Tour)}{85}{subsubsubsection.5.5.3.12}%
+\contentsline {section}{\numberline {6.}Hiện thực hệ thống}{87}{section.6}%
+\contentsline {subsection}{\numberline {6.1.}Kiến trúc hiện thực hệ thống}{87}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.}Phân tích kiến trúc tổng thể}{87}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.}Công nghệ sử dụng trong hệ thống}{87}{subsubsection.6.1.2}%
+\contentsline {subsubsubsection}{\numberline {a.}React và TypeScript – Tầng giao diện người dùng}{87}{subsubsubsection.6.1.2.1}%
+\contentsline {subsubsubsection}{\numberline {b.}Node.js và Express – Tầng backend}{88}{subsubsubsection.6.1.2.2}%
+\contentsline {subsubsubsection}{\numberline {c.}MongoDB – Hệ quản trị cơ sở dữ liệu}{88}{subsubsubsection.6.1.2.3}%
+\contentsline {subsection}{\numberline {6.2.}Các module chức năng chính của hệ thống}{89}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1.}Module quản lý người dùng}{89}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.}Module quản trị hệ thống}{90}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3.}Module tìm kiếm và tra cứu quán ăn}{90}{subsubsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.4.}Module quản lý quán ăn yêu thích}{90}{subsubsection.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.5.}Module đánh giá quán ăn}{91}{subsubsection.6.2.5}%
+\contentsline {subsubsection}{\numberline {6.2.6.}Module gợi ý quán ăn}{91}{subsubsection.6.2.6}%
+\contentsline {subsubsection}{\numberline {6.2.7.}Module quản lý Food Tour và tối ưu hóa lộ trình di chuyển}{92}{subsubsection.6.2.7}%
+\contentsline {subsubsection}{\numberline {6.2.8.}So sánh kỹ thuật tối ưu hóa lộ trình với các giải pháp tương tự}{93}{subsubsection.6.2.8}%
 \contentsline {subsubsection}{\numberline {6.2.9.}Module đề xuất quán ăn từ cộng đồng (Suggest Restaurant)}{96}{subsubsection.6.2.9}%
 \contentsline {subsubsection}{\numberline {6.2.10.}Module nhắn tin (Messaging)}{97}{subsubsection.6.2.10}%
-\contentsline {subsubsection}{\numberline {6.2.11.}Nhận xét chung về các module đã hiện thực}{97}{subsubsection.6.2.11}%
-\contentsline {section}{\numberline {7.}Kiểm thử hệ thống}{98}{section.7}%
-\contentsline {subsection}{\numberline {7.1.}Mục tiêu kiểm thử}{98}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2.}Môi trường kiểm thử}{98}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3.}Chiến lược kiểm thử}{98}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4.}Kiểm thử tích hợp (Integration Testing)}{99}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5.}Kiểm thử giao diện / End-to-End (UI / E2E Testing)}{101}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6.}Kiểm thử bảo mật (Security Testing)}{104}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7.}Kiểm thử chức năng người dùng và tương tác cộng đồng}{107}{subsection.7.7}%
-\contentsline {subsection}{\numberline {7.8.}Kiểm thử chuyên sâu tính năng tối ưu lộ trình và gợi ý ẩm thực}{110}{subsection.7.8}%
-\contentsline {subsubsection}{\numberline {7.8.1.}Kiểm thử tính năng tối ưu hóa lộ trình Food Tour nâng cao}{110}{subsubsection.7.8.1}%
-\contentsline {subsubsection}{\numberline {7.8.2.}Kiểm thử mô hình gợi ý quán ăn cá nhân hóa đa tiêu chí}{113}{subsubsection.7.8.2}%
-\contentsline {subsection}{\numberline {7.9.}Đánh giá hệ thống dựa trên kết quả kiểm thử}{116}{subsection.7.9}%
-\contentsline {section}{\numberline {8.}Kết luận và hướng phát triển}{117}{section.8}%
-\contentsline {subsection}{\numberline {8.1.}Kết luận}{117}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2.}Hướng phát triển}{117}{subsection.8.2}%
-\contentsline {section}{Tài liệu tham khảo}{118}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {6.2.11.}Module khởi động và theo dõi hành trình thực tế (Trip Session)}{97}{subsubsection.6.2.11}%
+\contentsline {paragraph}{\numberline {6.2.11..1}Mô hình dữ liệu phiên hành trình (TripSession Schema)}{97}{paragraph.6.2.11.1}%
+\contentsline {paragraph}{\numberline {6.2.11..2}Cơ chế nghiệp vụ và luồng xử lý chính}{98}{paragraph.6.2.11.2}%
+\contentsline {subsubsection}{\numberline {6.2.12.}Nhận xét chung về các module đã hiện thực}{99}{subsubsection.6.2.12}%
+\contentsline {subsection}{\numberline {6.3.}Triển khai hệ thống}{99}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1.}Mô hình triển khai}{99}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.}Triển khai Frontend}{100}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3.}Triển khai Backend Service}{100}{subsubsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.4.}Triển khai cơ sở dữ liệu}{100}{subsubsection.6.3.4}%
+\contentsline {subsubsection}{\numberline {6.3.5.}Cấu hình dịch vụ bên ngoài}{101}{subsubsection.6.3.5}%
+\contentsline {subsubsection}{\numberline {6.3.6.}Đường dẫn triển khai}{101}{subsubsection.6.3.6}%
+\contentsline {subsubsection}{\numberline {6.3.7.}Kiểm tra sau triển khai}{101}{subsubsection.6.3.7}%
+\contentsline {section}{\numberline {7.}Kiểm thử hệ thống}{103}{section.7}%
+\contentsline {subsection}{\numberline {7.1.}Mục tiêu kiểm thử}{103}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2.}Môi trường kiểm thử}{103}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3.}Chiến lược kiểm thử}{103}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4.}Kiểm thử tích hợp (Integration Testing)}{104}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5.}Kiểm thử giao diện / End-to-End (UI / E2E Testing)}{106}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6.}Kiểm thử bảo mật (Security Testing)}{109}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7.}Kiểm thử chức năng người dùng và tương tác cộng đồng}{112}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8.}Kiểm thử chuyên sâu tính năng tối ưu lộ trình và gợi ý ẩm thực}{115}{subsection.7.8}%
+\contentsline {subsubsection}{\numberline {7.8.1.}Kiểm thử tính năng tối ưu hóa lộ trình Food Tour nâng cao}{115}{subsubsection.7.8.1}%
+\contentsline {subsubsection}{\numberline {7.8.2.}Kiểm thử mô hình gợi ý quán ăn cá nhân hóa đa tiêu chí}{118}{subsubsection.7.8.2}%
+\contentsline {subsection}{\numberline {7.9.}Đánh giá hệ thống dựa trên kết quả kiểm thử}{121}{subsection.7.9}%
+\contentsline {section}{\numberline {8.}Kết luận và hướng phát triển}{122}{section.8}%
+\contentsline {subsection}{\numberline {8.1.}Kết luận}{122}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2.}Hướng phát triển}{122}{subsection.8.2}%
+\contentsline {section}{Tài liệu tham khảo}{123}{subsection.8.2}%

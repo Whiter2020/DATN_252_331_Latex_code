@@ -1,81 +1,174 @@
+    
+
 \begin{titlepage}
-% \begin{tikzpicture}[remember picture, overlay]
-%     % Viền chính
-%     \draw[black!70!black, line width=4pt] 
-%         ([xshift=-1.5cm,yshift=-2cm]current page.north east) 
-%         rectangle 
-%         ([xshift=2.3cm,yshift=2cm]current page.south west);
-
-%     % Viền phụ (nhỏ hơn, tạo hiệu ứng lồng nhau)
-%     \draw[black!70!black, line width=1pt] 
-%         ([xshift=-1.3cm,yshift=-1.8cm]current page.north east) 
-%         rectangle 
-%         ([xshift=2.1cm,yshift=1.8cm]current page.south west);
-% \end{tikzpicture}
-
-    \begin{center}
-        \fontsize{15pt}{15pt}\selectfont 
-        \textbf{ĐẠI HỌC QUỐC GIA TP.HCM}\\
-        \vspace{5pt}
-        \textbf{TRƯỜNG ĐẠI HỌC BÁCH KHOA}\\
-        \vspace{5pt}
-        \textbf{KHOA KHOA HỌC VÀ KỸ THUẬT MÁY TÍNH}\\
-    \end{center}
-    
-    \begin{center}
-        \includegraphics[scale=0.2]{bachkhoa_logo.png}
-    \end{center}
-    
-    \begin{center}
-    \fontsize{15pt}{15pt}\selectfont 
-        \begin{tabular}{c}
-            \multicolumn{1}{c}{\textbf{{BÁO CÁO}}}\\
-            \multicolumn{1}{c}{\textbf{{ĐỒ ÁN TỐT NGHIỆP}}}\\
-        \end{tabular}
-    \end{center}
-
-    \begin{center}
-        \rule{0.6\textwidth}{0.4pt}
-    \end{center}
-    
-    \vspace{10pt}
-    
-    \begin{center}
-        \fontsize{19pt}{15pt}\selectfont 
-        \begin{tabular}{c}
-        \multicolumn{1}{c}{\textbf{{ỨNG DỤNG GỢI Ý ẨM THỰC VÀ }}}\\ 
-        \multicolumn{1}{c}{\textbf{{LỘ TRÌNH ĂN UỐNG}}}\\ 
-        \end{tabular}
-    \end{center}
-    \begin{center}
-        \rule{0.6\textwidth}{0.4pt}
-    \end{center}
-
-    \begin{center}
-        \fontsize{15pt}{15pt}\selectfont 
-        \begin{tabular}{c}
-        \multicolumn{1}{c}{\textbf{{Ngành: Khoa Học Máy Tính }}}\\ 
-        \end{tabular}
-    \end{center}
     
 
-    \vspace{10pt}
-    \fontsize{14pt}{18pt}\selectfont
 
-    \hspace{6cm} 
-    \begin{tabular}{p{3cm} p{7cm}}
-    \textbf{GVHD:}  & TS. Trương Tuấn Anh \\[4pt]
-    \textbf{GVHD2:} & CN. Nguyễn Minh Tâm \\[10pt]
-    
-    \textbf{SVTH 1:} & Trần Minh Quang -- 2212757 \\[4pt]
-    \textbf{SVTH 2:} & Đặng Thanh Vũ -- 2213989 \\
-    \end{tabular}
+\thispagestyle{empty}
 
-        \vspace{50pt}
-    \begin{center}
-        \textit{TP. Hồ Chí Minh, tháng 9/2026}
-    \end{center}
+
+\AddToShipoutPictureBG*{%
+    \AtPageLowerLeft{%
+        \begin{tikzpicture}
+
+            % Co dinh toa do theo trang A4
+            \path[use as bounding box]
+                (0,0) rectangle
+                (\paperwidth,\paperheight);
+
+            % VIEN NGOAI - DAY
+            \draw[black, line width=1.5pt]
+                (2.5cm,1.5cm)
+                rectangle
+                (
+                    \dimexpr\paperwidth-1.5cm\relax,
+                    \dimexpr\paperheight-1.5cm\relax
+                );
+
+            % VIEN TRONG - MONG
+            \draw[black, line width=0.6pt]
+                (2.6cm,1.6cm)
+                rectangle
+                (
+                    \dimexpr\paperwidth-1.6cm\relax,
+                    \dimexpr\paperheight-1.6cm\relax
+                );
+
+        \end{tikzpicture}%
+    }%
+}
+
+
+
+\thispagestyle{empty}
+
+\vspace*{-2.0cm}
+
+\begin{center}
+
+% ============================
+% TEN TRUONG VA KHOA
+% ============================
+
+{\fontsize{15pt}{1pt}\selectfont
+\bfseries
+ĐẠI HỌC QUỐC GIA TP.HCM\par
+\vspace{5pt}
+TRƯỜNG ĐẠI HỌC BÁCH KHOA\par
+\vspace{5pt}
+KHOA KHOA HỌC VÀ KỸ THUẬT MÁY TÍNH\par
+}
+
+\vspace{0.8cm}
+
+% ============================
+% LOGO TRUONG
+% ============================
+
+\includegraphics[
+    width=3cm,
+    keepaspectratio
+]{bachkhoa_logo.png}
+
+\vspace{1cm}
+
+% ============================
+% LOAI BAO CAO
+% ============================
+
+{\fontsize{15pt}{15pt}\selectfont
+\bfseries
+BÁO CÁO\par
+ĐỒ ÁN TỐT NGHIỆP\par
+}
+
+\vspace{0.7cm}
+
+% ============================
+% TEN DE TAI
+% ============================
+
+
+\vspace{0.4cm}
+
+{\fontsize{22pt}{10pt}\selectfont
+\bfseries
+ỨNG DỤNG GỢI Ý ẨM THỰC VÀ
+LỘ TRÌNH ĂN UỐNG TRONG THÀNH PHỐ\par
+}
+
+\vspace{0.4cm}
+
+
+\vspace{0.7cm}
+
+% ============================
+% NGANH HOC
+% ============================
+
+{\fontsize{15pt}{20pt}\selectfont
+\bfseries
+Ngành: Khoa học Máy tính\par
+}
+
+\end{center}
+
+\vspace{1.2cm}
+
+% ============================
+% THONG TIN GIANG VIEN
+% VA SINH VIEN
+% ============================
+
+
+% ============================
+% HOI DONG - GIANG VIEN - SINH VIEN
+% ============================
+
+\begin{flushright}
+\begin{minipage}{10cm}
+
+\fontsize{15pt}{19pt}\selectfont
+
+\noindent\hspace*{-0.5cm}   
+\begin{tabular}{@{}l@{\hspace{0.4cm}}l@{\hspace{0.3cm}}l@{}}
+
+\textbf{HỘI ĐỒNG:}
+& 4L Khoa học Máy tính & \\[2pt]
+
+\textbf{GVHD:}
+& TS. Trương Tuấn Anh & \\[2pt]
+
+\textbf{GVPB:}
+& ThS. Mai Đức Trung & \\[8pt]
+
+\multicolumn{3}{c}{\textbf{---o0o---}} \\[8pt]
+
+\textbf{SVTH 1:}
+& Trần Minh Quang & (2212757) \\[2pt]
+
+\textbf{SVTH 2:}
+& Đặng Thanh Vũ & (2213989) \\
+
+\end{tabular}
+
+
+\end{minipage}
+\end{flushright}
+
+
+% ============================
+% DIA DIEM VA THOI GIAN
+% ============================
+
+\vfill
+
+\begin{center}
+{\fontsize{15pt}{20pt}\selectfont
+\text{TP. HỒ CHÍ MINH, THÁNG 10/2026}
+}
+\end{center}
+
 \end{titlepage}
-\newpage
 
-
+\clearpage

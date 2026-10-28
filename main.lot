@@ -11,11 +11,11 @@
 \contentsline {table}{\numberline {4.10}{\ignorespaces Use case: Gửi tin nhắn}}{39}{table.4.10}%
 \contentsline {table}{\numberline {4.11}{\ignorespaces Use case: Quản lý dữ liệu quán ăn}}{41}{table.4.11}%
 \contentsline {table}{\numberline {4.12}{\ignorespaces Use case: Quản lý nội dung food tour}}{42}{table.4.12}%
-\contentsline {table}{\numberline {4.13}{\ignorespaces Use case: Đăng ký thông tin quán ăn}}{43}{table.4.13}%
 \contentsline {table}{\numberline {6.1}{\ignorespaces So sánh kỹ thuật tối ưu hóa lộ trình: Google Maps, Mapbox Optimization API và CityFoodTour}}{94}{table.6.1}%
-\contentsline {table}{\numberline {7.1}{\ignorespaces Kết quả kiểm thử tích hợp (Integration Testing)}}{99}{table.caption.35}%
-\contentsline {table}{\numberline {7.2}{\ignorespaces Kết quả kiểm thử giao diện / End-to-End}}{102}{table.caption.39}%
-\contentsline {table}{\numberline {7.3}{\ignorespaces Kết quả kiểm thử bảo mật (Security Testing)}}{105}{table.caption.45}%
-\contentsline {table}{\numberline {7.4}{\ignorespaces Kiểm thử chức năng người dùng và tương tác cộng đồng}}{107}{table.caption.48}%
-\contentsline {table}{\numberline {7.5}{\ignorespaces Kiểm thử chuyên sâu thuật toán tối ưu hóa lộ trình}}{111}{table.caption.54}%
-\contentsline {table}{\numberline {7.6}{\ignorespaces Kiểm thử chuyên sâu mô hình gợi ý cá nhân hóa}}{114}{table.caption.60}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Đường dẫn triển khai hệ thống}}{101}{table.caption.36}%
+\contentsline {table}{\numberline {7.1}{\ignorespaces Kết quả kiểm thử tích hợp (Integration Testing)}}{104}{table.caption.37}%
+\contentsline {table}{\numberline {7.2}{\ignorespaces Kết quả kiểm thử giao diện / End-to-End}}{107}{table.caption.41}%
+\contentsline {table}{\numberline {7.3}{\ignorespaces Kết quả kiểm thử bảo mật (Security Testing)}}{110}{table.caption.47}%
+\contentsline {table}{\numberline {7.4}{\ignorespaces Kiểm thử chức năng người dùng và tương tác cộng đồng}}{112}{table.caption.50}%
+\contentsline {table}{\numberline {7.5}{\ignorespaces Kiểm thử chuyên sâu thuật toán tối ưu hóa lộ trình}}{116}{table.caption.56}%
+\contentsline {table}{\numberline {7.6}{\ignorespaces Kiểm thử chuyên sâu mô hình gợi ý cá nhân hóa}}{119}{table.caption.62}%
